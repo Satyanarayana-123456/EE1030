@@ -1,0 +1,114 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}  
+\usepackage{tikz}
+\usepackage{circuitikz} 
+\usepackage{caption}
+\def\inputGnumericTable{}              
+\usepackage[latin1]{inputenc}          
+\usepackage{color}                    
+\usepackage{array}                     
+\usepackage{longtable}                 
+\usepackage{calc}                     \usepackage{multirow}                  
+\usepackage{hhline}                    
+\usepackage{ifthen}                    
+\usepackage{lscape}
+\usepackage{amsmath}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+%\bibliographystyle{ieeetr}
+\begin{document}
+%
+
+\bibliographystyle{IEEEtran}
+
+
+
+
+\title{
+%	\logo{
+18-Definite Integrals and Applications of Integrals
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+\newpage
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{\large E-Subjective Problems}
+\vspace{0.5cm}
+
+
+\begin{enumerate}
+    \item Evaluate:\begin{align*}
+     \int_{0}^{\pi/4}\frac{\sin{(x)}+\cos{(x)}}{9+16\sin{(2x)}}dx\end{align*} \hfill($1983-3\ Marks$)\\\\
+\item Find the area bounded by the x-axis, part of the curve $y=(1+\frac{8}{x^2})$ and the ordinates at $x$=2 to $x$=4. If the ordinate at $x=a$ divides the area into two equal parts,\hfill($1983-3\ Marks$)\\find $a$.\\\\
+\item Evaluate the following\begin{align*}
+    \int_{0}^{1/2}\frac{xsin^-{}^1(x)}{\sqrt{1-x^2}}dx
+\end{align*}\hfill($1984-2\ Marks$)\\\\
+\item Find the area of the region bounded by the x-axis and the curves defined by $y=\tan{(x)}, \frac{-\pi}{3}\leq x \leq\frac{\pi}{3}$;\hfill($1984-4\ Marks$)\\$y=\cot{(x)}, \frac{\pi}{6}\leq x \leq\frac{3\pi}{2}$\\\\
+\item Given a function $f(x)$ such that\\(i)it is integrable over every interval on a real line and\\(ii) $f(t+x)=f(x)$, for every $x$ and a real $t$, then show that the integral$\int_{a}^{a+t}f(x) dx$ is independent of a.\hfill($1984-4\ Marks$)\\\\
+\item Evaluate the following:\begin{align*}
+    \int_{0}^{\pi/2}\frac{x\sin{(x)}\cos{(x)}}{\cos^4{(x)}+\sin^4{(x)}}dx
+\end{align*}\hfill($1985-5/2\ Marks$)\\\\
+\item Sketch the region bounded by the curves $y=\sqrt{5-x^2}$ and $y=|x-1|$ and its\\ area.\hfill($1985-5\ Marks$)\\\\
+\item Evaluate:\begin{align*}
+    \int_{0}^{\pi}\frac{xdx}{1+\cos{(\alpha)}\sin{(x)}},
+\end{align*}$0<\alpha<\pi$\hfill($1986-5/2\ Marks$)\\\\
+\item Find the area bounded by the curves,\\ $x^2+y^2=25,\ 4y=|4-x^2|$ and $x$=0 above the x-axis.\hfill($1987-6\ Marks$)\\\\
+\item Find the area of the region bounded by the curve C:y=$\tan{(x)}$, tangent drawn to C at $x=\pi/4$ and the x-axis.\hfill($1988-5\ Marks$)\\\\
+\item Evaluate\hfill($1988-5\ Marks$)\\$\int_{0}^{1}\log[\sqrt{1-x}+\sqrt{1+x}]dx$\\\\
+\item If $f$ and $g$ are continuous function on [0,$a$] satisfying $f(x)=f(a-x)$ and\\$g(x)+g(a-x)=2$, then show that $\int_{0}^{a}f(x)g(x)dx = \int_{0}^{a}f(x)dx$\hfill($1989-4\ Marks$)\\\\
+\item Show that $\int_{0}^{\pi/2}f(\sin{(2x)})\sin{(x)}dx=\sqrt{2}\int_{0}^{\pi/4}f(\cos{(2x)})\cos{(x)}dx$\hfill($1990-4\ Marks$)\\\\\\
+\item Prove that for any positive integer k, $\frac{\sin{(2kx)}}{\sin{(x)}}=2[\cos{(x)}+\cos{(3x)}+..............+\cos{(2k-1)x}]$\\\\Hence pove that\hfill($1990-4\ Marks$)\\ $\int_{0}^{\pi/2}\sin{(2kx)}\cot{(x)}dx=\pi/2$\\\\
+\item Compute the area of the region bounded by the curves $y=ex\ln{x}$ and\hfill($1990-4\ Marks$)\\$y=\frac{\ln{x}}{ex}$ where $\ln{e}=1$.\\\\
+\end{enumerate}
+\end{document}
+
