@@ -1,0 +1,111 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+18-Definite Integrals and Applications of Integrals
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{\large E-Subjective Problems}
+
+
+\begin{enumerate}
+    \item Evaluate:\begin{align*}
+         \int_{0}^{\pi/4}\frac{\sin{\brak{x}}+\cos{\brak{x}}}{9+16\sin{\brak{2x}}}dx\end{align*} \hfill($1983-3\ Marks$)\\\\
+	 \item Find the area bounded by the x-axis, part of the curve $y=\brak{1+\frac{8}{x^2}}$ and the ordinates at $x$=2 to $x$=4. If the ordinate at $x=a$ divides the area into two equal parts,\\ find $a$.\hfill($1983-3\ Marks$)\\\\
+	 \item Evaluate the following\begin{align*}
+	     \int_{0}^{1/2}\frac{xsin^-{}^1\brak{x}}{\sqrt{1-x^2}}dx
+	     \end{align*}\hfill($1984-2\ Marks$)\\\\
+     \item Find the area of the region bounded by the x-axis and the curves defined by \begin{align*}y=\tan{\brak{x}}, \frac{-\pi}{3}\leq x \leq\frac{\pi}{3};\end{align*}\begin{align*}y=\cot{\brak{x}}, \frac{\pi}{6}\leq x \leq\frac{3\pi}{2}\end{align*}\hfill($1984-4\ Marks$)\\\\
+	     \item Given a function $f\brak{x}$ such that
+		     \begin{enumerate}
+			     \item it is integrable over every interval on a real line and
+		     \item $f\brak{t+x}=f\brak{x}$, for every $x$ and a real $t$, then show that the integral$\int_{a}^{a+t}f\brak{x} dx$ is independent of a.\hfill($1984-4\ Marks$)\\\\
+		     \end{enumerate}
+	     \item Evaluate the following:\begin{align*}
+	         \int_{0}^{\pi/2}\frac{x\sin{\brak{x
+		     }}\cos{\brak{x}}}{\cos^4{\brak{x}}+\sin^4{\brak{x}}}dx
+		     \end{align*}\hfill($1985-5/2\ Marks$)\\\\
+		     \item Sketch the region bounded by the curves $y=\sqrt{5-x^2}$ and $y=\abs{x-1}$ and its\\ area.\hfill($1985-5\ Marks$)\\\\
+		     \item Evaluate:\begin{align*}
+		         \int_{0}^{\pi}\frac{xdx}{1+\cos{\brak{\alpha}}\sin{\brak{x}}},0<\alpha<\pi\end{align*}\hfill($1986-5/2\ Marks$)\\\\
+			 \item Find the area bounded by the curves, $x^2+y^2=25,\ 4y=\abs{4-x^2}$ and $x$=0 above the x-axis.\hfill($1987-6\ Marks$)\\\\
+			 \item Find the area of the region bounded by the curve C: y=$\tan{\brak{x}}$, tangent drawn to C at $x=\pi/4$ and the x-axis.\hfill($1988-5\ Marks$)\\\\
+			 \item Evaluate\hfill($1988-5\ Marks$)\\ \begin{align*}\int_{0}^{1}\log\sbrak{\sqrt{1-x}+\sqrt{1+x}}dx\end{align*}\\\\
+				 \item If $f$ and $g$ are continuous function on [0,$a$] satisfying $f\brak{x}=f\brak{a-x}$ and\\$g\brak{x}+g\brak{a-x}=2$, then show that \begin{align*}\int_{0}^{a}f\brak{x}g\brak{x}dx = \int_{0}^{a}f\brak{x}dx\end{align*}\hfill($1989-4\ Marks$)\\\\
+			 \item Show that \begin{align*}\int_{0}^{\pi/2}f\brak{\sin{\brak{2x}}}\sin{\brak{x}}dx=\sqrt{2}\int_{0}^{\pi/4}f\brak{\cos{\brak{2x}}}\cos{\brak{x}}dx\end{align*}\hfill($1990-4\ Marks$)\\\\\\
+			 \item Prove that for any positive integer k,
+				 \begin{align*} \frac{\sin{\brak{2kx}}}{\sin{\brak{x}}}=2\sbrak{\cos{\brak{x}}+\cos{\brak{3x}}+\cdots+\cos{\brak{2k-1}x}}
+				 \end{align*}
+					 \\\\Hence prove that $\int_{0}^{\pi/2}\sin{\brak{2kx}}\cot{\brak{x}}dx=\pi/2$\hfill($1990-4\ Marks$)\\\\
+				 \item Compute the area of the region bounded by the curves $y=ex\ln{x}$ and $y=\frac{\ln{x}}{ex}$ where $\ln{e}=1$.\hfill($1990-4\ Marks$)\\\\
+			 \end{enumerate}
+			 \end{document}
+
