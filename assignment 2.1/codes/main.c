@@ -1,39 +1,39 @@
 #include <stdio.h>
-#include <dlfcn.h>
+
+// Function to find the slope (m) and intercept (c) of the line
+void find_relation(double x1, double y1, double x2, double y2, double* m, double* c) {
+    *m = (y2 - y1) / (x2 - x1);
+    *c = y1 - (*m) * x1;
+}
 
 int main() {
-    // Load the shared library
-    void *handle;
-    float (*find_relation)(float, float, float, float, float, float);
-    char *error;
+    double x1 = -4, y1 = 6; // Coordinates of point B
+    double x2 = -2, y2 = 3; // Coordinates of point C
+    double m, c;
 
-    handle = dlopen("./collinear.so", RTLD_LAZY);
-    if (!handle) {
-        fprintf(stderr, "%s\n", dlerror());
+    // Calculate the slope and intercept
+    find_relation(x1, y1, x2, y2, &m, &c);
+
+    // Print the relation between x and y
+    printf("The relation between x and y is: y = %.2lf * x + %.2lf\n", m, c);
+
+    // Open the file coordinates.txt for writing
+    FILE *file = fopen("coordinates.txt", "w");
+
+    // Check if the file was opened successfully
+    if (file == NULL) {
+        printf("Error opening file!\n");
         return 1;
     }
 
-    // Get the function from the shared library
-    find_relation = dlsym(handle, "find_relation");
-    if ((error = dlerror()) != NULL) {
-        fprintf(stderr, "%s\n", error);
-        return 1;
+    // Write some coordinates that satisfy the relation y = m * x + c
+    for (double x = -10; x <= 10; x += 1.0) {
+        double y = m * x + c;
+        fprintf(file, "x = %.2lf, y = %.2lf\n", x, y);
     }
 
-    // Define the coordinates of points B(x1, y1) and C(x2, y2)
-    float x1 = -4.0, y1 = 6.0;
-    float x2 = -2.0, y2 = 3.0;
-
-    // The coefficients of x and y are A = (y1 - y2) and B = (x2 - x1)
-    float A = y1 - y2;
-    float B = x2 - x1;
-    float C = x1 * y2 - x2 * y1;
-
-    // Print the relation as: Ax + By = C
-    printf("The relation between x and y is: %.2fx + %.2fy = %.2f\n", A, B, C);
-
-    // Close the shared library
-    dlclose(handle);
+    // Close the file
+    fclose(file);
 
     return 0;
 }

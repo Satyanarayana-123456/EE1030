@@ -1,6 +1,12 @@
 // collinear.c
-float find_relation(float x1, float y1, float x2, float y2, float x, float y) {
-    // Relation equation: x(y1 - y2) + y(x2 - x1) = x1*y2 - x2*y1
-    return x * (y1 - y2) + y * (x2 - x1) - (x1 * y2 - x2 * y1);
+
+// Function to find the relation between x and y
+void find_relation(double x1, double y1, double x2, double y2, double* m, double* c) {
+    // The slope m = (y2 - y1) / (x2 - x1)
+    *m = (y2 - y1) / (x2 - x1);
+    // The intercept c = y1 - m * x1
+    *c = y1 - (*m) * x1;
 }
+
+// To compile as shared object: gcc -shared -o collinear.so -fPIC collinear.c
 
