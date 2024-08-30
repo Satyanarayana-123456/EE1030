@@ -5,7 +5,8 @@ import matplotlib.pyplot as plt
 # Load the shared library
 lib = CDLL('./collinear.so')
 
-# Define the argument and return types for the function
+# Define the function from the shared library
+# Function prototype: void find_relation(double x1, double y1, double x2, double y2, double* m, double* c);
 lib.find_relation.argtypes = [c_double, c_double, c_double, c_double, POINTER(c_double), POINTER(c_double)]
 lib.find_relation.restype = None
 
@@ -17,7 +18,7 @@ x2, y2 = -2, 3  # Coordinates of point C
 m = c_double()
 c = c_double()
 
-# Call the C function to get the slope and intercept
+# Call the function to get the slope and intercept
 lib.find_relation(x1, y1, x2, y2, byref(m), byref(c))
 
 # Print the relation
@@ -34,6 +35,20 @@ with open('coordinates.txt', 'r') as file:
         y = float(parts[1].split('=')[1].strip())
         x_coords.append(x)
         y_coords.append(y)
+
+# Check collinearity by calculating area of the triangle formed with the points B, C, and (x, y)
+def is_collinear(xa, ya, xb, yb, xc, yc):
+    # Calculate the area of the triangle using the determinant method
+    area = abs(xa*(yb - yc) + xb*(yc - ya) + xc*(ya - yb)) / 2.0
+    return area == 0
+
+# Select a point from coordinates.txt to verify
+if x_coords and y_coords:
+    x, y = x_coords[0], y_coords[0]
+    if is_collinear(x1, y1, x2, y2, x, y):
+        print(f"The point ({x}, {y}) is collinear with points B and C (area is 0).")
+    else:
+        print(f"The point ({x}, {y}) is NOT collinear with points B and C (area is not 0).")
 
 # Generate the plot
 plt.figure(figsize=(8, 6))
