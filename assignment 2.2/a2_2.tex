@@ -62,39 +62,46 @@
 \renewcommand{\thetable}{\theenumi}
 
 
-\textbf{Question}:1.7.6\\
-Find a relation between $x$ and $y$ if the points $\vec{A}$($x,y$), $\vec{B}$(-4,6), and $\vec{C}$(-2,3)\hfill(10, 2019)\\ are collinear.
+\textbf{Question}:1.8.24\\
+Find a relation between $x$ and $y$ such that the point ($x,y$) is equidistant from the points (7,1) and (3,5).
 \\
 \textbf{Solution:}
-\renewcommand{\tablename}{Table 1.7.6.1}
+\renewcommand{\tablename}{Table 1.8.24.1}
 \begin{table}[h!]
   \centering
   \input{tables/table.tex}
-  \caption{Vertex and its coordinates}
+  \caption{Labeling given coordinates as $\vec{A}$, $\vec{B}$, $\vec{C}$}
 \end{table}
 \\
- Points $\vec{A}$, $\vec{B}$, $\vec{C}$ are said to be collinear if
+$\vec{A}$ is said to be equidistant from $\vec{B}$ and $\vec{C}$ if 
  \begin{align}
- & rank\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}} = 1 \label{eq1.7.6.1} \\ &
-	 \vec{B} - \vec{A} = \myvec{-4 \\ 6} - \myvec{x \\ y} \\ &
-	 \vec{B} - \vec{A} = \myvec{-4 - x \\ 6 - y} \\ &
-	 \vec{C} - \vec{A} = \myvec{-2 \\ 3} - \myvec{x \\ y} \\ &
-	 \vec{C} - \vec{A} = \myvec{-2 - x \\ 3 - y} \\ &
-	 \myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}} = \myvec{-4 - x & -2 - x \\ 6 - y & 3 - y} \\ &
-	 \myvec{-4 - x & -2 - x \\ -6 - y & 3 - y} \xrightarrow[]{R_2 \rightarrow R_1+\frac{2}{3}R_2} \myvec{-4 - x & -2 - x \\ -x - \frac{2}{3}y & -x - \frac{2}{3}y}
-     \end{align}
-Given $\vec{A}$, $\vec{B}$, $\vec{C}$ are collinear, so rank\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}} = 1 from equation \ref{eq1.7.6.1} \\
-Therefore,
+    & \lVert \vec{B} - \vec{A} \rVert = \lVert \vec{C} - \vec{A} \rVert \label{eq1.8.24.1} \\ &
+     \vec{B} - \vec{A} = \myvec{7 \\ 1} - \myvec{x \\ y} \\ &
+     \vec{B} - \vec{A} = \myvec{7 - x \\ 1 - y} \\ &
+     \brak{\vec{B} - \vec{A}}^\intercal = \myvec{7 - x & 1 - y} \\ &
+     \vec{C} - \vec{A} = \myvec{3 \\ 5} - \myvec{x \\ y} \\ &
+     \vec{C} - \vec{A} = \myvec{3 - x \\ 5 - y} \\ &
+     \brak{\vec{C} - \vec{A}}^\intercal = \myvec{3 - x & 5 - y}
+ \end{align}
+Given $\vec{A}$ is equidistant from $\vec{B}$ and $\vec{C}$, so $\lVert \vec{B} - \vec{A} \rVert = \lVert \vec{C} - \vec{A} \rVert$ from equation \ref{eq1.8.24.1} , \\
+Therefore
 \begin{align}
-	& -x - \frac{2}{3}y = 0 \\ &
-	x = - \frac{2}{3}y \\ &
-	3x = -2y \\ &
-	3x + 2y = 0
+   & \sqrt{\brak{\vec{B} - \vec{A}}^\intercal\brak{\vec{B} - \vec{A}}} = \sqrt{\brak{\vec{C} - \vec{A}}^\intercal\brak{\vec{C} - \vec{A}}} \label{eq1.8.24.2} &
 \end{align}
-The relation between $x$ and $y$ is $3x + 2y = 0$.
+Squaring the equation \ref{eq1.8.24.2} on both sides,
+\begin{align}
+   & \brak{\vec{B} - \vec{A}}^\intercal\brak{\vec{B} - \vec{A}} = \brak{\vec{C} - \vec{A}}^\intercal\brak{\vec{C} - \vec{A}} \\ &
+    \myvec{7 - x & 1 - y}\myvec{7 - x \\ 1 - y} = \myvec{3 - x & 5 - y}\myvec{3 - x \\ 5 - y} \\ &
+    \brak{7 - x}^2 + \brak{1 - y}^2 = \brak{3 - x}^2 + \brak{5 - y}^2 \\ &
+    49 + x^2 - 14x + 1 + y^2 - 2y = 9 + x^2 -6x + 25 + y^2 -10y \\ &
+    8x - 8y - 16 = 0 \\ &
+    x - y - 2 = 0
+\end{align}
+The relation between $x$ and $y$ is $x - y - 2 = 0.$
 \begin{figure}[h!]
    \centering
-   \includegraphics[width=0.7\linewidth]{figs/collinear.png}
-   \caption{Relation between $x$ and $y$: $3x + 2y = 0$}
+   \includegraphics[width=0.7\linewidth]{figs/equi.png}
+   \caption{Relation between $x$ and $y$: $x - y -2 = 0$}
    \end{figure}
    \end{document}
+   
