@@ -1,25 +1,12 @@
-// Function to find the relation between x and y
-void find_relation(double bx, double by, double cx, double cy, double *m, double *c) {
-    // Midpoint of B and C
-    double mx = (bx + cx) / 2.0;
-    double my = (by + cy) / 2.0;
+// Function to calculate the coefficients of the equation m*x + n*y = p
+void calculate_relation(float x1, float y1, float x2, float y2, float *m, float *n, float *p) {
+    // The relation is derived from the equation of the perpendicular bisector:
+    // (x - x1)^2 + (y - y1)^2 = (x - x2)^2 + (y - y2)^2
 
-    // Check if the line BC is vertical
-    if (cx != bx) {
-        // Slope of line BC
-        double slope_bc = (cy - by) / (cx - bx);
-        
-        // Slope of the perpendicular bisector
-        *m = -1.0 / slope_bc;
-    } else {
-        // If the line BC is vertical, the perpendicular bisector is horizontal
-        *m = 0;
-        *c = my;
-        return;
-    }
-    
-    // Calculate the intercept c of the line y = mx + c
-    *c = my - (*m * mx);
+    // Simplified form: 
+    // m * x + n * y = p where
+    *m = 2 * (x2 - x1);
+    *n = 2 * (y2 - y1);
+    *p = (x2 * x2 + y2 * y2) - (x1 * x1 + y1 * y1);
 }
-
 
