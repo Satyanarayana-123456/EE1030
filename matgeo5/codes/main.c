@@ -2,31 +2,36 @@
 #include <math.h>
 
 // Function to calculate the unit vector PQ
-void find_unit_vector(double x1, double y1, double z1, double x2, double y2, double z2, double *ux, double *uy, double *uz) {
-    double PQx = x2 - x1;
-    double PQy = y2 - y1;
-    double PQz = z2 - z1;
+void find_unit_vector(double P[3], double Q[3], double unit_vector[3]) {
+    double PQ[3];
+    double magnitude = 0.0;
+
+    // Calculate PQ = Q - P
+    for (int i = 0; i < 3; i++) {
+        PQ[i] = Q[i] - P[i];
+        magnitude += PQ[i] * PQ[i];
+    }
 
     // Calculate the magnitude of vector PQ
-    double magnitude = sqrt(PQx * PQx + PQy * PQy + PQz * PQz);
+    magnitude = sqrt(magnitude);
 
     // Calculate the unit vector components
-    *ux = PQx / magnitude;
-    *uy = PQy / magnitude;
-    *uz = PQz / magnitude;
+    for (int i = 0; i < 3; i++) {
+        unit_vector[i] = PQ[i] / magnitude;
+    }
 }
 
 int main() {
     // Coordinates of P(2, 1, -1) and Q(4, 4, -7)
-    double x1 = 2, y1 = 1, z1 = -1;
-    double x2 = 4, y2 = 4, z2 = -7;
-    double ux, uy, uz;
+    double P[3] = {2, 1, -1};
+    double Q[3] = {4, 4, -7};
+    double unit_vector[3];
 
     // Find the unit vector of PQ
-    find_unit_vector(x1, y1, z1, x2, y2, z2, &ux, &uy, &uz);
+    find_unit_vector(P, Q, unit_vector);
 
     // Output the unit vector PQ
-    printf("The unit vector PQ is: (%.2lf, %.2lf, %.2lf)\n", ux, uy, uz);
+    printf("The unit vector PQ is: (%.2lf, %.2lf, %.2lf)\n", unit_vector[0], unit_vector[1], unit_vector[2]);
 
     return 0;
 }
