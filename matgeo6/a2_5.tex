@@ -42,7 +42,7 @@
 \vspace{3cm}
 
 \title{
-1-Vector Arithmetic \\
+3 - Constructions \\
 \large EE1030:Matrix Theory
 }
 \author{Gajjarapu Satyanarayana\\AI24BTECH11009
@@ -62,39 +62,39 @@
 \renewcommand{\thetable}{\theenumi}
 
 
-\textbf{Question}:1.11.2\\
-Unit vector along PQ, where coordinates of $\vec{P}$ and $\vec{Q}$ respectively are (2, 1, -1) and (4, 4, -7), is \hfill(12, 2023)
+\textbf{Question}:3.2.29\\
+Draw a triangle $ABC$ in which $AB$ = 5 cm, $BC$ = 6 cm and $\angle ABC$ = 60\degree.
 \\
 \textbf{Solution:}
-\renewcommand{\tablename}{Table 1.11.2.1}
+\renewcommand{\tablename}{Table 3.2.29.1}
 \begin{table}[h!]
   \centering
   \input{tables/table.tex}
-  \caption{Vertex and its coordinates}
+  \caption{Variables and its values}
 \end{table}
 \\
-The vector along PQ is $\vec{Q}$ - $\vec{P}$
-    \begin{align}
-    \vec{Q} - \vec{P} & = \myvec{4 \\ 4 \\ -7} - \myvec{2 \\ 1 \\ -1} \\
-    \vec{Q} - \vec{P} & = \myvec{2 \\ 3 \\ -6} \\
-    \brak{\vec{Q} - \vec{P}}^\intercal & = \myvec{2 & 3 & -6}
+In $\triangle ABC$, if $\vec{B}$ is considered as origin then the coordinates are represented by
+ \begin{align}
+ \vec{A} & = c\myvec{\cos{\brak{\angle B}} \\ \sin{\brak{\angle B}}} \label{eq3.2.29.1} \\
+ \vec{B} & = \myvec{0 \\ 0} \\
+ \vec{C} & = \myvec{a \\ 0} \label{eq3.2.29.2}
  \end{align}
-The magnitude of the vector along PQ is
+ Since $\angle B$ = 60\degree,
+ \begin{align}
+     \cos{\brak{\angle B}} & = \frac{1}{2} \\
+    \sin{\brak{\angle B}} & = \frac{\sqrt{3}}{2}
+ \end{align}
+Therefore using equations \ref{eq3.2.29.1} and \ref{eq3.2.29.2},
 \begin{align}
-\norm{\vec{Q} - \vec{P}} & = \sqrt{\brak{\vec{Q} - \vec{P}}^\intercal\brak{\vec{Q} - \vec{P}}} \\
-   \norm{\vec{Q} - \vec{P}} & = \sqrt{\myvec{2 & 3 & -6} \myvec{2 \\ 3 \\ -6}} \\
-   \norm{\vec{Q} - \vec{P}} & = \sqrt{\brak{2}^2 + \brak{3}^2 + \brak{-6}^2} \\
-   \norm{\vec{Q} - \vec{P}} & = 7 
-\end{align}
-The unit vector along PQ is 
-\begin{align}
-    \frac{\vec{Q} - \vec{P}}{\norm{\vec{Q} - \vec{P}}} & = \frac{\myvec{2 \\ 3 \\-6}}{7} \\
-    \frac{\vec{Q} - \vec{P}}{\norm{\vec{Q} - \vec{P}}} & = \frac{1}{7}\myvec{2 \\ 3 \\ -6}
+\vec{A} & = 5\myvec{\frac{1}{2} \\ \frac{\sqrt{3}}{2}} \\
+\vec{A} & = \frac{5}{2}\myvec{1 \\ \sqrt{3}} \\
+\vec{B} & = \myvec{0 \\ 0} \\
+\vec{C} & = \myvec{6 \\ 0}
 \end{align}
 \begin{figure}[h!]
    \centering
-   \includegraphics[width=0.7\linewidth]{figs/unit.png}
-	\caption{Unit Vector PQ}
+   \includegraphics[width=0.7\linewidth]{figs/triangle.png}
+	\caption{Triangle $ABC$}
    \end{figure}
-   \end{document}
+\end{document}
 
