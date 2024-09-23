@@ -1,58 +1,48 @@
 from ctypes import *
-import numpy as np
 import matplotlib.pyplot as plt
 
 # Load the shared object file
-triangle_lib = CDLL('./triangle.so')
+triangle = CDLL('./triangle.so')
 
-# Define the function signature for findCoordinates
-triangle_lib.findCoordinates.argtypes = [
-    c_double, c_double,
-    POINTER(c_double), POINTER(c_double),
-    POINTER(c_double), POINTER(c_double),
-    POINTER(c_double), POINTER(c_double)
-]
+# Define argument and return types for the C function
+triangle.verifyPythagorasTheorem.argtypes = [c_double, c_double, 
+                                             c_double, c_double, 
+                                             c_double, c_double]
+triangle.verifyPythagorasTheorem.restype = c_int
 
-# Given values
-AB = 6  # Length of AB
-BC = 8  # Length of BC
+# Reading coordinates from coordinates.txt
+with open('coordinates.txt', 'r') as file:
+    A = list(map(float, file.readline().strip().split(',')))
+    B = list(map(float, file.readline().strip().split(',')))
+    C = list(map(float, file.readline().strip().split(',')))
 
-# Create variables to store the coordinates
-Ax = c_double()
-Ay = c_double()
-Bx = c_double()
-By = c_double()
-Cx = c_double()
-Cy = c_double()
+Ax, Ay = A
+Bx, By = B
+Cx, Cy = C
 
-# Call the function from the shared object file
-triangle_lib.findCoordinates(AB, BC, byref(Ax), byref(Ay), byref(Bx), byref(By), byref(Cx), byref(Cy))
+# Call the C function to verify Pythagoras theorem
+result = triangle.verifyPythagorasTheorem(Ax, Ay, Bx, By, Cx, Cy)
 
-# Convert coordinates to numpy arrays
-A = np.array([Ax.value, Ay.value])
-B = np.array([Bx.value, By.value])
-C = np.array([Cx.value, Cy.value])
+# Print result
+if result == 1:
+    print("Pythagoras theorem holds: b^2 = a^2 + c^2")
+else:
+    print("Pythagoras theorem does NOT hold.")
 
-# Plot the triangle
-plt.figure()
-plt.plot([A[0], B[0]], [A[1], B[1]], 'bo-', label='AB')
-plt.plot([B[0], C[0]], [B[1], C[1]], 'go-', label='BC')
-plt.plot([C[0], A[0]], [C[1], A[1]], 'ro-', label='CA')
-plt.scatter([A[0], B[0], C[0]], [A[1], B[1], C[1]], c='black')
+# Plot the triangle and label vertices with coordinates
+x_vals = [Ax, Bx, Cx, Ax]  # Closing the triangle
+y_vals = [Ay, By, Cy, Ay]
 
-# Annotate the points with their coordinates
-plt.text(A[0], A[1], f'A({A[0]:.2f}, {A[1]:.2f})', fontsize=12, ha='right')
-plt.text(B[0], B[1], f'B({B[0]:.2f}, {B[1]:.2f})', fontsize=12, ha='right')
-plt.text(C[0], C[1], f'C({C[0]:.2f}, {C[1]:.2f})', fontsize=12, ha='right')
+plt.plot(x_vals, y_vals, marker='o', color='b')  # Triangle edges and points
 
-# Add labels and formatting
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Triangle ABC')
-plt.legend()
+# Label vertices with coordinates
+plt.text(Ax, Ay, f'A({Ax}, {Ay})', fontsize=12, ha='right')
+plt.text(Bx, By, f'B({Bx}, {By})', fontsize=12, ha='right')
+plt.text(Cx, Cy, f'C({Cx}, {Cy})', fontsize=12, ha='right')
+
+plt.title("Triangle ABC")
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
 plt.grid(True)
-plt.axis('equal')
-
-# Show the plot
 plt.show()
 
