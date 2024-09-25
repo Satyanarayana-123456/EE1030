@@ -1,0 +1,93 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{
+4 - Linear Forms \\
+\large EE1030:Matrix Theory
+}
+\author{Gajjarapu Satyanarayana\\AI24BTECH11009
+}
+% \maketitle
+% \newpage
+% \bigskip
+{\let\newpage\relax\maketitle}
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+
+\numberwithin{equation}{enumi}
+\numberwithin{figure}{enumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\textbf{Question}:4.2.16\\
+Find the direction and normal vectors of $2 + 3y = 7x$.
+\\
+\textbf{Solution:}
+\renewcommand{\tablename}{Table 4.2.16.1}
+\begin{table}[h!]
+  \centering
+  \input{tables/table.tex}
+  \caption{Assigning Variables}
+\end{table}
+\\
+For a line equation $y = mx + c$, direction and normal vectors are given by 
+\begin{align}
+\vec{d} & = \myvec{1 \\ m} \\
+\vec{n} & = \myvec{-m \\ 1}
+\end{align}
+The above line equation can be written as $y = \frac{7}{3}x - \frac{2}{3}$ \\
+So $m=\frac{7}{3}$,
+\begin{align}
+    \vec{d} & = \myvec{1 \\ \frac{7}{3}} \\
+    \vec{n} & = \myvec{\frac{-7}{3} \\ 1}
+\end{align}
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=0.7\linewidth]{figs/line.png}
+	\caption{Line $2 + 3y = 7x$}
+   \end{figure}
+\end{document}
+
