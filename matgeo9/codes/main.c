@@ -1,62 +1,54 @@
 #include <stdio.h>
 
-// Function to find direction and normal vectors for the line
-void find_direction_and_normal_vector(double *direction, double *normal) {
-    // Line: 2 + 3y = 7x can be rearranged to 7x - 3y = -2
-    // General form: Ax + By + C = 0 -> A=7, B=-3
-    double A = 7;
-    double B = -3;
+// Function to generate three points lying on the line
+void generate_points(float slope, float intercept, FILE *file) {
+    float x_values[3] = {0, 1, 2}; // Three arbitrary x-values
+    float y_values[3];
     
-    // Direction vector (dx, dy) is perpendicular to the normal vector (A, B)
-    direction[0] = B;    // dx = -B
-    direction[1] = -A;   // dy = A
-    
-    // Normal vector (nx, ny) is (A, B)
-    normal[0] = A;
-    normal[1] = B;
+    for (int i = 0; i < 3; i++) {
+        y_values[i] = slope * x_values[i] + intercept; // Calculate corresponding y-values
+        fprintf(file, "%.2f, %.2f\n", x_values[i], y_values[i]);
+    }
 }
 
 int main() {
-    double direction[2], normal[2];
-    double points[3][2];
+    // The given equation is 2 + 3y = 7x
+    // Rearrange the equation to match the form Ax + By = C
+
+    // Coefficients A, B, and C for the line 7x - 3y = -2
+    float A = 7.0;
+    float B = -3.0;
+    float C = -2.0;
+
+    // Calculate slope and y-intercept based on A, B, C
+    float slope = -A / B; // Slope is -A/B
+    float intercept = C / B; // Y-intercept is C/B
     
-    // Rearranging the line equation to slope-intercept form: y = (7/3)x - (2/3)
-    double slope = 7.0 / 3.0;
-    double intercept = -2.0 / 3.0;
+    // Find direction vector (since slope is rise/run, direction vector is (run, rise))
+    float direction_vector[2] = {1, slope}; // For slope, direction vector can be (1, slope)
     
-    // Find direction and normal vectors
-    find_direction_and_normal_vector(direction, normal);
+    // Find normal vector (perpendicular to the direction vector)
+    float normal_vector[2] = {-slope, 1}; // Normal to (1, slope) is (-slope, 1)
     
-    // Print the direction and normal vectors
-    printf("Direction Vector: (%.2f, %.2f)\n", direction[0], direction[1]);
-    printf("Normal Vector: (%.2f, %.2f)\n", normal[0], normal[1]);
-    
-    // Generate 3 points using x values (-1, 0, 1) and y = slope * x + intercept
-    for (int i = 0; i < 3; i++) {
-        points[i][0] = i - 1;  // x values: -1, 0, 1
-        points[i][1] = slope * points[i][0] + intercept;  // y = mx + b
-    }
-    
-    // Save the points to coordinates.txt
+    // Display the vectors
+    printf("Direction Vector: (%.2f, %.2f)\n", direction_vector[0], direction_vector[1]);
+    printf("Normal Vector: (%.2f, %.2f)\n", normal_vector[0], normal_vector[1]);
+
+    // Open the file to save coordinates
     FILE *file = fopen("coordinates.txt", "w");
-    
-    // Check if the file is opened successfully
     if (file == NULL) {
-        perror("Error opening file");
+        printf("Error opening file!\n");
         return 1;
-    } else {
-        printf("File 'coordinates.txt' opened successfully.\n");
     }
     
-    // Print and write the points to the file
-    for (int i = 0; i < 3; i++) {
-        printf("Point %d: (%.2f, %.2f)\n", i + 1, points[i][0], points[i][1]);
-        fprintf(file, "Point %d: (%.2f, %.2f)\n", i + 1, points[i][0], points[i][1]);
-    }
-
+    // Generate and save three points on the line (only points are saved to the file)
+    generate_points(slope, intercept, file);
+    
+    // Close the file
     fclose(file);
-    printf("Points saved to 'coordinates.txt' successfully.\n");
-
+    
+    printf("Coordinates saved to coordinates.txt\n");
+    
     return 0;
 }
 

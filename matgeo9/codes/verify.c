@@ -1,14 +1,21 @@
-#include <stdio.h>
+// Function to calculate the dot product of two vectors
+float dot_product(float vec1[], float vec2[], int n) {
+    float dot = 0.0;
+    for (int i = 0; i < n; i++) {
+        dot += vec1[i] * vec2[i];
+    }
+    return dot;
+}
 
-int verify_perpendicular(double direction[2], double normal[2]) {
-    // Dot product of two vectors: direction • normal = dx * nx + dy * ny
-    double dot_product = direction[0] * normal[0] + direction[1] * normal[1];
+// Function to verify if two vectors are perpendicular
+int are_perpendicular(float vec1[], float vec2[], int n) {
+    float dot = dot_product(vec1, vec2, n);
     
-    // If the dot product is zero, the vectors are perpendicular
-    if (dot_product == 0) {
-        return 1;  // Perpendicular
+    // If dot product is approximately zero, the vectors are perpendicular
+    if (dot == 0.0) {
+        return 1; // Vectors are perpendicular
     } else {
-        return 0;  // Not perpendicular
+        return 0; // Vectors are not perpendicular
     }
 }
 
