@@ -1,23 +1,22 @@
 #include <stdio.h>
 #include <math.h>
 
-// Function to find the center and radius of the circle
-void findCircleProperties(float a1, float b1, float c1, float a2, float b2, float c2, float area, float *centerX, float *centerY, float *radius) {
-    float pi = 22.0 / 7.0;
-
-    // Finding the center of the circle (intersection of two lines)
+// Function to find the intersection point (center) of two lines
+void findCenter(float a1, float b1, float c1, float a2, float b2, float c2, float* centerX, float* centerY) {
     float determinant = a1 * b2 - a2 * b1;
 
     if (determinant != 0) {
         *centerX = (b1 * c2 - b2 * c1) / determinant;
         *centerY = (a2 * c1 - a1 * c2) / determinant;
-
-        // Calculate radius from the area
-        *radius = sqrt(area / pi);
     } else {
-        // Handle the case when the lines are parallel (no intersection)
-        *centerX = *centerY = *radius = 0;
+        printf("The lines are parallel, no intersection found.\n");
     }
+}
+
+// Function to calculate radius given the area
+float calculateRadius(float area) {
+    float pi = 22.0 / 7.0;
+    return sqrt(area / pi);
 }
 
 int main() {
@@ -29,8 +28,11 @@ int main() {
     // Variables to hold the center and radius
     float centerX, centerY, radius;
 
-    // Call the function to find the center and radius
-    findCircleProperties(a1, b1, c1, a2, b2, c2, area, &centerX, &centerY, &radius);
+    // Call the function to find the center
+    findCenter(a1, b1, c1, a2, b2, c2, &centerX, &centerY);
+
+    // Call the function to calculate the radius
+    radius = calculateRadius(area);
 
     // Print the center and radius
     printf("Center of the circle: (%.2f, %.2f)\n", centerX, centerY);
@@ -48,15 +50,20 @@ int main() {
 
     // Writing 3 random points on the circle (theta = 0, 120, 240 degrees)
     float theta[] = {0, 120 * M_PI / 180, 240 * M_PI / 180}; // Angles in radians
+    float coordinates[3][2]; // 3x2 array to store the coordinates
     for (int i = 0; i < 3; i++) {
         float x = centerX + radius * cos(theta[i]);
         float y = centerY + radius * sin(theta[i]);
-        fprintf(file, "Point %d: (%.2f, %.2f)\n", i + 1, x, y);
+        coordinates[i][0] = x;
+        coordinates[i][1] = y;
+        fprintf(file, "(%.2f, %.2f)\n", x, y);
     }
 
+    // Close the file
     fclose(file);
 
-    printf("3 points lying on the circle are written to coordinates.txt\n");
+
+    printf("Points on the circle are written to coordinates.txt\n");
 
     return 0;
 }

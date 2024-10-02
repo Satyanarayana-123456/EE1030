@@ -1,70 +1,61 @@
 from ctypes import*
 import numpy as np
 import matplotlib.pyplot as plt
+
 # Load the shared object file
 circle_lib = CDLL('./circle.so')
 
-# Define the function from the shared library
-circle_lib.findCircleProperties.argtypes = [c_float, c_float, c_float,
-                                              c_float, c_float, c_float,
-                                              c_float, POINTER(c_float),
-                                              POINTER(c_float), POINTER(c_float)]
+# Define the function signatures
+# findCenter(a1, b1, c1, a2, b2, c2, centerX, centerY)
+circle_lib.findCenter.argtypes = [c_float, c_float, c_float,
+                                  c_float, c_float, c_float,
+                                  POINTER(c_float), POINTER(c_float)]
 
-# Initialize variables for the diameters and area
-a1, b1, c1 = 2, -3, -5    # Coefficients for line 1: 2x - 3y = 5
-a2, b2, c2 = 3, -4, -7    # Coefficients for line 2: 3x - 4y = 7
-area = 154.0              # Area of the circle
+# calculateRadius(area) -> radius
+circle_lib.calculateRadius.argtypes = [c_float]
+circle_lib.calculateRadius.restype = c_float
 
-# Create variables to hold the center and radius
-centerX = c_float()
-centerY = c_float()
-radius = c_float()
+# Input values for the equations and area
+a1, b1, c1 = 2.0, -3.0, -5.0  # Line 1: 2x - 3y = 5
+a2, b2, c2 = 3.0, -4.0, -7.0  # Line 2: 3x - 4y = 7
+area = 154.0  # Area of the circle
 
-# Call the function from the shared object
-circle_lib.findCircleProperties(a1, b1, c1, a2, b2, c2, area, 
-                                 byref(centerX), 
-                                 byref(centerY), 
-                                 byref(radius))
+# Variables to store center coordinates
+centerX = c_float(0)
+centerY = c_float(0)
 
-# Print the calculated center and radius
-#print(f"Center of the circle: ({centerX.value:.2f}, {centerY.value:.2f})")
-#print(f"Radius of the circle: {radius.value:.2f}")
+# Calculate center of the circle
+circle_lib.findCenter(a1, b1, c1, a2, b2, c2, byref(centerX), byref(centerY))
+centerX = centerX.value
+centerY = centerY.value
 
-# Read the coordinates from the file
-with open('coordinates.txt', 'r') as file:
-    lines = file.readlines()
-    points = [tuple(map(float, line.strip().split(': ')[1].strip('()').split(', '))) for line in lines if "Point" in line]
+# Calculate the radius of the circle
+radius = circle_lib.calculateRadius(area)
 
-# Extract x and y coordinates for plotting
-x_coords, y_coords = zip(*points)
+# Read points from coordinates.txt
+with open("coordinates.txt", "r") as file:
+    points = np.array([list(map(float, line.strip().replace("(", "").replace(")", "").split(", "))) for line in file])
 
 # Plot the circle
-theta = np.linspace(0, 2 * np.pi, 100)
-x_circle = centerX.value + radius.value * np.cos(theta)
-y_circle = centerY.value + radius.value * np.sin(theta)
+theta = np.linspace(0, 2 * np.pi, 300)
+x_circle = centerX + radius * np.cos(theta)
+y_circle = centerY + radius * np.sin(theta)
 
-plt.plot(x_circle, y_circle, label='Circle', color='blue')
+plt.figure()
+plt.plot(x_circle, y_circle, label=f" Center({centerX:.2f}, {centerY:.2f}), Radius = {radius:.2f}")
+plt.scatter(points[:, 0], points[:, 1], color='red', label="Points on Circle")
+plt.scatter(centerX, centerY, color='blue', s=100, label="Center", edgecolor='black')  # Mark the center
 
-# Plot the points
-plt.plot(x_coords, y_coords, 'ro')  # Red points
-plt.text(x_coords[0], y_coords[0], f'({x_coords[0]:.2f}, {y_coords[0]:.2f})', fontsize=8, ha='right')
-plt.text(x_coords[1], y_coords[1], f'({x_coords[1]:.2f}, {y_coords[1]:.2f})', fontsize=8, ha='right')
-plt.text(x_coords[2], y_coords[2], f'({x_coords[2]:.2f}, {y_coords[2]:.2f})', fontsize=8, ha='right')
+for point in points:
+    plt.text(point[0], point[1], f"({point[0]:.2f}, {point[1]:.2f})", fontsize=10, ha='right', color='black')
 
-# Mark the center
-plt.plot(centerX.value, centerY.value, 'go')  # Green point for the center
-plt.text(centerX.value, centerY.value, f'Center ({centerX.value:.2f}, {centerY.value:.2f})', fontsize=10, ha='right', color='green')
+plt.text(centerX, centerY, f"({centerX:.2f}, {centerY:.2f})", fontsize=10, ha='right', color='black')
 
-# Adjust plot settings
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Circle")
+plt.legend(loc='upper right')
 plt.gca().set_aspect('equal', adjustable='box')
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Circle')
-plt.legend()
 plt.grid(True)
-plt.axhline(0, color='black', linewidth=0.5, ls='--')
-plt.axvline(0, color='black', linewidth=0.5, ls='--')
-
-# Show the plot
 plt.show()
 
