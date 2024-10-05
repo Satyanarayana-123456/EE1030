@@ -1,89 +1,71 @@
-from ctypes import *
-import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.pyplot as plt
+from ctypes import *
 
 # Load the shared object file
 parab = CDLL('./parab.so')
 
-# Define the argument and return types for the C function
-parab.find_intersection.argtypes = [c_float, c_float, c_float, c_float, c_float,
-                                    POINTER(c_float), POINTER(c_float),
-                                    POINTER(c_float), POINTER(c_float), POINTER(c_int)]
+# Set argument and return types for the functions in parab.so
+parab.riemannSum.argtypes = [c_double, c_double, c_double, c_double, c_double, c_double, c_double, c_int]
+parab.riemannSum.restype = c_double
 
-# Variables to hold intersection points
-x1 = c_float()
-y1 = c_float()
-x2 = c_float()
-y2 = c_float()
-num_points = c_int()
+# Parameters for the line y = 4x and the parabola y = x^2
+a = 1.0  # Coefficient of x^2 in the parabola
+b = 0.0  # Coefficient of x in the parabola
+c1 = 0.0  # Constant term in the parabola
+m_value = 4.0  # Slope of the line y = 4x
+c2 = 0.0  # Constant term in the line y = 4x
+x1 = 0.0  # Start x-coordinate (lower limit of integration)
+x2 = 4.0  # End x-coordinate (upper limit of integration, approx intersection)
+n = 1000  # Number of rectangles for Riemann sum (increase for accuracy)
 
-# Parameters for y=4x (line) and y=x^2 (parabola)
-m = 4.0  # Slope of line
-c = 0.0  # Intercept of line
-a = 1.0  # Coefficient of x^2 in parabola
-b = 0.0  # Coefficient of x in parabola
-c_p = 0.0  # Constant term in parabola
+# Call the function to compute the area using Riemann sum method
+area = parab.riemannSum(c_double(a), c_double(b), c_double(c1), c_double(m_value), c_double(c2), c_double(x1), c_double(x2), c_int(n))
 
-# Call the function to find intersection points
-parab.find_intersection(m, c, a, b, c_p, byref(x1), byref(y1), byref(x2), byref(y2), byref(num_points))
+# Verify the area and print result
+target_area = 32.0 / 3.0  # Expected area
+if np.isclose(area, target_area, rtol=1e-5):
+    print(f"The value of m is verified. Area is approximately: {area}")
+else:
+    print(f"Area mismatch! Calculated area: {area}")
 
-# Read additional points from coordinates.txt (assumed to be formatted as x, y per line)
-coords = []
-with open('coordinates.txt', 'r') as file:
-    for line in file:
-        x, y = map(float, line.split(','))
-        coords.append((x, y))
+# Load points from coordinates.txt using loadtxt (skip the first 2 lines for intersections)
+points = np.loadtxt("coordinates.txt", delimiter=',', skiprows=3, usecols=(0, 1))
 
-# Prepare the plot
-x_vals = np.linspace(-5, 5, 400)
-y_parabola = x_vals**2  # Parabola y = x^2
-y_line = 4 * x_vals  # Line y = 4x
+x_parabola = points[:, 0]
+y_parabola = points[:, 1]
 
-plt.plot(x_vals, y_parabola, label="y = x^2 (Parabola)", color="blue")
-plt.plot(x_vals, y_line, label="y = 4x (Line)", color="red")
+# Extract intersection points from the first two lines
+with open("coordinates.txt", "r") as file:
+    intersections = [next(file) for _ in range(2)]
+    x1_intersection, y1_intersection = map(float, intersections[0].strip().strip("()").split(","))
+    x2_intersection, y2_intersection = map(float, intersections[1].strip().strip("()").split(","))
 
-# Prepare shading variables outside the conditions
-x_fill = np.linspace(-5, 5, 400)
-y_fill_line = 4 * x_fill
-y_fill_parabola = x_fill**2
+# Plotting the parabola and intersection points
+plt.figure(figsize=(8, 6))
 
-# Plot intersection points and join them with a line if there are two points
-if num_points.value == 1:
-    plt.scatter([x1.value], [y1.value], color='green', label=f'Intersection: ({x1.value:.2f}, {y1.value:.2f})')
-    plt.annotate(f'({x1.value:.2f}, {y1.value:.2f})', (x1.value, y1.value), textcoords="offset points", xytext=(0,10), ha='center')
-    # Shade the area between the parabola and line
-    plt.fill_between(x_fill, y_fill_parabola, y_fill_line, where=(y_fill_parabola < y_fill_line), color='yellow', alpha=0.5, label='Shaded Area')
+# Plot 500 points of the parabola
+plt.plot(x_parabola, y_parabola, label=r'$y = x^2$', color='blue')
 
-elif num_points.value == 2:
-    plt.scatter([x1.value, x2.value], [y1.value, y2.value], color='green', label=f'Intersections: ({x1.value:.2f}, {y1.value:.2f}) and ({x2.value:.2f}, {y2.value:.2f})')
-    plt.annotate(f'({x1.value:.2f}, {y1.value:.2f})', (x1.value, y1.value), textcoords="offset points", xytext=(0,10), ha='center')
-    plt.annotate(f'({x2.value:.2f}, {y2.value:.2f})', (x2.value, y2.value), textcoords="offset points", xytext=(0,10), ha='center')
-    
-    # Join the intersection points with a line
-    plt.plot([x1.value, x2.value], [y1.value, y2.value], color='green', linestyle='--', label='Line through intersections')
-    
-    # Shade the area between the parabola and the line
-    x_fill = np.linspace(x1.value, x2.value, 400)
-    y_fill_parabola = x_fill**2
-    y_fill_line = 4 * x_fill
-    plt.fill_between(x_fill, y_fill_parabola, y_fill_line, where=(y_fill_parabola < y_fill_line), color='yellow', alpha=0.5, label='Shaded Area')
+# Plot the line y = 4x
+#x_line = np.linspace(min(x_parabola), max(x_parabola), 500)
+#y_line = m_value * x_line
+#plt.plot(x_line, y_line, label=r'$y = 4x$', color='green')
 
-# Mark the vertex of the parabola
-vertex_x = 0
-vertex_y = 0
-plt.scatter([vertex_x], [vertex_y], color='orange', label='Vertex (0, 0)')
-plt.annotate(f'({vertex_x}, {vertex_y})', (vertex_x, vertex_y), textcoords="offset points", xytext=(0,10), ha='center')
+# Highlight the points of intersection
+plt.scatter([x1_intersection, x2_intersection], [y1_intersection, y2_intersection], color='red', zorder=5, label='Intersection Points')
 
-# Plot additional points from coordinates.txt
-if coords:
-    for coord in coords:
-        plt.scatter(coord[0], coord[1], color='purple')
-        plt.annotate(f'({coord[0]}, {coord[1]})', (coord[0], coord[1]), textcoords="offset points", xytext=(0,10), ha='center')
+# Mark coordinates of the intersection points in brackets
+plt.text(x1_intersection, y1_intersection, f'({x1_intersection:.2f}, {y1_intersection:.2f})', fontsize=10, color='red', ha='right')
+plt.text(x2_intersection, y2_intersection, f'({x2_intersection:.2f}, {y2_intersection:.2f})', fontsize=10, color='red', ha='left')
+
+# Draw a line between points of intersection
+plt.plot([x1_intersection, x2_intersection], [y1_intersection, y2_intersection], color='red', linestyle='--', label='y =4x')
 
 # Labels and legend
 plt.xlabel('x')
 plt.ylabel('y')
-plt.title('Area between Line and Parabola')
+plt.title('Area between y = 4x and y = x^2')
 plt.legend()
 
 # Show the plot
