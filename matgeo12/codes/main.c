@@ -96,7 +96,7 @@ int main() {
     // Define the interval of interest
     double x_start = 0.0;  // Start of parabola
     double x_mid = 0.5;    // Intersection point
-    double x_end = 1.0;    // End of circle
+    double x_end = 1.5;    // End of circle
 
     // Number of sub-intervals for the Riemann sum
     int n = 1000;

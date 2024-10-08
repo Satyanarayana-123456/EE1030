@@ -19,7 +19,7 @@ k = 0.0  # y-coordinate of the circle center
 r = 1.5  # Radius of the circle
 x_start = 0.0
 x_mid = 0.5
-x_end = 1.0
+x_end = 1.5
 # Number of rectangles for the Riemann sum
 n = 1000
 
@@ -46,8 +46,30 @@ y_parabola = data[:502, 1]
 x_circle = data[502:1506, 0]
 y_circle = data[502:1506, 1]
 
-# Plotting the points from coordinates.txt
+# Create a single plot
 plt.figure(figsize=(10, 8))
+
+# Plot parabola points
+plt.scatter(x_parabola, y_parabola, label='Parabola', color='blue', s=1)  # s=1 for small points
+# Plot circle points
+plt.scatter(x_circle, y_circle, label='Circle', color='green', s=1)  # s=1 for small points
+
+# Define the range for shading the area above the parabola
+x_parabola_fill = np.linspace(0, 0.5, 1000)
+y_parabola_fill = np.sqrt(4 * p * x_parabola_fill)
+
+# Shade the area above the parabola from x=0 to x=0.5
+plt.fill_between(x_parabola_fill, y_parabola_fill, color='blue', alpha=0.3)
+plt.fill_between(x_parabola_fill, -y_parabola_fill, color='blue', alpha=0.3)
+
+# Define the range for shading the area below the circle
+x_circle_fill = np.linspace(0.5, 1.5, 1000)
+y_circle_fill_upper = k + np.sqrt(r**2 - (x_circle_fill - h)**2)
+y_circle_fill_lower = k - np.sqrt(r**2 - (x_circle_fill - h)**2)
+
+# Shade the area above the circle from x=0.5 to x=1.5
+plt.fill_between(x_circle_fill, y_circle_fill_upper, color='blue', alpha=0.3)
+plt.fill_between(x_circle_fill, y_circle_fill_lower, color='blue', alpha=0.3)
 
 # Plot intersection points
 plt.scatter([x1_intersection, x2_intersection], [y1_intersection, y2_intersection],
@@ -55,19 +77,17 @@ plt.scatter([x1_intersection, x2_intersection], [y1_intersection, y2_intersectio
 plt.text(x1_intersection, y1_intersection, f'({x1_intersection:.2f}, {y1_intersection:.2f})', fontsize=10, color='red', ha='right')
 plt.text(x2_intersection, y2_intersection, f'({x2_intersection:.2f}, {y2_intersection:.2f})', fontsize=10, color='red', ha='left')
 
-# Plot circle points as a line without shading
-plt.plot(x_circle, y_circle, label='Circle', color='green')
-# Plot parabola points as a line
-plt.plot(x_parabola, y_parabola, label='Parabola', color='blue')
-
 # Labels and legend
 plt.xlabel('x')
 plt.ylabel('y')
 plt.title('Area between Parabola and Circle')
 plt.legend()
 
-# Show the plot
+# Ensure equal aspect ratio for accurate representation
+plt.axis('equal')
 plt.grid(True)
-plt.axis('equal')  # Ensure the aspect ratio is equal for accurate representation
+
+# Show the plot
+plt.tight_layout()
 plt.show()
 
