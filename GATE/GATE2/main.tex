@@ -1,0 +1,221 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2007 - XE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{18 - 34}
+
+
+\begin{enumerate}
+\item The volume of the prism whose base is the triangle in the $xy$ - plane bounded by the $x$ - axis and the lines $y = x$ and $x = 2$ and whose top lies in the plane $z = 5 - x - y$ is
+    \begin{enumerate}
+        \item 2
+        \item 4
+        \item 6
+        \item 10 \\
+    \end{enumerate}
+\item The general solution of 
+\begin{align*}
+    x\brak{z^2 - y^2}\frac{\partial z}{\partial x} + y\brak{x^2 - z^2}\frac{\partial z}{\partial y} = z\brak{y^2 - x^2}
+\end{align*}
+is
+\begin{enumerate}
+    \item $F\brak{x^2 + y^2 + z^2, xyz} = 0$
+    \item $F\brak{x^2 + y^2 - z^2, xyz} = 0$
+    \item $F\brak{x^2 - y^2 + z^2, xyz} = 0$
+    \item $F\brak{-x^2 + y^2 + z^2, xyz} = 0$ \\
+\end{enumerate}
+\item Choose a point uniformly distributed at random on the disc $x^2 + y^2 \leq 1$. Let the random variable $X$ denote the distance of this point from the center of the disc. Then the variance of $X$ is 
+\begin{enumerate}
+    \item $\frac{1}{16}$
+    \item $\frac{1}{17}$
+    \item $\frac{1}{18}$
+    \item $\frac{1}{19}$ \\
+\end{enumerate}
+\item If Runge-Kutta method of order 4 is used to solve the differential equation $\frac{dy}{dx} = f\brak{x}$, $y\brak{0} = 0$ in the interval $\sbrak{0, h}$ with step size $h$, then
+ \begin{enumerate}
+     \item $y\brak{h} = \frac{h}{6}\sbrak{f\brak{0} + 4f\brak{\frac{h}{2}} + f\brak{h}}$
+     \item $y\brak{h} = \frac{h}{6}\sbrak{f\brak{0} + f\brak{h}}$
+     \item $y\brak{h} = \frac{h}{2}\sbrak{f\brak{0} + f\brak{h}}$
+     \item $y\brak{h} = \frac{h}{6}\sbrak{f\brak{0} + 2f\brak{\frac{h}{2}} + f\brak{h}}$ \\
+ \end{enumerate}
+\item If a polynomial of degree three interpolates a function $f\brak{x}$ at the points \brak{0, 3}, \brak{1, 13}, \brak{3, 99} and \brak{4, 187}, then $f\brak{2}$ is
+\begin{enumerate}
+    \item 20
+    \item 36
+    \item 43
+    \item 58 \\
+\end{enumerate}
+\textbf{Common Data for Questions 23, 24:} \\
+Let $f : \mathfrak{R} \rightarrow \mathfrak{R}$ be defined by $f\brak{x} = x^2$ for $-\pi \leq x \leq \pi$ and $f\brak{x + 2\pi} = f\brak{x}$. \\
+\item The Fourier series of $f$ in $\sbrak{-\pi, \pi}$ is
+\begin{enumerate}
+    \item $\frac{\pi^2}{3} + 4\sum\limits_{n=1}^{\infty}\frac{\cos\brak{nx}}{n^2}$
+    \item $\frac{\pi^2}{3} + \sum\limits_{n=1}^{\infty}\frac{\brak{-1}^n\cos\brak{nx}}{n^2}$
+    \item $\frac{\pi^2}{3} + 4\sum\limits_{n=1}^{\infty}\frac{\brak{-1}^2\cos\brak{nx}}{n^2}$
+    \item $\frac{\pi^2}{3} + \sum\limits_{n=1}^{\infty}\frac{\cos\brak{nx}}{n^2}$ \\
+\end{enumerate}
+\item The sum of the absolute values of the Fourier coefficients of $f$ is
+\begin{enumerate}
+    \item $\frac{\pi^2}{6}$
+    \item $\frac{\pi^2}{3}$
+    \item $\frac{2\pi^2}{3}$
+    \item $\pi^2$ \\
+\end{enumerate}
+\textbf{Statement for Linked Answer Questions 25 \& 26:} \\
+Let $y\brak{x} = \sum\limits_{n=0}^{\infty}a_nx^n$ be a solution of the differential equation $\frac{d^2y}{dx^2} + xy = 0$.\\
+\item The value of $a_{11}$ is
+ \begin{enumerate}
+     \item 0
+     \item 1
+     \item 2
+     \item 3 \\
+ \end{enumerate}
+\item The solution of the differential equation given above satisfying $y\brak{0} = 1$ and $y'\brak{0} = 0$ is
+\begin{enumerate}
+     \item $y\brak{x} = 1 + \frac{1}{2.3}x^2 - \frac{1}{2.3.5.6}x^4 + \frac{1}{2.3.5.6.8.9}x^6 - \cdots$
+     \item $y\brak{x} = 1 - \frac{1}{2.3}x^2 + \frac{1}{2.3.5.6}x^4 - \frac{1}{2.3.5.6.8.9}x^6 + \cdots$
+     \item $y\brak{x} = 1 + \frac{1}{2.3}x^3 - \frac{1}{2.3.5.6}x^6 + \frac{1}{2.3.5.6.8.9}x^9 - \cdots$
+     \item $y\brak{x} = 1 - \frac{1}{2.3}x^3 + \frac{1}{2.3.5.6}x^6 - \frac{1}{2.3.5.6.8.9}x^9 + \cdots$ \\
+ \end{enumerate}
+\textbf{Statement for Linked Answer Questions 27 \& 28:} \\
+The potential $u\brak{x, y}$ satisfies the equation $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$ in the square $0 \leq x \leq \pi$, $0 \leq y \leq \pi$. Three of the edges $x = 0$, $x = \pi$ and $y = 0$ of the square are kept at zero potential and the edge $y = \pi$ is kept at nonzero potential. \\
+\item The potential $u\brak{x, y}$ is given by
+\begin{enumerate}
+    \item $u\brak{x, y} = \sum\limits_{n=1}^{\infty}A_n\cosh\brak{nx}\sin\brak{ny}$
+    \item $u\brak{x, y} = \sum\limits_{n=1}^{\infty}A_n\sin\brak{nx}\cosh\brak{ny}$
+    \item $u\brak{x, y} = \sum\limits_{n=1}^{\infty}A_n\sinh\brak{nx}\sin\brak{ny}$
+    \item $u\brak{x, y} = \sum\limits_{n=1}^{\infty}A_n\sin\brak{nx}\sinh\brak{ny}$ \\
+\end{enumerate}
+\item If the edge $y = \pi$ is kept at the potential $\sin\brak{x}$, then the potential $u\brak{x, y}$ is given by
+\begin{enumerate}
+    \item $u\brak{x, y} = \sum\limits_{n=1}^{\infty}\frac{\sin\brak{nx}\sinh\brak{ny}}{\sinh\brak{n\pi}}$
+    \item $u\brak{x, y} = \frac{\sin\brak{x}\sinh\brak{y}}{\sinh\brak{\pi}}$
+    \item $u\brak{x, y} = \frac{\sin\brak{x}\cosh\brak{y}}{\cosh\brak{\pi}}$
+    \item $u\brak{x, y} = \sum\limits_{n=1}^{\infty}\frac{\cosh\brak{nx}\sin\brak{ny}}{\cosh\brak{n\pi}}$ \\
+\end{enumerate}
+\item If the 7-base representation of a number is 123, then its octal representation is
+\begin{enumerate}
+    \item 102
+    \item 103
+    \item 111
+    \item 112 \\
+\end{enumerate}
+\item Consider the following four FORTRAN statements
+\begin{align*}
+    S_1: X & = 5^{**}3 \\
+    S_2: X & = \brak{-5}^{**}3.0 \\
+    S_3: X & = 5^{**}\brak{-3} \\
+    S_4: X & = 5^{**}3.0
+\end{align*}
+Which one of the following sets contains the set of valid statements from above?
+\begin{enumerate}
+    \item $\{S_1, S_3\}$
+    \item $\{S_1, S_4\}$
+    \item $\{S_2, S_3\}$
+    \item $\{S_2, S_4\}$ \\
+\end{enumerate}
+\item Which one of the following sets contains the set of the basic data types in C?
+\begin{enumerate}
+   \item \{char, int, float, logical\}
+   \item \{char, boolean, int, float\}
+   \item \{char, int, long, short, float, double\}
+   \item \{char, int, float, void\} \\
+\end{enumerate}
+\item If a root of $f\brak{x} = x^2 - 2x + 1 = 0$ is obtained by using the iterative scheme 
+\begin{align*}
+    x_{n+1} = x_n - \frac{f\brak{x_n}}{f'\brak{x_n}}
+\end{align*} with initial value $x_0 = 0.5$, then the convergence rate is
+\begin{enumerate}
+    \item 1
+    \item 1.62
+    \item 1.84
+    \item 2 \\
+\end{enumerate}
+\item Let $S_1$ be the sum of the eigen values of a $2 \times 2$ matrix $P$ and $S_2$ be the sum of the eigen values of another $2 \times 2$ matrix $Q$. If $S_1 = S_2$, then $P$ and $Q$ are
+\begin{enumerate}
+    \item \myvec{4 & 1 \\ 3 & 5} and \myvec{1 & 4 \\ 2 & 3}
+    \item \myvec{3 & 4 \\ 5 & 1} and \myvec{2 & 4 \\ 3 & 1}
+    \item \myvec{4 & 1 \\ 3 & 5} and \myvec{3 & 4 \\ 1 & 5}
+    \item \myvec{1 & 3 \\ 4 & 5} and \myvec{4 & 3 \\ 1 & 2} \\
+\end{enumerate}
+\item If $y_i$ denotes the value of $y\brak{x}$ at $x = x_i$ in $x_0 < x_1 < \cdots < x_i < \cdots < x_n$ and $x_i - x_{i-1} = h$ for $1 \leq i \leq n$, then $\frac{d^2y}{dx^2}$ at $x = x_i$, $1 \leq i \leq n-1$ is approximated using finite difference scheme by 
+\begin{enumerate}
+    \item $\frac{1}{2h}\brak{y_{i+1} - 2y_i + y_{i-1}}$
+    \item $\frac{1}{2h}\brak{y_{i+1} - y_i + y_{i-1}}$
+    \item $\frac{1}{h^2}\brak{y_{i+1} - 2y_i + y_{i-1}}$
+    \item $\frac{1}{h^2}\brak{y_{i+1} - y_i + y_{i-1}}$ \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
