@@ -1,0 +1,287 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2008 - EE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{1 - 17}
+
+\begin{enumerate}
+\item The number of chords in the graph of the given circuit will be
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q1.tex}
+}%
+\end{figure}
+    \begin{enumerate}
+        \item 3
+        \item 4
+        \item 5
+        \item 6 \\
+    \end{enumerate}
+\item The Thevenin's equivalent of a circuit operating at $\omega$ = 5 rad/s, has $V_{oc} = 3.71\angle{-15.9\degree} V$ and $Z_o = 2.38 - j0.667\Omega$. At this frequency, the minimal realization of the Thevenin's impedance will have a
+\begin{enumerate}
+    \item resistor and a capacitor and an inductor
+    \item resistor and a capacitor
+    \item resistor and an inductor
+    \item capacitor and an inductor
+\end{enumerate}
+\item A signal $e^{-\alpha t}\sin\brak{\omega t}$ is the input to a real Linear Time Invariant system. Given $K$ and $\phi$ are constants, the output of the system will be of the form $Ke^{-\beta t}\sin\brak{vt+\phi}$ where
+\begin{enumerate}
+    \item $\beta$ need not be equal to $\alpha$ but $v$ equal to $\omega$
+    \item $v$ need not be equal to $\omega$ but $\beta$ equal to $\alpha$
+    \item $\beta$ equal to $\alpha$ and $v$ is equal to $\omega$
+    \item $\beta$ need not be equal to $\alpha$ and $v$ need not be equal to $\omega$ \\
+\end{enumerate}
+\item $X$ is a uniformly distributed random variable that takes values between 0 and 1. The value of $E\{X^3\}$ will be
+ \begin{enumerate}
+     \item 0
+     \item $\frac{1}{8}$
+     \item $\frac{1}{4}$
+     \item $\frac{1}{2}$ \\
+ \end{enumerate}
+\item The characteristic equation of a $\brak{3 \times 3}$ matrix $\vec{P}$ is defined as 
+\begin{align*}
+    \alpha\brak{\lambda} = \abs{\lambda\vec{I} - \vec{P}} = \lambda^3 + \lambda^2 + 2\lambda + 1 = 0
+\end{align*}
+If $\vec{I}$ denotes identity matrix, then the inverse of matrix $\vec{P}$ will be
+\begin{enumerate}
+    \item $\brak{\vec{P}^2 + \vec{P} + \vec{2I}}$
+    \item $\brak{\vec{P}^2 + \vec{P} + \vec{I}}$
+    \item $-\brak{\vec{P}^2 + \vec{P} + \vec{I}}$
+    \item $-\brak{\vec{P}^2 + \vec{P} + \vec{2I}}$ \\
+\end{enumerate}
+\item If the rank of a \brak{5 \times 6} matrix $\vec{Q}$ is 4, then which one of the following statements is correct?
+\begin{enumerate}
+    \item $\vec{Q}$ will have four linearly independent rows and four linearly independent columns
+    \item $\vec{Q}$ will have four linearly independent rows and five linearly independent columns
+    \item $\vec{Q Q^\intercal}$ will be invertible
+    \item $\vec{Q^\intercal Q}$ will be invertible \\
+\end{enumerate}
+\item A function $y\brak{t}$ satisfies the following differential equation:
+\begin{align*}
+    \frac{dy\brak{t}}{dt} + y\brak{t} = \delta\brak{t}
+\end{align*}
+where $\delta\brak{t}$ is the delta function. Assuming zero initial condition, and denoting the unit step function by $u\brak{t}$, $y\brak{t}$ can be of form
+\begin{enumerate}
+    \item $e^t$
+    \item $e^{-t}$
+    \item $e^tu\brak{t}$
+    \item $e^{-t}u\brak{t}$ \\
+\end{enumerate}
+\item The equivalent circuits of a diode, during forward biased and reverse biased conditions, are shown in the figure
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q8.1.tex}
+}%
+\end{figure}\\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q8.2.tex}
+}%
+\end{figure}
+\\
+If such a diode is used in clipper circuit of figure given above, the output voltage $\brak{v_o}$ of the circuit will be 
+ \begin{enumerate}
+     \item \begin{figure}[h!]
+   \includegraphics[width=0.3\linewidth]{figs/A8.1.png}
+   \end{figure}
+     \item \begin{figure}[h!]
+   \includegraphics[width=0.25\linewidth]{figs/A8.2.png}
+   \end{figure}
+     \item \begin{figure}[h!]
+   \includegraphics[width=0.3\linewidth]{figs/A8.3.png}
+   \end{figure}
+     \item \begin{figure}[h!]
+   \includegraphics[width=0.25\linewidth]{figs/A8.4.png}
+   \end{figure}
+ \end{enumerate}
+\item Two 8-bit ADCs, one of single slope integrating type and the other of successive approximation type, take $T_A$ and $T_B$ times to convert a 5 V analog input signal to an equivalent digital output. If the input analog signal is reduced to 2.5 V, the approximate time taken by the two ADCs will respectively, be
+\begin{enumerate}
+     \item $T_A, T_B$
+     \item $\frac{T_A}{2}, T_B$
+     \item $T_A, \frac{T_B}{2}$
+     \item $\frac{T_A}{2}, \frac{T_B}{2}$ \\
+ \end{enumerate}
+\item An input device is interfaced with Intel 8085A microprocessor as memory mapped I/O. The address of the device is 2500H. In order to input data from the device to accumulator, the sequence of instructions will be
+\begin{enumerate}
+    \item LXI\ \ \ H, 2500H \\
+    MOV A, M
+    \item LXI\ \ \ H, 2500H \\
+    MOV M, A
+    \item LHLD 2500H \\
+    MOV A, M
+    \item LHLD 2500H \\
+    MOV M, A \\
+\end{enumerate}
+\item Distributed winding and short chording employed in AC machines will result in
+\begin{enumerate}
+    \item increase in emf and reduction in harmonics.
+    \item reduction in emf and increase in harmonics.
+    \item increase in both emf and harmonics.
+    \item reduction in both emf and harmonics. \\
+\end{enumerate}
+\item Three single-phase transformers are connected to form a 3-phase transformer bank. The transformers are connected in the following manner:\\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q12.tex}
+}%
+\end{figure}\\
+The transformer connection will be represented by
+\begin{enumerate}
+    \item Yd0
+    \item Yd1
+    \item Yd6
+    \item Yd11 \\
+\end{enumerate}
+\item In a stepper motor, the detent torque means
+\begin{enumerate}
+    \item minimum of the static torque with the phase winding excited.
+    \item maximum of the static torque with the phase winding excited.
+    \item minimum of the static torque with the phase winding unexcited.
+    \item maximum of the static torque with the phase winding unexcited. \\
+\end{enumerate}
+\item A two machine power system is shown below. Transmission line $XY$ has positive sequence impedance of $Z_1 \Omega$ and zero sequence impedance of $Z_0 \Omega$. \\
+\begin{figure}[h!]
+\centering
+   \includegraphics[width=0.5\linewidth]{figs/Q14.png}
+   \end{figure}\\
+An '$a$' phase to ground fault with zero fault impedance occurs at the centre of the transmission line. Bus voltage at $X$ and line current from $X$ to $F$ for the phase '$a$', are given by $V_a$ Volts and $I_a$ Amperes, respectively. Then, the impedance measured by the ground distance relay located at the terminal $X$ of line $XY$ will be given by
+\begin{enumerate}
+   \item $\frac{Z_1}{2} \Omega$
+   \item $\frac{Z_0}{2} \Omega$
+   \item $\frac{Z_0+Z_1}{2} \Omega$
+   \item $\frac{V_a}{I_a} \Omega$ \\
+\end{enumerate}
+\item An extra high voltage transmission line of length 300 km can be approximated by a lossless line having propagation constant $\beta$ = 0.00127 radians per km. Then the percentage ratio of line length to wavelength will be given by
+\begin{enumerate}
+    \item 24.24\%
+    \item 12.12\%
+    \item 19.05\%
+    \item 6.06\% \\
+\end{enumerate}
+\item A 3-phase transmission line is shown in the figure:\\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\input{codes/Q16.1.tex}
+}%
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\input{codes/Q16.2.tex}
+}%
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\input{codes/Q16.3.tex}
+}%
+\end{figure}\\
+Voltage drop across the transmission line is given by the following equation:
+\begin{align*}
+    \sbrak{\begin{matrix}
+        \Delta V_a \\ \Delta V_b \\ \Delta V_c
+    \end{matrix}} = \sbrak{\begin{matrix}
+        Z_s & Z_m & Z_m \\Z_m & Z_s & Z_m \\ Z_m & Z_m & Z_s
+    \end{matrix}}\sbrak{\begin{matrix}
+        I_a \\ I_b \\ I_c
+    \end{matrix}}
+\end{align*}
+Shunt capacitance of the line can be neglected. If the line has positive sequence impedance of 15 $\Omega$ ans zero sequence impedance of 48 $\Omega$, then the values of $Z_s$ and $Z_m$ will be
+\begin{enumerate}
+    \item $Z_s=31.5\ \Omega$; $Z_m=16.5\ \Omega$
+    \item $Z_s=26\ \Omega$; $Z_m=11\ \Omega$
+    \item $Z_s=16.5\ \Omega$; $Z_m=31.5\ \Omega$
+    \item $Z_s=11\ \Omega$; $Z_m=26\ \Omega$ \\
+\end{enumerate}
+\item In the single phase voltage controller circuit shown in the figure, for what range of triggering angle $\brak{\alpha}$, the output voltage $\brak{v_0}$ is not controllable?
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q17.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item $0\degree < \alpha < 45\degree$
+    \item $45\degree < \alpha < 135\degree$
+    \item $90\degree < \alpha < 180\degree$
+    \item $135\degree < \alpha < 180\degree$ \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+

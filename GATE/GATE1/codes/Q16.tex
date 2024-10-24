@@ -1,0 +1,22 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw  (2.25,9.5) ellipse (0.75cm and 1cm);
+\draw (6.5,11) to[L,l={ \large 0.5 $H$} ] (6.5,8);
+\draw (6.5,11) to[R,l={ \large 5 $\Omega$}] (9,11);
+\draw (2.25,11) to[R,l={ \large 3 $\Omega$}] (4.75,11);
+\draw (4.75,11) to[L,l={ \large 0.2 $H$} ] (6.75,11);
+\draw (2.25,11) to[short] (2.25,10.5);
+\draw (2.25,8.5) to[short] (2.25,8);
+\draw (2.25,8) to[short] (9,8);
+\draw (9,8) to[short] (9,8.75);
+\draw (9,8.75) to[american controlled voltage source] (9,11);
+\node [font=\normalsize] at (2.25,10.25) {$+$};
+\node [font=\normalsize] at (2.25,8.75) {$-$};
+\node [font=\large] at (1.25,9.25) {$V$};
+\node [font=\large] at (5.75,10.5) {$V_x$};
+\node [font=\normalsize] at (5.25,10.75) {$+$};
+\node [font=\normalsize] at (6.25,10.75) {$-$};
+\node [font=\large] at (10,9.5) {0.2 $V_x$};
+\node [font=\large] at (5.75,9.5) {$I_1$};
+\node [font=\large] at (6,9.5) {$\downarrow$};
+\end{circuitikz}

@@ -88,28 +88,11 @@ AI24BTECH11009
     \end{enumerate}
 \item Consider the discrete-time system shown in the figure where the impulse response of $G\brak{z}$ is $g\brak{0}=0$, $g\brak{1}=g\brak{2}=1$, $g\brak{3}=g\brak{4}=\cdots=0$.
 \begin{figure}[!ht]
-\centering
-\resizebox{0.5\textwidth}{!}{%
-\begin{circuitikz}
-\tikzstyle{every node}=[font=\normalsize]
-\draw  (3.25,12.25) rectangle (5,11.25);
-\draw  (1,11.75) circle (0.5cm);
-\draw  (2.25,10.5) rectangle (3.25,9.5);
-\draw [->, >=Stealth] (1.5,11.75) -- (3.25,11.75);
-\draw [->, >=Stealth] (5,11.75) -- (6.75,11.75);
-\draw [short] (5.75,11.75) -- (5.75,10);
-\draw [->, >=Stealth] (5.75,10) -- (3.25,10);
-\draw [short] (2.25,10) -- (1,10);
-\draw [->, >=Stealth] (1,10) -- (1,11.25);
-\draw [->, >=Stealth] (-0.25,11.75) -- (0.5,11.75);
-\node [font=\Large] at (4.25,11.75) {\textit{G(z)}};
-\node [font=\Large] at (2.75,10) {\textit{K}};
-\node [font=\Large] at (1,11.75) {\textit{$\Sigma$}};
-\node [font=\normalsize] at (0.5,12.25) {\textit{+}};
-\node [font=\normalsize] at (0.5,11.25) {\textit{+}};
-\end{circuitikz}
-}%
-\end{figure}\\
+    \centering
+    \resizebox{0.5\textwidth}{!}{%
+    \input{codes/Q2.tex}
+    }%
+  \end{figure}\\
      This system is stable for range of values of $K$
 \begin{enumerate}
     \item $\sbrak{-1, \frac{1}{2}}$
@@ -144,103 +127,14 @@ Which among the following gives the fundamental Fourier term of $x\brak{t}$?
 \begin{figure}[!ht]
 \centering
 \resizebox{0.5\textwidth}{!}{%
-\begin{circuitikz}
-\tikzstyle{every node}=[font=\normalsize]
-\draw  (1.5,11.25) rectangle (2.75,10.5);
-\draw  (4.5,11.25) rectangle (5.75,10.5);
-\draw  (7.25,11.25) rectangle (8.5,10.5);
-\draw  (9.75,11.25) rectangle (11,10.5);
-\draw  (9.25,9.25) circle (0.5cm);
-\draw [short] (1.25,12.5) -- (10.25,12.5);
-\draw [->, >=Stealth] (10.25,12.5) -- (10.25,11.25);
-\draw [->, >=Stealth] (5,12.5) -- (5,11.25);
-\draw (4.25,11.75) to[crossing] (5.75,11.75);
-\draw (5.75,11.75) to[short] (8,11.75);
-\draw (0.5,11.75) to[short] (4.25,11.75);
-\draw [->, >=Stealth] (2,11.75) -- (2,11.25);
-\draw [->, >=Stealth] (8,11.75) -- (8,11.25);
-\draw [short] (0.5,11.75) -- (0.5,4.25);
-\draw [short] (7.75,10.5) -- (7.75,9.25);
-\draw [short] (10.5,10.5) -- (10.5,9.25);
-\draw [->, >=Stealth] (7.75,9.25) -- (8.75,9.25);
-\draw [->, >=Stealth] (10.5,9.25) -- (9.75,9.25);
-\draw  (9.25,7.25) circle (0.5cm);
-\draw  (5.5,7.5) rectangle (6.75,6.75);
-\draw  (3.5,7.25) circle (0.5cm);
-\draw [short] (2,10.5) -- (2,7.25);
-\draw [short] (5,10.5) -- (5,8.75);
-\draw [short] (5,8.75) -- (3.5,8.75);
-\draw [->, >=Stealth] (2,7.25) -- (3,7.25);
-\draw [->, >=Stealth] (3.5,8.75) -- (3.5,7.75);
-\draw [->, >=Stealth] (4,7.25) -- (5.5,7.25);
-\draw [->, >=Stealth] (6.75,7.25) -- (8.75,7.25);
-\draw [->, >=Stealth] (9.25,8.75) -- (9.25,7.75);
-\draw  (10.75,7.5) rectangle (12,6.75);
-\draw  (13.25,7.5) rectangle (14.5,6.75);
-\draw  (3,6) rectangle (4.25,5.25);
-\draw  (8.75,6) rectangle (10,5.25);
-\draw [->, >=Stealth] (9.75,7.25) -- (10.75,7.25);
-\draw [->, >=Stealth] (3.5,6) -- (3.5,6.75);
-\draw [->, >=Stealth] (9.25,6) -- (9.25,6.75);
-\draw [->, >=Stealth] (3.5,4.75) -- (3.5,5.25);
-\draw [->, >=Stealth] (12,7.25) -- (13.25,7.25);
-\draw [->, >=Stealth] (14.5,7.25) -- (15.75,7.25);
-\draw [short] (3.5,4.75) -- (12.75,4.75);
-\draw [short] (12.75,4.75) -- (12.75,7.25);
-\draw [->, >=Stealth] (9.25,4.75) -- (9.25,5.25);
-\draw [short] (0.5,4.25) -- (15,4.25);
-\draw [->, >=Stealth] (15,4.25) -- (15,7.25);
-\node [font=\Large] at (3.5,7.25) {$\Sigma$};
-\node [font=\Large] at (9.25,9.25) {$\Sigma$};
-\node [font=\Large] at (9.25,7.25) {$\Sigma$};
-\node [font=\large] at (2,11) {$b_0$};
-\node [font=\large] at (5,11) {$c_0$};
-\node [font=\large] at (7.75,11) {$b_1$};
-\node [font=\large] at (10.25,11) {$c_1$};
-\node [font=\large] at (3.5,5.75) {$a_0$};
-\node [font=\large] at (9.25,5.75) {$a_1$};
-\node [font=\large] at (13.75,7.25) {\textit{P}};
-\node [font=\large] at (11.25,7.25) {\textit{1/s}};
-\node [font=\large] at (6,7.25) {\textit{1/s}};
-\node [font=\normalsize] at (8.5,9.5) {\textit{+}};
-\node [font=\normalsize] at (9.5,8) {\textit{+}};
-\node [font=\normalsize] at (10,9) {\textit{+}};
-\node [font=\normalsize] at (8.5,7.5) {\textit{+}};
-\node [font=\normalsize] at (9,6.5) {\textit{-}};
-\node [font=\normalsize] at (2.75,7.5) {\textit{+}};
-\node [font=\normalsize] at (3.75,8) {\textit{+}};
-\node [font=\normalsize] at (3.25,6.5) {\textit{-}};
-\end{circuitikz}
+\input{codes/Q5.1.tex}
 }%
 \end{figure}\\
 can be reduced to the form
 \begin{figure}[!ht]
 \centering
 \resizebox{0.5\textwidth}{!}{%
-\begin{circuitikz}
-\tikzstyle{every node}=[font=\normalsize]
-\draw  (1.5,12) rectangle (2.5,11);
-\draw  (3.75,11.5) circle (0.5cm);
-\draw  (5.25,12) rectangle (6.25,11);
-\draw  (7.25,12) rectangle (8.25,11);
-\draw  (5.25,9.75) rectangle (6.25,8.75);
-\draw [->, >=Stealth] (0.5,11.5) -- (1.5,11.5);
-\draw [->, >=Stealth] (2.5,11.5) -- (3.25,11.5);
-\draw [->, >=Stealth] (4.25,11.5) -- (5.25,11.5);
-\draw [->, >=Stealth] (6.25,11.5) -- (7.25,11.5);
-\draw [->, >=Stealth] (8.25,11.5) -- (9.5,11.5);
-\draw [short] (8.75,11.5) -- (8.75,9.25);
-\draw [->, >=Stealth] (8.75,9.25) -- (6.25,9.25);
-\draw [short] (5.25,9.25) -- (3.75,9.25);
-\draw [->, >=Stealth] (3.75,9.25) -- (3.75,11);
-\node [font=\Large] at (2,11.5) {\textit{X}};
-\node [font=\Large] at (5.75,11.5) {\textit{Y}};
-\node [font=\Large] at (7.75,11.5) {\textit{P}};
-\node [font=\Large] at (5.75,9.25) {\textit{Z}};
-\node [font=\Large] at (3.75,11.5) {\textit{$\Sigma$}};
-\node [font=\normalsize] at (3,11.75) {\textit{+}};
-\node [font=\normalsize] at (3.5,10.75) {\textit{+}};
-\end{circuitikz}
+\input{codes/Q5.2.tex}
 }%
 \end{figure}\\
 with
@@ -327,28 +221,7 @@ with
 \begin{figure}[!ht]
 \centering
 \resizebox{0.5\textwidth}{!}{%
-\begin{circuitikz}
-\tikzstyle{every node}=[font=\large]
-\draw  (2.25,9.5) ellipse (0.75cm and 1cm);
-\draw (6.5,11) to[L,l={ \large 0.5 $H$} ] (6.5,8);
-\draw (6.5,11) to[R,l={ \large 5 $\Omega$}] (9,11);
-\draw (2.25,11) to[R,l={ \large 3 $\Omega$}] (4.75,11);
-\draw (4.75,11) to[L,l={ \large 0.2 $H$} ] (6.75,11);
-\draw (2.25,11) to[short] (2.25,10.5);
-\draw (2.25,8.5) to[short] (2.25,8);
-\draw (2.25,8) to[short] (9,8);
-\draw (9,8) to[short] (9,8.75);
-\draw (9,8.75) to[american controlled voltage source] (9,11);
-\node [font=\normalsize] at (2.25,10.25) {$+$};
-\node [font=\normalsize] at (2.25,8.75) {$-$};
-\node [font=\large] at (1.25,9.25) {$V$};
-\node [font=\large] at (5.75,10.5) {$V_x$};
-\node [font=\normalsize] at (5.25,10.75) {$+$};
-\node [font=\normalsize] at (6.25,10.75) {$-$};
-\node [font=\large] at (10,9.5) {0.2 $V_x$};
-\node [font=\large] at (5.75,9.5) {$I_1$};
-\node [font=\large] at (6,9.5) {$\downarrow$};
-\end{circuitikz}
+\input{codes/Q16.tex}
 }%
 \end{figure}
 \begin{enumerate}

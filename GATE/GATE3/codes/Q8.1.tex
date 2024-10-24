@@ -1,0 +1,24 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw (2.5,11.25) to[D] (5.25,11.25);
+\draw (2.5,10) to[D] (5.25,10);
+\node [font=\LARGE] at (6.5,11.25) {$\equiv$};
+\node [font=\LARGE] at (6.5,10) {$\equiv$};
+\node [font=\normalsize] at (2.5,11.5) {+};
+\node [font=\normalsize] at (5.25,10.25) {+};
+\node [font=\normalsize] at (5.25,11.5) {-};
+\node [font=\normalsize] at (2.5,10.25) {-};
+\draw (4.5,11.25) to[short, -o] (5.25,11.25) ;
+\draw (4.5,10) to[short, -o] (5.25,10) ;
+\draw (3,11.25) to[short, -o] (2.5,11.25) ;
+\draw (2.75,10) to[short, -o] (2.5,10) ;
+\draw (7.75,11.25) to[battery1] (9.5,11.25);
+\draw (9.5,11.25) to[R] (11.25,11.25);
+\draw (7.75,10) to[normal open switch] (11.25,10);
+\draw (8,11.25) to[short, -o] (7.75,11.25) ;
+\draw (8,10) to[short, -o] (7.75,10) ;
+\draw (11,11.25) to[short, -o] (11.25,11.25) ;
+\node [font=\large] at (8.75,11.75) {$0.7 V$};
+\draw (11,10) to[short, -o] (11.25,10) ;
+\node [font=\large] at (10.5,11.75) {$R_d$};
+\end{circuitikz}

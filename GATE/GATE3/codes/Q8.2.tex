@@ -1,0 +1,19 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\draw (3,11.25) to[sinusoidal voltage source, sources/symbol/rotate=auto] (3,8.75);
+\draw (3,11.25) to[R] (6,11.25);
+\node at (6,11.25) [circ] {};
+\draw (6,11.25) to[short] (8.25,11.25);
+\draw (8.25,11.25) to[R] (8.25,8.75);
+\draw (6,11.25) to[D] (6,9.5);
+\draw (6,9.5) to[battery1] (6,8.75);
+\node at (6,8.75) [circ] {};
+\draw (3,8.75) to[short] (8.25,8.75);
+\node [font=\large] at (4.5,11.75) {10 k$\Omega$};
+\node [font=\large] at (1.65,10) {10 Sin$\brak{\omega t}$};
+\node [font=\large] at (6.75,9.25) {$5 V$};
+\node [font=\large] at (9,10) {$10 k\Omega$};
+\node [font=\large] at (7.75,10.25) {$v_o$};
+\node [font=\large] at (7.75,10.75) {$\uparrow$};
+\draw [short] (7.75,10) -- (7.75,9.25);
+\end{circuitikz}

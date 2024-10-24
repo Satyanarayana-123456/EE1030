@@ -1,0 +1,24 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (1.5,12) rectangle (2.5,11);
+\draw  (3.75,11.5) circle (0.5cm);
+\draw  (5.25,12) rectangle (6.25,11);
+\draw  (7.25,12) rectangle (8.25,11);
+\draw  (5.25,9.75) rectangle (6.25,8.75);
+\draw [->, >=Stealth] (0.5,11.5) -- (1.5,11.5);
+\draw [->, >=Stealth] (2.5,11.5) -- (3.25,11.5);
+\draw [->, >=Stealth] (4.25,11.5) -- (5.25,11.5);
+\draw [->, >=Stealth] (6.25,11.5) -- (7.25,11.5);
+\draw [->, >=Stealth] (8.25,11.5) -- (9.5,11.5);
+\draw [short] (8.75,11.5) -- (8.75,9.25);
+\draw [->, >=Stealth] (8.75,9.25) -- (6.25,9.25);
+\draw [short] (5.25,9.25) -- (3.75,9.25);
+\draw [->, >=Stealth] (3.75,9.25) -- (3.75,11);
+\node [font=\Large] at (2,11.5) {\textit{X}};
+\node [font=\Large] at (5.75,11.5) {\textit{Y}};
+\node [font=\Large] at (7.75,11.5) {\textit{P}};
+\node [font=\Large] at (5.75,9.25) {\textit{Z}};
+\node [font=\Large] at (3.75,11.5) {\textit{$\Sigma$}};
+\node [font=\normalsize] at (3,11.75) {\textit{+}};
+\node [font=\normalsize] at (3.5,10.75) {\textit{+}};
+\end{circuitikz}
