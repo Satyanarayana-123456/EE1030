@@ -1,0 +1,13 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (9,10) to[short] (9.25,10);
+\draw (9,9.5) to[short] (9.25,9.5);
+\draw (9.25,10) node[ieeestd xor port, anchor=in 1, scale=0.89](port){} (port.out) to[short] (11,9.75);
+\draw (5,9.5) node[ieeestd not port, anchor=in](port){} (port.out) to[short] (7,9.5);
+\draw (port.in) to[short] (4.5,9.5);
+\draw [short] (7,9.5) -- (9,9.5);
+\draw [short] (3.75,10) -- (9.25,10);
+\draw [short] (4.5,10) -- (4.5,9.5);
+\node [font=\normalsize] at (11.5,9.75) {\textbf{Y}};
+\node [font=\normalsize] at (3.5,10) {\textbf{X}};
+\end{circuitikz}

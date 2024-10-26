@@ -1,0 +1,35 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (4.25,9.75) circle (0.5cm);
+\draw (7,9.75) to[R] (8.25,11);
+\draw (8.25,11) to[R] (9.5,9.75);
+\draw (7,9.75) to[R] (8.25,8.5);
+\draw (8.25,8.5) to[european resistor] (9.5,9.75);
+\draw (6.75,10.5) to[variable capacitor] (7.5,11.25);
+\draw [short] (6.75,10.5) -- (7.25,10);
+\draw [short] (7.5,11.25) -- (8,10.75);
+\draw [short] (8.25,11) -- (8.25,11.75);
+\draw [short] (8.25,11.75) -- (4.25,11.75);
+\draw [short] (4.25,11.75) -- (4.25,10.25);
+\draw [short] (4.25,9.25) -- (4.25,8);
+\draw [short] (4.25,8) -- (8.25,8);
+\draw [short] (8.25,8) -- (8.25,8.5);
+\draw [->, >=Stealth] (7.5,10) -- (7.5,10.75);
+\draw  (8.25,9.75) circle (0.25cm);
+\draw [short] (7,9.75) -- (8,9.75);
+\draw [short] (8.5,9.75) -- (9.5,9.75);
+\node at (7.25,10) [circ] {};
+\node at (8,10.75) [circ] {};
+\node at (8.25,11) [circ] {};
+\node at (7,9.75) [circ] {};
+\node at (9.5,9.75) [circ] {};
+\node at (8.25,8.5) [circ] {};
+\node [font=\normalsize] at (4.25,9.75) {$\sim$};
+\node [font=\normalsize] at (4.5,10.5) {+};
+\node [font=\normalsize] at (6.5,11) {$C_1$};
+\node [font=\normalsize] at (8,10.25) {$R_1$};
+\node [font=\normalsize] at (9.25,10.75) {$R_2$};
+\node [font=\normalsize] at (7,9) {$R_4$};
+\node [font=\normalsize] at (9.25,8.75) {$Z_X$};
+\node [font=\normalsize] at (8.25,9.75) {D};
+\end{circuitikz}
