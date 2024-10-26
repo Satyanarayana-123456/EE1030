@@ -1,0 +1,336 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2010 - EE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{27 - 39}
+
+
+\begin{enumerate}
+\item A box contains 4 white balls and 3 red balls. In succession, two balls are randomly selected and removed from the box. Given that the first removed ball is white, the probability that the second removed ball is red is
+    \begin{enumerate}
+        \item $\frac{1}{3}$
+        \item $\frac{3}{7}$
+        \item $\frac{1}{2}$
+        \item $\frac{4}{7}$ \\
+    \end{enumerate}
+\item An eigenvector of 
+\begin{align*}
+    P = \myvec{1 & 1 & 0 \\ 0 & 2 & 2 \\ 0 & 0 & 3}
+\end{align*}
+is
+\begin{enumerate}
+    \item $\myvec{-1 & 1 & 1}^\intercal$
+    \item $\myvec{1 & 2 & 1}^\intercal$
+    \item $\myvec{1 & -1 & 2}^\intercal$
+    \item $\myvec{2 & 1 & -1}^\intercal$ \\
+\end{enumerate}
+\item For the differential equation 
+\begin{align*}
+    \frac{d^2x}{dt^2} + 6\frac{dx}{dt} + 8x = 0
+\end{align*}
+with initial conditions $x\brak{0}=1$ and $\frac{dx}{dt}\bigg|_{t=0}$, the solution is
+\begin{enumerate}
+    \item $x\brak{t} = 2e^{-6t} - e^{-2t}$
+    \item $x\brak{t} = 2e^{-2t} - e^{-4t}$
+    \item $x\brak{t} = -e^{-6t} + 2e^{-4t}$
+    \item $x\brak{t} = e^{-2t} + 2e^{-4t}$ \\
+\end{enumerate}
+\item For the set of equations 
+\begin{align*}
+    x_1 + 2x_2 + x_3 + 4x_4 & = 2 \\
+    3x_1 + 6x_2 + 3x_3 + 12x_4 & = 6
+\end{align*}
+the following statement is true:
+ \begin{enumerate}
+     \item Only the trivial solution $x_1 = x_2 = x_3 = x_4 = 0$ exists
+     \item There are no solutions
+     \item A unique non-trivial solution exists
+     \item  Multiple non-trivial solutions exist \\
+ \end{enumerate}
+\item $x(t)$ is a positive rectangular pulse from $t = -1$ to $t = +1$ with unit height as shown in the figure. The value of $\int_{-\infty}^{\infty}\abs{X\brak{\omega}}^2 d\omega$ \{where $X\brak{\omega}$ is the Fourier transform of x\brak{t}\} is 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q5.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item 2
+    \item $2\pi$
+    \item 4
+    \item $4\pi$ \\
+\end{enumerate}
+\item Given the finite length input x\sbrak{n} and the corresponding finite length output y\sbrak{n} of an LTI system as shown below, the impulse response h\sbrak{n} of the system is 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q6.tex}
+}%
+\end{figure}
+   \begin{enumerate}
+   \item 
+   \begin{figure}[!ht]
+\resizebox{0.16\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\node [font=\large] at (4,11.5) {h[n] = \{1,0,0,1\}};
+\node [font=\large] at (4.1,11) {$\uparrow$};
+\end{circuitikz}
+}%
+\end{figure}
+\item 
+   \begin{figure}[!ht]
+\resizebox{0.16\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\node [font=\large] at (4,11.5) {h[n] = \{1,0,1\}};
+\node [font=\large] at (4.2,11) {$\uparrow$};
+\end{circuitikz}
+}%
+\end{figure}
+\item 
+   \begin{figure}[!ht]
+\resizebox{0.16\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\node [font=\large] at (4,11.5) {h[n] = \{1,1,1,1\}};
+\node [font=\large] at (4.1,11) {$\uparrow$};
+\end{circuitikz}
+}%
+\end{figure}
+\item 
+   \begin{figure}[!ht]
+\resizebox{0.16\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\large]
+\node [font=\large] at (4,11.5) {h[n] = \{1,1,1\}};
+\node [font=\large] at (4.2,11) {$\uparrow$};
+\end{circuitikz}
+}%
+\end{figure}
+\end{enumerate}
+\item If the 12 $\Omega$ resistor draws a current of 1 A as shown in the figure, the value of resistance R is 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q7.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item 4 $\Omega$
+    \item 6 $\Omega$
+    \item 8 $\Omega$
+    \item 18 $\Omega$ \\
+\end{enumerate}
+\item The two-port network P shown in the figure has ports 1 and 2, denoted by
+terminals (a, b) and (c, d), respectively. It has an impedance matrix $Z$ with
+parameters denoted by $z_{ij}$ .A 1$\Omega$ resistor is connected in series with the network at port 1 as shown in the figure. The impedance matrix of the modified two-port network (shown as a dashed box) is 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q8.tex}
+}%
+\end{figure}
+ \begin{enumerate}
+    \item $\myvec{z_{11}+1 & z_{12}+1 \\ z_{21} & z_{22}+1}$
+    \item $\myvec{z_{11}+1 & z_{12} \\ z_{21} & z_{22}+1}$
+    \item $\myvec{z_{11}+1 & z_{12} \\ z_{21} & z_{22}}$
+    \item $\myvec{z_{11}+1 & z_{12} \\ z_{21}+1 & z_{22}}$ \\
+ \end{enumerate}
+\item The Maxwell's bridge shown in the figure is at balance. The parameters of the inductive coil are 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q9.tex}
+}%
+\end{figure}
+\begin{enumerate}
+     \item $R = \frac{R_2R_3}{R_4}$, $L = C_4R_2R_3$
+     \item $L = \frac{R_2R_3}{R_4}$, $R = C_4R_2R_3$
+     \item $R = \frac{R_4}{R_2R_3}$, $L = \frac{1}{C_4R_2R_3}$
+     \item $L = \frac{R_4}{R_2R_3}$, $R = \frac{1}{C_4R_2R_3}$ \\
+ \end{enumerate}
+\item The frequency response of 
+\begin{align*}
+ G\brak{s} = \frac{1}{\sbrak{s\brak{s+1}\brak{s+2}}}   
+\end{align*}
+plotted in the complex G\brak{j\omega} plane \brak{\text{for}\ 0 < \omega < \infty} is
+\begin{enumerate}
+    \item 
+    \begin{figure}[!ht]
+\resizebox{0.2\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw [->, >=Stealth] (4,11.25) -- (7.75,11.25);
+\draw [->, >=Stealth] (6.5,9) -- (6.5,12.5);
+\draw [short] (5.25,9) .. controls (5.75,10.5) and (5.75,12.5) .. (6.5,11.25);
+\draw [dashed] (5,11.75) -- (5,8.5);
+\draw [->, >=Stealth] (5.5,8.75) -- (5.75,9.5);
+\node [font=\normalsize] at (6.75,12.5) {Im};
+\node [font=\normalsize] at (7.5,11) {Re};
+\node [font=\normalsize] at (4.75,12) {-3/4};
+\node [font=\small] at (5.75,8.5) {$\omega$ = 0};
+\end{circuitikz}
+}%
+\end{figure}
+    \item 
+    \begin{figure}[!ht]
+\resizebox{0.2\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [->, >=Stealth] (5,10) -- (9,10);
+\draw [->, >=Stealth] (7.75,9.5) -- (7.75,12.5);
+\draw [short] (6.25,12.25) .. controls (6.75,11) and (6.75,9) .. (7.75,10);
+\draw [dashed] (6,12.75) -- (6,9);
+\draw [->, >=Stealth] (6.5,12.5) -- (6.75,11.5);
+\node [font=\small] at (6.75,12.75) {$\omega$ = 0};
+\node [font=\normalsize] at (5.75,8.75) {-3/4};
+\node [font=\normalsize] at (8,12.75) {Im};
+\node [font=\normalsize] at (8.75,9.75) {Re};
+\end{circuitikz}
+}%
+\end{figure}
+    \item 
+    \begin{figure}[!ht]
+\resizebox{0.2\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [->, >=Stealth] (5,9) -- (9.25,9);
+\draw [->, >=Stealth] (8,8.25) -- (8,12);
+\draw [dashed] (7.25,12) -- (7.25,8);
+\draw [->, >=Stealth] (6.75,11.75) -- (6.5,11.25);
+\node [font=\small] at (6.5,12) {$\omega$ = 0};
+\node [font=\normalsize] at (8.25,12.25) {Im};
+\node [font=\normalsize] at (9.25,8.5) {Re};
+\node [font=\normalsize] at (7,8) {-1/6};
+\draw [short] (7,11.75) .. controls (5.75,9.5) and (5.5,7.5) .. (8,9);
+\end{circuitikz}
+}%
+\end{figure}
+    \item \begin{figure}[!ht]
+\resizebox{0.2\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [->, >=Stealth] (5.5,11) -- (9.75,11);
+\draw [->, >=Stealth] (8.75,7.75) -- (8.75,12);
+\draw [dashed] (7.75,11.75) -- (7.75,7.5);
+\draw [short] (7.5,8) .. controls (6,11.25) and (6.5,12.75) .. (8.75,11);
+\draw [->, >=Stealth] (7,8.25) -- (6.75,8.75);
+\node [font=\small] at (6.5,8.25) {$\omega$ = 0};
+\node [font=\normalsize] at (9,12.25) {Im};
+\node [font=\normalsize] at (9.5,10.75) {Re};
+\node [font=\normalsize] at (7.75,7.25) {-1/6};
+\end{circuitikz}
+}%
+\end{figure} 
+\end{enumerate}
+\item The system $x = Ax + Bu$ with $A = \sbrak{\begin{matrix}
+    -1 & 2 \\ 0 & 2
+\end{matrix}}$, $B = \sbrak{\begin{matrix}
+    0 \\ 1
+\end{matrix}}$ is
+\begin{enumerate}
+    \item stable and controllable
+    \item stable but uncontrollable
+    \item unstable but controllable
+    \item unstable and uncontrollable \\
+\end{enumerate}
+\item The characteristic equation of a closed-loop system is 
+\begin{align*}
+    s\brak{s+1}\brak{s+3} + k\brak{s+2} = 0,\ k > 0
+\end{align*}
+Which of the following statements is true ? 
+ \begin{enumerate}
+    \item Its roots are always real
+    \item It cannot have a breakaway point in the range $-1 < Re\sbrak{s} < 0$
+    \item Two of its roots tend to infinity along the asymptotes $Re\sbrak{s} = -1$
+    \item It may have complex roots in the right half plane \\
+\end{enumerate}
+\item A 50 Hz synchronous generator is initially connected to a long lossless
+transmission line which is open circuited at the receiving end. With the field voltage held constant, the generator is disconnected from the transmission line. Which of the following may be said about the steady state terminal voltage and field current of the generator ? 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q13.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item The magnitude of terminal voltage decreases, and the field current does not change.
+    \item The magnitude of terminal voltage increases, and the field current does not change.
+    \item The magnitude of terminal voltage increases, and the field current increases.
+    \item The magnitude of terminal voltage does not change, and the field current decreases. \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ l

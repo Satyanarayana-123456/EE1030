@@ -1,0 +1,16 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw (4.25,8.75) to[american current source] (4.25,11);
+\draw (4.25,11) to[R] (7.5,11);
+\draw (7.5,11) to[R] (7.5,8.75);
+\draw (7.5,11) to[R] (11,11);
+\draw (11,11) to[battery2] (11,8.75);
+\draw (4.25,8.75) to[short] (11,8.75);
+\node [font=\normalsize] at (9.25,11.5) {R};
+\node [font=\normalsize] at (5.75,11.5) {1$\Omega$};
+\node [font=\normalsize] at (8,10) {12$\Omega$};
+\node [font=\normalsize] at (6.75,9.75) {1A};
+\draw [->, >=Stealth] (7.25,10.5) -- (7.25,9.25);
+\node [font=\normalsize] at (3.5,9.75) {2A};
+\node [font=\normalsize] at (11.5,9.75) {6V};
+\end{circuitikz}

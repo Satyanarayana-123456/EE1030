@@ -1,0 +1,22 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (5,11.75) rectangle (9.25,9.75);
+\draw [short] (9.25,11.5) -- (10,11.5);
+\draw [short] (9.25,10.25) -- (10,10.25);
+\draw (1.75,11.5) to[R] (5,11.5);
+\draw (1.75,10.25) to[short] (5,10.25);
+\node at (4.5,11.5) [circ] {};
+\node at (1.75,11.5) [circ] {};
+\node at (1.75,10.25) [circ] {};
+\node at (4.5,10.25) [circ] {};
+\node at (10,11.5) [circ] {};
+\node at (10,10.25) [circ] {};
+\draw [ dashed] (2.25,12.5) rectangle  (9.75,9);
+\node [font=\normalsize] at (7,10.75) {P};
+\node [font=\normalsize] at (3.25,12) {1$\Omega$};
+\node [font=\normalsize] at (4.5,11.75) {a};
+\node [font=\normalsize] at (4.5,10) {b};
+\node [font=\normalsize] at (10.25,11.5) {c};
+\node [font=\normalsize] at (10.25,10.25) {d};
+\node [font=\normalsize] at (1.5,11.5) {e};
+\end{circuitikz}
