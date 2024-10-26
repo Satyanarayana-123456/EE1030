@@ -94,7 +94,7 @@ AI24BTECH11009
     \item resistor and a capacitor and an inductor
     \item resistor and a capacitor
     \item resistor and an inductor
-    \item capacitor and an inductor
+    \item capacitor and an inductor \\
 \end{enumerate}
 \item A signal $e^{-\alpha t}\sin\brak{\omega t}$ is the input to a real Linear Time Invariant system. Given $K$ and $\phi$ are constants, the output of the system will be of the form $Ke^{-\beta t}\sin\brak{vt+\phi}$ where
 \begin{enumerate}
@@ -155,18 +155,19 @@ where $\delta\brak{t}$ is the delta function. Assuming zero initial condition, a
 \\
 If such a diode is used in clipper circuit of figure given above, the output voltage $\brak{v_o}$ of the circuit will be 
  \begin{enumerate}
-     \item \begin{figure}[h!]
-   \includegraphics[width=0.3\linewidth]{figs/A8.1.png}
-   \end{figure}
-     \item \begin{figure}[h!]
-   \includegraphics[width=0.25\linewidth]{figs/A8.2.png}
-   \end{figure}
-     \item \begin{figure}[h!]
-   \includegraphics[width=0.3\linewidth]{figs/A8.3.png}
-   \end{figure}
-     \item \begin{figure}[h!]
-   \includegraphics[width=0.25\linewidth]{figs/A8.4.png}
-   \end{figure}
+     \item 
+      \includegraphics[width=0.3\linewidth]{figs/A8.1.png}
+        \item 
+\resizebox{0.3\textwidth}{!}{%
+\input{codes/A8.2.tex}
+}%
+     \item 
+      \includegraphics[width=0.3\linewidth]{figs/A8.3.png}
+     \item 
+\resizebox{0.3\textwidth}{!}{%
+\input{codes/A8.4.tex}
+}%
+
  \end{enumerate}
 \item Two 8-bit ADCs, one of single slope integrating type and the other of successive approximation type, take $T_A$ and $T_B$ times to convert a 5 V analog input signal to an equivalent digital output. If the input analog signal is reduced to 2.5 V, the approximate time taken by the two ADCs will respectively, be
 \begin{enumerate}
@@ -214,11 +215,14 @@ The transformer connection will be represented by
     \item minimum of the static torque with the phase winding unexcited.
     \item maximum of the static torque with the phase winding unexcited. \\
 \end{enumerate}
-\item A two machine power system is shown below. Transmission line $XY$ has positive sequence impedance of $Z_1 \Omega$ and zero sequence impedance of $Z_0 \Omega$. \\
-\begin{figure}[h!]
+\item A two machine power system is shown below. Transmission line $XY$ has positive sequence impedance of $Z_1 \Omega$ and zero sequence impedance of $Z_0 \Omega$. 
+\pagebreak
+\begin{figure}[!ht]
 \centering
-   \includegraphics[width=0.5\linewidth]{figs/Q14.png}
-   \end{figure}\\
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q14.tex}
+}%
+\end{figure} \\
 An '$a$' phase to ground fault with zero fault impedance occurs at the centre of the transmission line. Bus voltage at $X$ and line current from $X$ to $F$ for the phase '$a$', are given by $V_a$ Volts and $I_a$ Amperes, respectively. Then, the impedance measured by the ground distance relay located at the terminal $X$ of line $XY$ will be given by
 \begin{enumerate}
    \item $\frac{Z_1}{2} \Omega$
