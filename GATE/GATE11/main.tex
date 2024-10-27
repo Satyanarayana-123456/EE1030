@@ -1,0 +1,185 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2014- AE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{27 - 39}
+
+
+\begin{enumerate}
+\item For a given fuel flow rate and thermal efficiency, the take-off thrust for a gas turbine engine burning aviation turbine fuel (considering fuel-air ratio $f<<1$) is
+    \begin{enumerate}
+      \item Directly proportional to exhaust velocity 
+      \item Inversely proportional to exhaust velocity
+      \item Independent of exhaust velocity
+      \item Directly proportional to the square of the exhaust velocity \\
+    \end{enumerate}
+\item For a fifty percent reaction axial compressor stage, following  statements are given: \\
+I. Velocity triangles at the entry and exit of the rotor are symmetrical \\
+II. The whirl or swirl component of absolute velocity at the entry of rotor and entry of stator are same. \\
+Which of the following options are correct?
+\begin{enumerate}
+    \item Both I and II are correct statements 
+    \item I is correct but II is incorrect
+    \item I is incorrect but II is correct
+    \item Both I and II are incorrect \\
+\end{enumerate}
+\item A small rocket having a specific impulse of $200s$ produces a total thrust of $98kN$, out of which $10kN$ is the pressure thrust. Considering the acceleration due to gravity to be $9.8m/s^2$, the propellant mass flow rate in $kg/s$ is
+\begin{enumerate}
+    \item 55.1 
+    \item 44.9
+    \item 50
+    \item 60.2 \\
+\end{enumerate}
+\item The thrust produced by a turbojet engine
+ \begin{enumerate}
+     \item Increases with increasing compressor pressure ratio
+     \item Decreases with increasing compressor pressure ratio
+     \item Remains constant with increasing compressor pressure ratio
+     \item First increases and then decreases with increasing compressor pressure ratio \\
+ \end{enumerate}
+\item The moment coefficient measured about the centre of gravity and about aerodynamic centre of a given wing-body combination are 0.0065 and -0.0235 respectively. The aerodynamic centre lies 0.06 chord lengths ahead of the centre of gravity. The lift coefficient for this wing-body is $\_\_\_\_$. \\
+\item The vertical ground load factor on a stationary aircraft parked in its hangar is:
+\begin{enumerate}
+    \item 0
+    \item -1
+    \item Not defined
+    \item 1 \\
+\end{enumerate}
+\item Under what condition should a glider be operated to ensure minimum sink rate?
+\begin{enumerate}
+    \item Maximum $\frac{C_L}{C_D}$
+    \item Minimum $\frac{C_L}{C_D}$
+    \item Maximum $\frac{C_D}{C_L^\frac{3}{2}}$
+    \item Minimum $\frac{C_D}{C_L^\frac{3}{2}}$ \\
+ \end{enumerate}
+\item In most airplanes, the Dutch roll mode can be excited by applying
+ \begin{enumerate}
+    \item a step input to the elevators
+    \item a step input to the rudder
+    \item a sinusoidal input to the aileron
+    \item an impulse input to the elevators \\
+ \end{enumerate}
+\item Considering \textbf{R} as the radius of the moon, the ratio of the velocities of two spacecraft orbiting moon in circular orbit at altitudes \textbf{R} and \textbf{2R} above the surface of the moon is $\_\_\_\_$. \\
+\item If $\sbrak{A} = \sbrak{\begin{matrix}
+    3 & -3 \\ -3 & 4
+\end{matrix}}$. Then $\det\brak{-\sbrak{A}^2 + 7\sbrak{A} - 3\sbrak{I}}$ is
+\begin{enumerate}
+    \item 0
+    \item -324
+    \item 324 
+    \item 6 \\
+\end{enumerate}
+\item For the periodic function given by
+\begin{align*}
+    f\brak{x} = \begin{cases}
+        -2, & -\pi < x < 0 \\
+        2, & 0 < x < \pi
+    \end{cases}
+\end{align*}
+with $f\brak{x+2\pi} = f\brak{x}$, using Fourier series, the sum
+\begin{align*}
+    s = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots
+\end{align*}
+converges to
+\begin{enumerate}
+    \item 1
+    \item $\frac{\pi}{3}$
+    \item $\frac{\pi}{4}$
+    \item $\frac{\pi}{5}$ \\
+\end{enumerate}
+\item Let $\Gamma$ be the boundary of the closed circular region $A$ given by $x^2 + y^2 \leq 1$. Then 
+\begin{align*}
+    I = \int\limits_{\Gamma}\brak{3x^3 - 9xy^2}ds
+\end{align*}
+(where $ds$ means integration along the bounding curve) is 
+  \begin{enumerate}
+   \item $\pi$
+   \item -$\pi$
+   \item 1
+   \item 0 \\
+\end{enumerate}
+\item Solution to the boundary-value problem
+\begin{align*}
+    -9\frac{d^2u}{dx^2} + u = 5x,\ 0 < x <3
+\end{align*}
+with $u\brak{0} = 0$, $\frac{du}{dx}\bigg{|}_{x=3} = 0$ is
+\begin{enumerate}
+    \item $u\brak{x} = \frac{15e}{1+e^2}\brak{e^{-\frac{x}{3}} - e^{\frac{x}{3}}} + 5x$
+    \item $u\brak{x} = \frac{15e}{1+e^2}\brak{e^{-\frac{x}{3}} + e^{\frac{x}{3}}} + 5x$
+    \item $u\brak{x} = -\frac{15\sin\brak{\frac{x}{3}}}{\cos\brak{1}} + 5x$
+    \item $u\brak{x} = -\frac{15\sin\brak{\frac{x}{3}}}{\cos\brak{1}} - \frac{5}{54}x^3$ \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
