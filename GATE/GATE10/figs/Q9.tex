@@ -1,0 +1,17 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (5.75,11.5) -- (5.75,9.75);
+\draw [short] (7,11.5) -- (7,9.75);
+\draw [short] (5.75,9.75) -- (5.75,9.25);
+\draw [->, >=Stealth] (5.75,9.5) -- (6.25,9.5);
+\draw [short] (5.75,11.5) .. controls (6.25,11.75) and (6.25,11.75) .. (6.75,11.5);
+\draw [short] (6.75,11.5) .. controls (6.75,11.75) and (7,11.75) .. (7,11.5);
+\draw [short] (5.75,9.75) .. controls (6.5,9.75) and (6.25,9.5) .. (6.75,9.75);
+\draw [short] (6.75,9.75) -- (7,9.75);
+\draw [->, >=Stealth] (5.25,10) -- (5.75,10.25);
+\draw [->, >=Stealth] (7.5,10.75) -- (7,11);
+\node [font=\normalsize] at (6.5,9.5) {$x$};
+\node [font=\normalsize] at (5,10) {$T_1$};
+\node [font=\normalsize] at (7.75,10.75) {$T_2$};
+\node [font=\normalsize] at (8.75,11) {where $T_2>T_1$};
+\end{circuitikz}

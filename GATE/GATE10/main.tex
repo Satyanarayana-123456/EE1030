@@ -1,0 +1,202 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2013 - ME
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{1 - 13}
+
+
+\begin{enumerate}
+\item The partial differential equation $\frac{\partial u}{\partial t} + u\frac{\partial u}{\partial x} = \frac{\partial^2 u}{\partial x^2}$ is a
+    \begin{enumerate}
+      \item linear equation of order 2 
+      \item non-linear equation of order 1
+      \item linear equation of order 1
+      \item non-linear equation of order 2  \\
+    \end{enumerate}
+\item The eigenvalues of a symmetric matrix are all  
+\begin{enumerate}
+    \item complex with non-zero positive imaginary part. 
+    \item complex with non-zero negative imaginary part.
+    \item real. 
+    \item pure imaginary. \\
+\end{enumerate}
+\item Match the \textbf{CORRECT} pairs.
+\begin{table}[h!]
+  \centering
+  \input{tables/Q3.tex}
+\end{table}
+\begin{enumerate}
+    \item P-2, Q-1, R-3 
+    \item P-3, Q-2, R-1
+    \item P-1, Q-2, R-3 
+    \item P-3, Q-1, R-2  \\
+\end{enumerate}
+\item A rod of length $L$ having uniform cross-sectional area $A$ is subjected to a tensile force $P$ as shown in the figure below. If the Young's modulus of the material varies linearly from $E_1$ to $E_2$ along the length of the rod, the normal stress developed at the section-SS is 
+\pagebreak
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q4.tex}
+}%
+\end{figure}
+ \begin{enumerate}
+     \item $\frac{P}{A}$
+     \item $\frac{P\brak{E_1-E_2}}{A\brak{E_1+_2}}$
+     \item $\frac{PE_2}{AE_1}$
+     \item $\frac{PE_1}{AE_2}$ \\
+ \end{enumerate}
+\item Two threaded bolts A and B of same material and length are subjected to identical tensile load. If the elastic strain energy stored in bolt A is 4 times that of bolt B and the mean diameter of bolt A is 12 $mm$, the mean diameter of bolt B in $mm$ is 
+\begin{enumerate}
+   \item 16
+   \item 24
+   \item 36
+   \item 48 \\
+\end{enumerate}
+\item A link OB is rotating with a constant angular velocity of 2 $rad/s$ in counter clockwise direction and a block is sliding radially outward on it with an uniform velocity of 0.75 $m/s$ with respect to the rod, as shown in the figure below. If OA = 1 $m$, the magnitude of the absolute acceleration of the
+block at location A in $m/s^2$ is 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.25\textwidth}{!}{%
+\input{figs/Q6.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item 3
+    \item 4
+    \item 5
+    \item 6 \\
+\end{enumerate}
+\item For steady, fully developed flow inside a straight pipe of diameter $D$, neglecting gravity effects, the pressure drop $\Delta p$ over a length $L$ and the wall shear stress $\tau_w$ are related by 
+\begin{enumerate}
+    \item $\tau_w = \frac{\Delta pD}{4L}$
+    \item $\tau_w = \frac{\Delta pD^2}{4L^2}$
+    \item $\tau_w = \frac{\Delta pD}{2L}$
+    \item $\tau_w = \frac{4\Delta pL}{D}$ \\
+ \end{enumerate}
+\item The pressure, dry bulb temperature and relative humidity of air in a room are 1 $bar$, 30\degree C and 70\%, respectively. If the saturated steam pressure at 30\degree C is 4.25 $kPa$, the specific humidity of the room air in $kg\ water\ vapour/kg\ dry\ air$ is 
+ \begin{enumerate}
+    \item 0.0083
+    \item 0.0101 
+    \item 0.0191 
+    \item 0.0232 \\
+ \end{enumerate}
+\item Consider one-dimensional steady state heat conduction, without heat generation, in a plane wall; with boundary conditions as shown in the figure below. The conductivity of the wall is given by $k = k_0 + bT$; where $k_0$ and $b$ are positive constants, and $T$ is temperature. 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.4\textwidth}{!}{%
+\input{figs/Q9.tex}
+}%
+\end{figure}
+As $x$ increases, the temperature gradient $\brak{\frac{dT}{dx}}$ will
+\begin{enumerate}
+     \item remain constant
+     \item be zero
+     \item increase
+     \item decrease \\
+ \end{enumerate}
+\item In a rolling process, the state of stress of the material undergoing deformation is 
+\begin{enumerate}
+    \item pure compression
+    \item pure shear
+    \item compression and shear 
+    \item tension and shear  \\
+\end{enumerate}
+\item Match the \textbf{CORRECT} pairs.
+\begin{table}[h!]
+  \centering
+  \input{tables/Q11.tex}
+\end{table}
+\begin{enumerate}
+    \item P-4, Q-3, R-1, S-2
+    \item P-4, Q-2, R-3, S-1
+    \item P-2, Q-3, R-4, S-1 
+    \item P-2, Q-4, R-1, S-3 \\
+\end{enumerate}
+\item A metric thread of pitch 2 $mm$ and thread angle 60\degree is inspected for its pitch diameter using 3-wire method. The diameter of the best size wire in $mm$ is 
+  \begin{enumerate}
+   \item 0.866
+   \item 1.000
+   \item 1.154
+   \item 2.000 \\
+\end{enumerate}
+\item Customers arrive at a ticket counter at a rate of 50 per $hr$ and tickets are issued in the order of their arrival. The average time taken for issuing a ticket is 1 $min$. Assuming that customer arrivals form a Poisson process and service times are exponentially distributed, the average waiting time in queue in $min$ is
+\begin{enumerate}
+    \item 3
+    \item 4
+    \item 5
+    \item 6 \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ E
