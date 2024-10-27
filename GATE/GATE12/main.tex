@@ -1,0 +1,188 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2014- MA
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{53 - 65}
+
+
+\begin{enumerate}
+\item Suppose that $X$ is a population random variable with probability density function
+\begin{align*}
+    f\brak{x; \theta} = \begin{cases}
+        \theta x^{\theta-1} & \text{if}\ 0 < x < 1 \\
+        0 & \text{otherwise},
+    \end{cases}
+\end{align*}
+where $\theta$ is a parameter. In order to test the null hypothesis $H_0: \theta = 2$, against the alternative hypothesis $H_1: \theta = 3$, the following test is used: Reject the null hypothesis if $X_1 \geq \frac{1}{2}$ and accept otherwise, where $X_1$ is a random sample of size 1 drawn from the above population. Then the power of the test is $\_\_\_\_$ \\
+\item Suppose that $X_1$, $X_2$, $\cdots$, $X_n$ is a random sample of size $n$ drawn from a population with probability density function 
+\begin{align*}
+    f\brak{x; \theta} = \begin{cases}
+        \frac{x}{\theta^2}e^{-\frac{x}{\theta}} & \text{if}\ x > 0 \\
+        0 & \text{otherwise},
+    \end{cases}
+\end{align*}
+where $\theta$ is a parameter such that $\theta > 0$. The maximum likelihood estimator of $\theta$ is
+\begin{enumerate}
+    \item $\frac{\sum\limits_{i=1}^{n}X_i}{n}$
+    \item $\frac{\sum\limits_{i=1}^{n}X_i}{n-1}$
+    \item $\frac{\sum\limits_{i=1}^{n}X_i}{2n}$
+    \item $\frac{2\sum\limits_{i=1}^{n}X_i}{n}$ \\
+\end{enumerate}
+\item Let $\overrightarrow{F}$ be a vector field defined on $\mathbb{R}^2\backslash\{\brak{0,0}\}$ by 
+\begin{align*}
+    \overrightarrow{F}\brak{x, y} = \frac{y}{x^2 + y^2}\hat{i} - \frac{x}{x^2 + y^2}\hat{j}.
+\end{align*}
+Let $\gamma,\alpha:\sbrak{0,1}\rightarrow\mathbb{R}^2$ be defined by
+\begin{align*}
+    \gamma\brak{t} = \brak{8\cos\brak{2 \pi t}, 17\sin\brak{2 \pi t}}\ \text{and}\ \alpha\brak{t} = \brak{26\cos\brak{2 \pi t}, -10\sin\brak{2 \pi t}}.
+\end{align*}
+If $3\int\limits_{\alpha} \overrightarrow{F} \cdot d \overrightarrow{r} - 4\int\limits_{\gamma} \overrightarrow{F} \cdot d \overrightarrow{r} = 2m\pi$, then $m$ is $\_\_\_\_$ \\
+\item If $g: \mathbb{R}^3 \rightarrow \mathbb{R}^3$ be defined by 
+\begin{align*}
+    g\brak{x, y, z} = \brak{(3y + 4z, 2x - 3z, x + 3y}
+\end{align*} 
+and let $S = \{\brak{x, y, z} \in \mathbb{R}^3 : 0 \leq x \leq 1, 0 \leq y \leq 1, 0 \leq z \leq 1\}$. If
+\begin{align*}
+    \iiint\limits_{g\brak{S}}\brak{2x + y - 2z}dx\ dy\ dz = \alpha\iiint\limits_{S}z\ dx\ dy\ dz,
+\end{align*}
+then $\alpha$ is $\_\_\_\_$ \\
+\item Let $T_1$, $T_2$ : $\mathbb{R}^5 \rightarrow \mathbb{R}^3$ be linear transformations such that $rank\brak{T_1} = 3$ and $nullity\brak{T_2} = 3$. Let
+$T_3$ : $\mathbb{R}^3 \rightarrow \mathbb{R}^3$ be a linear transformation such that $T_3 \circ T_1 = T_2$. Then $rank\brak{T_3}$ is $\_\_\_\_$ \\
+\item Let $\mathbb{F}_3$ be the field of 3 elements and let $\mathbb{F}_3 \times \mathbb{F}_3$ be the vector space over $\mathbb{F}_3$. The number of
+distinct linearly dependent sets of the form $\{u, v\}$, where $u, v \in \mathbb{F}_3 \times \mathbb{F}_3 \backslash \{0, 0\}$ and $u \neq v$ is $\_\_\_\_$ \\
+\item Let $\mathbb{F}_{125}$ be the field of 125 elements. The number of non-zero elements $\alpha \in \mathbb{F}_{125}$ such that $\alpha^5 = \alpha$ is $\_\_\_\_$ \\
+\item The value of $\iint\limits_{R}xy\ dx\ dy$, where $R$ is the region in the first quadrant bounded by the curves $y = x^2$, $y + x = 2$ and $x = 0$ is $\_\_\_\_$ \\
+\item Consider the heat equation
+\begin{align*}
+    \frac{\partial u}{\partial t} = \frac{\partial^2 u}{\partial x^2},\ 0 < x < \pi,\ t > 0,
+\end{align*}
+with the boundary conditions $u\brak{0, t} = 0$, $u\brak{\pi, t} = 0$ for $t > 0$, and the initial condition $u\brak{x, 0}= \sin\brak{x}$. Then $u\brak{\frac{\pi}{2}, 1}$ is $\_\_\_\_$ \\
+\item Consider the partial order in $\mathbb{R}^2$ given by the relation $\brak{x_1, y_1} < \brak{x_2, y_2}$ EITHER if $x_1 < x_2$ OR if $x_1 = x_2$ and $y_1 < y_2$. Then in the order topology on $\mathbb{R}^2$ defined by the above order
+\begin{enumerate}
+    \item $\sbrak{0, 1} \times \{1\}$ is compact but $\sbrak{0, 1} \times \sbrak{0, 1}$ is NOT compact
+    \item $\sbrak{0, 1} \times \sbrak{0, 1}$ is compact but $\sbrak{0, 1} \times \{1\}$ is NOT compact
+    \item both $\sbrak{0, 1} \times \sbrak{0, 1}$ and $\sbrak{0, 1} \times \{1\}$ are compact
+    \item both $\sbrak{0, 1} \times \sbrak{0, 1}$ and $\sbrak{0, 1} \times \{1\}$ are NOT compact \\
+\end{enumerate}
+\item Consider the following linear programming problem: \\
+Minimize: $x_1 + x_2 + 2x_3$ \\
+Subject to
+\begin{align*}
+    x_1 + 2x_2 & \geq 4, \\
+    x_2 + 7x_3 & \leq 5, \\
+    x_1 - 3x_2 + 5x_3 & = 6, \\
+    x_1, x_2 & \geq 0,\ x_3 \text{ is unrestricted}
+\end{align*}
+The dual to this problem is: \\
+Maximize: $4y_1 + 5y_2 + 6y_3$ \\
+Subject to
+\begin{align*}
+    y_1 + y_3 & \leq 1, \\
+    2y_1 + y_2 - 3y_3 & \leq 1, \\
+    7y_2 + 5y_3 & = 2
+\end{align*}
+and further subject to:
+  \begin{enumerate}
+   \item $y_1 \geq 0$, $y_2 \leq 0$ and $y_3$ is unrestricted
+   \item $y_1 \geq 0$, $y_2 \geq 0$ and $y_3$ is unrestricted
+   \item $y_1 \geq 0$, $y_3 \leq 0$ and $y_2$ is unrestricted
+   \item $y_3 \geq 0$, $y_2 \leq 0$ and $y_1$ is unrestricted \\
+\end{enumerate}
+\item Let $X = C^1\sbrak{0, 1}$. For each $f \in X$, define
+\begin{align*}
+    p_1\brak{f} & := \sup\ \{\abs{f\brak{t}}: t \in \sbrak{0, 1}\} \\
+    p_2\brak{f} & := \sup\ \{\abs{f'\brak{t}}: t \in \sbrak{0, 1}\} \\
+    p_3\brak{f} & := p_1\brak{f} + p_2\brak{f}.
+\end{align*}
+Which of the following statements is \textbf{TRUE} ?
+\begin{enumerate}
+    \item $\brak{X, p_1}$ is a Banach space
+    \item $\brak{X, p_2}$ is a Banach space
+    \item $\brak{X, p_3}$ is NOT a Banach space
+    \item $\brak{X, p_3}$ does NOT have denumerable basis \\
+\end{enumerate}
+\item If the power series
+\begin{align*}
+    \sum_{n=0}^{\infty} a_n\brak{z + 3 - i}^n
+\end{align*}
+converges at $5i$ and diverges at $-3i$, then the power series
+\begin{enumerate}
+    \item converges at $-2 + 5i$ and diverges at $2 - 3i$
+    \item converges at $2 - 3i$ and diverges at $-2 + 5i$
+    \item converges at both $2 - 3i$ and $-2 + 5i$
+    \item diverges at both $2 - 3i$ and $-2 + 5i$ \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
