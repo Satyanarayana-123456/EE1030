@@ -1,0 +1,190 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2015- CE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{14 - 26}
+
+
+\begin{enumerate}
+\item Workability of concrete can be measured using slump, compaction factor and Vebe time. Consider the following statements for workability of concrete: \\\\
+(i) As the slump increases, the Vebe time increases \\
+(ii) As the slump increases, the compaction factor increases \\
+\\
+Which of the following is TRUE ?
+\begin{enumerate}
+    \item Both (i) and (ii) are True
+    \item Both (i) and (ii) are False
+    \item (i) is True and (ii) is False
+    \item (i) is False and (ii) is True \\
+\end{enumerate}
+\item Consider the following statements for air-entrained concrete: \\\\
+(i) Air-entrainment reduces the water demand for a given level of workability \\
+(ii) Use of air-entrained concrete is required in environments where cyclic freezing and thawing is expected \\
+\\
+Which of the following is TRUE ?
+\begin{enumerate}
+    \item Both (i) and (ii) are True
+    \item Both (i) and (ii) are False
+    \item (i) is True and (ii) is False
+    \item (i) is False and (ii) is True \\
+\end{enumerate}
+\item Consider the singly reinforced beam shown in the figure below:
+\pagebreak
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q3.tex}
+}%
+\end{figure} \\
+At cross-section $XX$, which of the following statements is TRUE at the limit state ?
+\begin{enumerate}
+    \item The variation of stress is linear and that of strain is non-linear
+    \item The variation of strain is linear and that of stress is non-linear
+    \item The variation of both stress and strain is linear
+    \item The variation of both stress and strain is non-linear \\
+\end{enumerate}
+\item For the beam shown below, the stiffness coefficient $K_{22}$ can be written as
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q4.tex}
+}%
+\end{figure} \\
+\begin{enumerate}
+    \item $\frac{6EI}{L^2}$
+    \item $\frac{12EI}{L^3}$
+    \item $\frac{3EI}{L}$
+    \item $\frac{EI}{6L^2}$ \\
+\end{enumerate}
+\item The development length of a deformed reinforcement bar can be expressed as $\brak{\frac{1}{k}}\brak{\frac{\phi\sigma_s}{\tau_{bd}}}$. From the IS: 456-2000, the value of $k$ can be calculated as $\_\_\_\_$. \\
+\item For the beam shown below, the value of the support moment $M$ is $\_\_\_\_$ kN-m.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q6.tex}
+}%
+\end{figure} \\
+\pagebreak
+\item Two triangular wedges are glued together as shown in the following figure. The stress acting normal to the interface, $\sigma_n$ is $\_\_\_\_$ MPa.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{codes/Q7.tex}
+}%
+\end{figure} \\
+\item A fine-grained soil has 60\% (by weight) silt content. The soil behaves as $semi-solid$ when water content is between 15\% and 28\%. The soil behaves $fluid-like$ when the water content is more than 40\%. The '$Activity$' of the soil is
+\begin{enumerate}
+    \item 3.33
+    \item 0.42
+    \item 0.30
+    \item 0.20 \\
+\end{enumerate}
+\item Which of the following statements is TRUE for the relation between discharge velocity and seepage velocity ?
+\begin{enumerate}
+    \item Seepage velocity is always smaller than discharge velocity
+    \item Seepage velocity can never be smaller than discharge velocity
+    \item Seepage velocity is equal to the discharge velocity
+    \item No relation between seepage velocity and discharge velocity can be established \\
+\end{enumerate}
+\item Which of the following statements is TRUE for degree of disturbance of collected soil sample ?
+\begin{enumerate}
+    \item Thinner the sampler wall, lower the degree of disturbance of collected soil sample
+    \item Thicker the sampler wall, lower the degree of disturbance of collected soil sample
+    \item Thickness of the sampler wall and the degree of disturbance of collected soil sample are unrelated
+    \item The degree of disturbance of collected soil sample is proportional to the inner diameter of the sampling tube \\
+\end{enumerate}
+\item In an unconsolidated undrained triaxial test, it is observed that an increase in cell pressure from 150 kPa to 250 kPa leads to a pore pressure increase of 80 kPa. It is further observed that, an increase of 50 kPa in deviatoric stress results in an increase of 25 kPa in the pore pressure. The value of $Skempton's\ pore\ pressure\ parameter\ B$ is:
+  \begin{enumerate}
+   \item 0.5
+   \item 0.625
+   \item 0.8
+   \item 1.0 \\
+\end{enumerate}
+\item Which of the following statements is NOT correct ?
+\begin{enumerate}
+    \item Loose sand exhibits contractive behavior upon shearing
+    \item Dense sand when sheared under undrained condition, may lead to generation of negative pore pressure
+    \item Black cotton soil exhibits expansive behavior
+    \item Liquefaction is the phenomenon where cohesionless soil near the downstream side of dams or sheet-piles loses its shear strength due to high upward hydraulic gradient \\
+\end{enumerate}
+\item In a two-dimensional steady flow field, in a certain region of the $x-y$ plane, the velocity component in the $x$-direction is given by $v_x = x^2$ and the density varies as $\rho = \frac{1}{x}$. Which of the following is a valid expression for the velocity component in the $y$-direction, $v_y$ ?
+\begin{enumerate}
+    \item $v_y = -\frac{x}{y}$
+    \item $v_y = \frac{x}{y}$
+    \item $v_y = -xy$
+    \item $v_y = xy$ \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 

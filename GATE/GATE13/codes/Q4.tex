@@ -1,0 +1,29 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (3.5,11.25) -- (3.5,9);
+\draw [short] (3.25,11.25) -- (3.25,9);
+\draw [short] (3.25,11.25) -- (3.5,11.25);
+\draw [short] (3.25,9) -- (3.5,9);
+\draw [short] (3.25,11.25) -- (3,11);
+\draw [short] (3.25,11) -- (3,10.75);
+\draw [short] (3.25,10.75) -- (3,10.5);
+\draw [short] (3.25,10.5) -- (3,10.25);
+\draw [short] (3.25,10.25) -- (3,10);
+\draw [short] (3.25,10) -- (3,9.75);
+\draw [short] (3.25,9.75) -- (3,9.5);
+\draw [short] (3.25,9.5) -- (3,9.25);
+\draw [short] (3.25,9.25) -- (3,9);
+\draw  (3.5,10.5) rectangle (6.25,9.75);
+\draw [<->, >=Stealth] (3.5,10.75) -- (6.25,10.75);
+\draw [->, >=Stealth] (6.25,10.25) -- (6.25,11.75);
+\draw [->, >=Stealth] (6.25,10.25) -- (7.75,10.25);
+\node at (6.25,10.25) [circ] {};
+\draw [->, >=Stealth] (6.75,10) .. controls (7,10.5) and (7,10.5) .. (6.75,10.75) ;
+\node [font=\normalsize] at (8,10.25) {1};
+\node [font=\normalsize] at (6.25,12) {2};
+\node [font=\normalsize] at (6.75,11) {3};
+\node [font=\normalsize] at (4.75,11) {$L$};
+\node [font=\normalsize] at (4.75,10) {$A,E,I$};
+\node [font=\normalsize] at (8.5,11.75) {Note: 1, 2 and 3};
+\node [font=\normalsize] at (8,11.5) {are d.o.f};
+\end{circuitikz}
