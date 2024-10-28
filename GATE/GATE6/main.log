@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.21)  26 OCT 2024 11:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.10.21)  28 OCT 2024 22:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1916,25 +1916,25 @@ File: omstxr.fd 2000/12/15 v3.1
 )
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <10> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 121.
- (./codes/Q5.tex)
+ (./figs/Q5.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-(./codes/Q6.tex)
+(./figs/Q6.tex)
 LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12> not available
 (Font)              Font shape `OMS/txsy/m/n' tried instead on input line 150.
- [2] (./codes/Q7.tex)
+ [2] (./figs/Q7.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
-(./codes/Q8.tex)
+(./figs/Q8.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
  []
 
-[3] (./codes/Q9.tex)
+[3] (./figs/Q9.tex)
 Underfull \hbox (badness 10000) in paragraph at lines 222--223
 
  []
@@ -1949,26 +1949,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 318--319
 
  []
 
-(./codes/Q13.tex) [5]
+(./figs/Q13.tex) [5]
 Underfull \hbox (badness 10000) in paragraph at lines 332--333
 
  []
 
 [6] (./main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  53ACF6BA8AE0138F95952E3F533ED4EB;84.
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 53ACF6BA8AE0138F95952E3F533ED4EB;84.
  ) 
 Here is how much of TeX's memory you used:
- 50856 strings out of 478287
- 1193172 string characters out of 5849288
- 1647996 words of memory out of 5000000
- 68132 multiletter control sequences out of 15000+600000
+ 50858 strings out of 478287
+ 1193160 string characters out of 5849288
+ 1648149 words of memory out of 5000000
+ 68134 multiletter control sequences out of 15000+600000
  555696 words of font info for 224 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  106i,13n,107p,425b,1206s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1979,10 +1973,10 @@ fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/txfon
 ts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (6 pages, 68118 bytes).
+Output written on main.pdf (6 pages, 68222 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 155 compressed objects within 2 object streams
+ 199 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  87 named destinations out of 1000 (max. 500000)
- 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 

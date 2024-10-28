@@ -1,0 +1,217 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2016- CE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{27 - 39}
+
+
+\begin{enumerate}
+\item Pre-cursors to photochemical oxidants are
+\begin{enumerate}
+    \item $\text{NO}_\text{X}$, VOCs and sunlight
+\item $\text{SO}_2$, $\text{CO}_2$ and sunlight
+\item $\text{H}_2$S, CO and sunlight
+\item $\text{SO}_2$, $\text{NH}_3$ and sunlight \\
+\end{enumerate}
+\item Crown corrosion in a reinforced concrete sewer is caused by:
+\begin{enumerate}
+    \item $\text{H}_2$S
+    \item $\text{CO}_2$
+    \item $\text{CH}_4$
+    \item $\text{NH}_3$ \\
+\end{enumerate}
+\item It was decided to construct a fabric filter, using bags of 0.45 m diameter and 7.5 m long, for removing industrial stack gas containing particulates. The expected rate of airflow into the filter is 10 $\text{m}^3$/s. If the filtering velocity is 2.0 m/min, the minimum number of bags (rounded to nearest higher integer) required for continuous cleaning operation is 
+\begin{enumerate}
+    \item 27
+    \item 29
+    \item 31
+    \item 32 \\
+\end{enumerate}
+\item Match the items in Group - I with those in Group - II and choose the right combination
+\begin{table}[h!]
+  \centering
+  \input{tables/Q4.tex}
+\end{table}
+\begin{enumerate}
+    \item P-3, Q-4, R-2, S-1 
+    \item P-2, Q-3, R-4, S-1
+    \item P-3, Q-2, R-4, S-1 
+    \item P-1, Q-4, R-2, S-3 \\
+\end{enumerate}
+\item During a forensic investigation of pavement failure, an engineer reconstructed the graphs P, Q, R and S, using partial and damaged old reports.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.25\textwidth}{!}{%
+\input{figs/Q5.1.tex}
+}%
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.25\textwidth}{!}{%
+\input{figs/Q5.2.tex}
+}%
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.25\textwidth}{!}{%
+\input{figs/Q5.3.tex}
+}%
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.25\textwidth}{!}{%
+\input{figs/Q5.4.tex}
+}%
+\end{figure}
+\\
+Theoretically plausible correct graphs according to the 'Marshall mixture design output' are
+\begin{enumerate}
+    \item P, Q, R 
+    \item P, Q, S 
+    \item Q, R, S 
+    \item R, S, P \\
+\end{enumerate}
+\item In a one-lane one-way homogeneous traffic stream, the observed average headway is 3.0 s. The flow (expressed in vehicles/hr) in this traffic stream is
+ $\_\_\_\_$ \\
+\item The minimum number of satellites needed for a GPS to determine its position precisely is 
+\begin{enumerate}
+    \item 2
+    \item 3
+    \item 4
+    \item 24 \\
+\end{enumerate}
+\item The system that uses the Sun as a source of electromagnetic energy and records the naturally radiated and reflected energy from the object is called
+\begin{enumerate}
+    \item Geographical Information System
+    \item Global Positioning System
+\item Passive Remote Sensing
+\item Active Remote Sensing \\
+\end{enumerate}
+\item The staff reading taken on a workshop floor using a level is 0.645 m. The inverted staff reading taken to the bottom of a beam is 2.960 m. The reduced level of the floor is 40.500 m. The reduced level (expressed in m) of the bottom of the beam is 
+\begin{enumerate}
+    \item 44.105
+    \item 43.460
+    \item 42.815
+    \item 41.145 \\
+\end{enumerate}
+\item Probability density function of a random variable $X$ is given below
+\begin{align*}
+    f\brak{x} = \begin{cases}
+        0.25 & \text{if}\ 1 \leq x \leq 5 \\
+        0 & \text{otherwise}
+    \end{cases}
+\end{align*}
+$P\brak{X \leq 4}$ is
+  \begin{enumerate}
+   \item $\frac{3}{4}$
+   \item $\frac{1}{2}$
+   \item $\frac{1}{4}$
+   \item $\frac{1}{8}$ \\
+\end{enumerate}
+\item The value of 
+\begin{align*}
+    \int_{0}^{\infty}\frac{1}{1 + x^2}dx + \int_{0}^{\infty}\frac{\sin\brak{x}}{x}dx
+\end{align*}
+is
+\begin{enumerate}
+    \item $\frac{\pi}{2}$
+    \item $\pi$
+    \item $\frac{3\pi}{2}$
+    \item 1 \\
+\end{enumerate}
+\item The area of the region bounded by the parabola $y = x^2 + 1$ and the straight line $x + y = 3$ is
+\begin{enumerate}
+    \item $\frac{59}{6}$
+    \item $\frac{9}{2}$
+    \item $\frac{10}{3}$
+    \item $\frac{7}{6}$ \\
+\end{enumerate}
+\item The magnitudes of vectors $\vec{P}$, $\vec{Q}$ and $\vec{R}$ are 100 kN, 250 kN and 150 kN, respectively as shown in the figure.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q13.tex}
+}%
+\end{figure}
+\\
+The respective values of the magnitude (in kN) and the direction (with respect to the x-axis) of the resultant vector are 
+\begin{enumerate}
+    \item 290.9 and 96.0\degree
+    \item 368.1 and 94.7\degree
+    \item 330.4 and 118.9\degree
+    \item 400.1 and 113.5\degree
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
