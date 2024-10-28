@@ -1,0 +1,162 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2016- ME
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{53 - 65}
+
+
+\begin{enumerate}
+\item An infinitely long furnace of 0.5 m $\times$ 0. 4 m cross-section is shown in the figure below. Consider all surfaces of the furnace to be black. The top and bottom walls are maintained at temperature $T_1 = T_3 = 927\degree $C while the side walls are at temperature $T_2 = T_4 = 527\degree$C. The view factor, $F_{1-2}$ is 0.26. The net radiation heat loss or gain on side 1 is $\_\_\_\_$ W/m. \\\\
+Stefan-Boltzmann constant = $5.67 \times 10^{-8}$ W/$\text{m}^2$-$\text{K}^4$
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q1.tex}
+}%
+\end{figure} \\
+\item A fluid (Prandtl number, $Pr = 1$) at 500 K flows over a flat plate of 1.5 m length, maintained at 300 K. The velocity of the fluid is 10 m/s. Assuming kinematic viscosity, $v = 30 \times 10^{-6} \text{m}^2$/s, the
+thermal boundary layer thickness (in mm) at 0.5 m from the leading edge is $\_\_\_\_$ \\
+\item For water at 25 \degree C, $\frac{dp_s}{dT_s} = 0.189$ kPa/K ($p_s$ is the saturation pressure in kPa and $T_s$ is the saturation temperature in K) and the specific volume of dry saturated vapour is 43.38 $\text{m}^3$/kg. Assume that the specific volume of liquid is negligible in comparison with that of vapour. Using the Clausius-Clapeyron equation, an estimate of the enthalpy of evaporation of water at 25 \degree C (in kJ/kg) is $\_\_\_\_$ \\
+\item An ideal gas undergoes a reversible process in which the pressure varies linearly with volume. The conditions at the start (subscript 1) and at the end (subscript 2) of the process with usual notation are: $p_1$ = 100 kPa, $V_1$ = 0.2 $\text{m}^3$ and $p_2$ = 200 kPa, $V_2$ = 0.1 $\text{m}^3$ and the gas constant, $R = 0.275$ kJ/kg-K. The magnitude of the work required for the rocess (in kJ) is $\_\_\_\_$ \\
+\item In a steam power plant operating on an ideal Rankine cycle, superheated steam enters the turbine at 3 MPa and 350 \degree C. The condenser pressure is 75 kPa. The thermal efficiency of the cycle is $\_\_\_\_$ percent. \\\\
+Given data: \\
+For saturated liquid, at $P$ = 75 kPa, $h_f$ = 384.39 kJ/kg, $v_f$ = 0.001037 $\text{m}^3$/kg, $s_f$ = 1.213 kJ/kg-K \\
+At 75 kPa, $h_{fg}$ = 2278.6 kJ/kg, $s_{fg}$ = 6.2434 kJ/kg-K \\
+At $P$ = 3 MPa and $T$ = 350 \degree C (superheated steam), $h$ = 3115.3 kJ/kg,
+$s$ = 6.7428 kJ/kg-K \\
+\item A hypothetical engineering stress-strain curve shown in the figure has three straight lines PQ, QR, RS with coordinates P(0,0), Q(0.2,100), R(0.6,140) and S(0.8,130). 'Q' is the yield point, 'R' is the UTS point and 'S' the fracture point. 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q6.tex}
+}%
+\end{figure} \\
+The toughness of the material (in MJ/$\text{m}^3$) is $\_\_\_\_$ \\
+\item Heat is removed from a molten metal of mass 2 kg at a constant rate of 10 kW till it is completely solidified. The cooling curve is shown in the figure.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q7.tex}
+}%
+\end{figure} \\
+Assuming uniform temperature throughout the volume of the metal during solidification, the latent heat of fusion of the metal (in kJ/kg) is $\_\_\_\_$ \\
+\item The tool life equation for HSS tool is $VT^{0.14}f^{0.7}d^{0.4} = Constant$. The tool life \brak{T} of 30 min is obtained using the following cutting conditions: \\
+$V$ = 45 m/min, $f$ = 0.35 mm, $d$ = 2.0 mm \\
+If speed \brak{V}, feed \brak{f} and depth of cut \brak{d} are increased individually by 25\%, the tool life (in min) is
+\begin{enumerate}
+    \item 0.15
+    \item 1.06
+    \item 22.50
+    \item 30.0 \\
+\end{enumerate}
+\item A cylindrical job with diameter of 200 mm and height of 100 mm is to be cast using modulus method of riser design. Assume that the bottom surface of cylindrical riser does not contribute as cooling surface. If the diameter of the riser is equal to its height, then the height of the riser (in mm) is
+\begin{enumerate}
+    \item 150
+    \item 200
+    \item 100
+    \item 125 \\
+\end{enumerate}
+\item A 300 mm thick slab is being cold rolled using roll of 600 mm diameter. If the coefficient of friction is 0.08, the maximum possible reduction (in mm) is $\_\_\_\_$ \\
+\item The figure below represents a triangle $PQR$ with initial coordinates of the vertices as $P\brak{1,3}$, $Q\brak{4,5}$ and $R\brak{5,3.5}$. The triangle is rotated in the $X-Y$ plane about the vertex $P$ by angle $\theta$ in
+clockwise direction. If $\sin\brak{\theta}$ = 0.6 and $\cos\brak{\theta}$ = 0.8, the new coordinates of the vertex $Q$ are
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q11.tex}
+}%
+\end{figure}
+  \begin{enumerate}
+   \item \brak{4.6,2.8}
+   \item \brak{3.2,4.6}
+   \item \brak{7.9,5.5}
+   \item \brak{5.5,7.9} \\
+\end{enumerate}
+\item The annual demand for an item is 10,000 units. The unit cost is Rs. 100 and inventory carrying charges are 14.4\% of the unit cost per annum. The cost of one procurement is Rs. 2000. The time between two consecutive orders to meet the above demand is $\_\_\_\_$ month(s). \\
+\item Maximize $Z=15X_1 + 20X_2$ \\
+subject to \\
+\begin{align*}
+    12X_1+ 4X_2 & \geq 36 \\
+12X_1 - 6X_2 & \leq 24 \\
+X_1, X_2 & \geq 0 \\
+\end{align*}
+The above linear programming problem has
+\begin{enumerate}
+    \item infeasible solution
+    \item unbounded solution
+    \item alternative optimum solutions
+    \item degenerate solution \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
