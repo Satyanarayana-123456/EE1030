@@ -1,0 +1,148 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2017- MA
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{1 - 13}
+
+
+\begin{enumerate}
+\item Consider the vector space $V = \{a_0 + a_1x + a_2x^2 : a_i \in \mathbb{R} \text{for} i = 0, 1 ,2\}$ of polynomials of degree at most 2. Let $f: V \rightarrow \mathbb{R}$ be a linear function such that $f\brak{1+x} = 0$, $f\brak{1-x^2} = 0$ and $f\brak{x^2-x} = 2$. Then $f\brak{1+x+x^2}$ equals $\_\_\_\_$. \\
+\item Let $A$ be a $7 \times 7$ matrix such that $2A^2 - A^4 = I$, where $I$ is the identity matrix. If $A$ has two distinct eigenvalues and each eigenvalue has geometric multiplicity 3, then the total number of nonzero entries in the Jordan canonical form of $A$ equals $\_\_\_\_$. \\
+\item Let $f\brak{z} = \brak{x^2 + y^2} + i2xy$ and $g\brak{z} = 2xy + i\brak{y^2 - x^2}$ for $z = x + iy \in \mathbb{C}$. Then, in the complex plane $\mathbb{C}$,
+\begin{enumerate}
+    \item $f$ is analytic and $g$ is NOT analytic
+    \item $f$ is NOT analytic and $g$ is analytic
+    \item neither $f$ nor $g$ is analytic
+    \item both $f$ and $g$ are analytic \\
+\end{enumerate}
+\item If $\sum\limits_{n=-\infty}^{\infty}a_n\brak{z-2}^n$ is the Laurent series of function $f\brak{z} = \frac{z^4 + z^3 + z^2}{\brak{z - 2}^3}$ for $z \in \mathbb{C}\backslash\{2\}$, then $a_{-2}$ equals $\_\_\_\_$. \\
+\item Let $f_n : \sbrak{0,1}\rightarrow\mathbb{R}$ be given by 
+\begin{align*}
+    f_n\brak{x} = \frac{2x^2}{x^2 + \brak{1-2nx}^2}, n = 1, 2, \cdots
+\end{align*}
+Then the sequence $\brak{f_n}$
+\begin{enumerate}
+    \item converges uniformly on $\sbrak{0,1}$
+    \item does NOT converge uniformly on $\sbrak{0,1}$ but has a subsequence that converges uniformly on $\sbrak{0,1}$
+    \item does NOT converge pointwise on $\sbrak{0,1}$
+    \item converges pointwise on $\sbrak{0,1}$ but does NOT have a subsequence that converges uniformly on $\sbrak{0,1}$ \\
+\end{enumerate}
+\item Let $C : x^2 + y^2 = 9$ be the circle in $\mathbb{R}^2$ oriented positively. Then
+\begin{align*}
+    \frac{1}{\pi} \oint\limits_{C} \brak{3y - e^{\cos x^2}} dx + \brak{7x + \sqrt{y^4 + 11}}dy
+\end{align*}
+equals $\_\_\_\_$. \\
+\item Consider the following statements: \\
+(P): There exists an unbounded subset of $\mathbb{R}$ whose Lebesgue measure is equal to 5. \\
+(Q): If $f : \mathbb{R} \rightarrow \mathbb{R}$ is continuous and $g : \mathbb{R} \rightarrow \mathbb{R}$ is such that $f = g$ almost everywhere on $\mathbb{R}$, then $g$ must be continuous almost everywhere on $\mathbb{R}$. \\\\
+Which of the above statements hold TRUE ?
+\begin{enumerate}
+    \item Both P and Q
+    \item Only P
+    \item Only Q
+    \item Neither P nor Q \\
+\end{enumerate}
+\item If $x^3y^2$ is an integrating factor of 
+\begin{align*}
+    \brak{6y^2 + axy}dx + \brak{6xy + bx^2}dy = 0,
+\end{align*}
+where $a, b \in \mathbb{R}$, then
+\begin{enumerate}
+    \item $3a - 5b = 0$
+    \item $2a - b = 0$
+     \item $3a + 5b = 0$
+    \item $2a + b = 0$ \\
+\end{enumerate}
+\item If $x\brak{t}$ and $y\brak{t}$ are the solutions of the system $\frac{dx}{dt} = y$ and $\frac{dy}{dt} = -x$ with the initial conditions $x\brak{0} = 1$ and $y\brak{0} = 1$, then $x\brak{\frac{\pi}{2}} + y\brak{\frac{\pi}{2}}$ equals $\_\_\_\_$. \\
+\item If $y = 3e^{2x} + e^{-2x} - \alpha x$ is the solution of the initial value problem 
+\begin{align*}
+    \frac{d^2y}{dx^2} + \beta y = 4 \alpha x,\ y\brak{0} = 4\ \text{and}\ \frac{dy}{dx}\brak{0} = 1,\ \text{where}\ \alpha, \beta \in \mathbb{R},
+\end{align*}
+ then
+  \begin{enumerate}
+   \item $\alpha = 3$ and $\beta = 4$
+   \item $\alpha = 1$ and $\beta = 2$
+   \item $\alpha = 3$ and $\beta = -4$
+   \item $\alpha = 1$ and $\beta = -2$ \\
+\end{enumerate}
+\item Let $G$ be a non-abelian group of order 125. Then the total number of elements in 
+\begin{align*}
+    Z\brak{G} = \{x \in G : gx = xg \text{ for all } g \in G\}
+\end{align*}
+equals $\_\_\_\_$. \\
+\item Let $F_1$ and $F_2$ be subfields of a finite $F$ consisting of $2^9$ and $2^6$ elements, respectively. Then the total number of elements in $F_1 \cap F_2$ equals $\_\_\_\_$. \\
+\item Consider the normed linear space $\mathbb{R}^2$ equipped with the norm given by $\abs{\abs{\brak{x, y}}} = \abs{x} + \abs{y}$ and the subspace $X = \{\brak{x, y} \in \mathbb{R}^2 : x = y \}$. Let $f$ be the linear functional on $X$ given by $f\brak{x, y} = 3x$. If $g\brak{x, y} = \alpha x + \beta y$, $\alpha,\ \beta \in \mathbb{R}$, is a Hahn-Banach extension of $f$ on $\mathbb{R}^2$, then $\alpha - \beta$ equals $\_\_\_\_$. \\
+			 \end{enumerate}
+			 \end{document}
+ 
