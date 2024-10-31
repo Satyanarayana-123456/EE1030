@@ -1,0 +1,122 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2020 - AE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{53 - 65}
+
+
+\begin{enumerate}
+\item The ratio of tangential velocities of a planet at the perihelion and the aphelion from the sun is 1.0339. Assuming that the planet's orbit around the sun is planar and elliptic, the value of eccentricity of the orbit is $\_\_\_\_$ \brak{round\ off\ to\ three\ decimal\ places}. \\
+\item The eigenvalues for phugoid mode of a general aviation airplane at a stable cruise flight condition at low angle of attack are $\lambda_{1,2} = -0.02 \pm i\ 0.25$. If the acceleration due to gravity is 9.8 $m/\text{s}^2$, the equilibrium speed of the airplane is $\_\_\_\_$ m/s \brak{round\ off\ to\ two\ decimal\ places}. \\
+\item For a general aviation airplane with tail efficiency $\eta$ = 0.95, horizontal tail volume ratio $V_H$ = 0.453, downwash angle slope $\frac{d\varepsilon}{d\alpha}$ = 0.35, wing lift curve slope $C_{L\alpha}^{w}$ = 4.8 $\text{rad}^{-1}$, horizontal tail lift curve slope $C_{L\alpha}^{t}$ = 4.4 $\text{rad}^{-1}$, shift in neutral point location as a percentage of mean aerodynamic chord is $\_\_\_\_$ \brak{round\ off\ to\ two\ decimal\ places}. \\
+\item A single engine, propeller driven, general aviation airplane is flying in cruise at sea-level condition (density of air at sea-level is 1.225 kg/$\text{m}^3$) with speed to cover maximum range. For drag coefficient $C_D = 0.025 + 0.049\ C_L^2$ and wing loading $\frac{W}{S}$ = 9844 N/$\text{m}^2$, the speed of the airplane is $\_\_\_\_$ m/s \brak{round\ off\ to\ one\ decimal\ place}. \\
+\item The design flight Mach number of an ideal ramjet engine is 2.8. The stagnation temperature of air at the exit of the combustor is 2400 K. Assuming the specific heat ratio of 1.4 and gas constant of 287 J/(kg K), the velocity of air at the exit of the engine is $\_\_\_\_$ m/s \brak{round\ off\ to\ one\ decimal\ place}. \\
+\item The operating conditions of an aircraft engine combustor are as follows. \\
+The rate of total enthalpy of air entering the combustor = 28.94 MJ/s. \\
+The rate of total enthalpy of air leaving the combustor = 115.42 MJ/s. \\
+Mass flow rate of air = 32 kg/s. \\
+Air to fuel mass ratio = 15.6. \\
+Lower heating value of the fuel = 46 MJ/kg. \\
+The efficiency of the combustor is $\_\_\_\_$\% \brak{round\ off\ to\ two\ decimal\ places}. \\
+\item The figure shows the T-S diagram for an axial turbine stage.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q7.tex}
+}%
+\end{figure}\\
+Assuming specific heat ratio of 1.33 for the hot gas, the isentropic efficiency of the turbine stage is $\_\_\_\_$\% \brak{round\ off\ to\ two\ decimal\ places}. \\
+\item A rocket engine has a sea level specific impulse of 210 s and a nozzle throat area of 0.005 $\text{m}^2$. While testing at sea level conditions, the characteristic velocity and pressure for the thrust chamber are 1900 m/s and 50 bar, respectively. Assume the acceleration due to gravity to be 9.8 m/$\text{s}^2$. The thrust produced by the rocket engine is $\_\_\_\_$ kN \brak{round\ off\ to\ one\ decimal\ place}. \\
+\item A critically damped single degree of freedom spring-mass-damper system used in a door closing mechanism becomes overdamped due to softening of the spring with extended use. If the new damping ratio $\brak{\xi_{\text{new}}}$ for overdamped condition is 1.2, the ratio of the original spring stiffness to the new spring stiffness $\brak{\frac{k_{\text{org}}}{k_{\text{new}}}}$, assuming that the other parameters remain unchanged, is $\_\_\_\_$ \brak{round\ off\ to\ two\ decimal\ places}. \\
+\item The two masses of the two degree of freedom system shown in the figure are given initial displacements of 2 cm $\brak{x_1}$ and 1.24 cm $\brak{x_2}$. The system starts to vibrate in the first mode. The first mode shape of this system is $\phi_1 = \sbrak{\begin{matrix}
+    1 & a
+\end{matrix}}^\intercal$, where $a = \_\_\_\_$ \brak{round\ off\ to\ two\ decimal\ places}. 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q10.tex}
+}%
+\end{figure}\\
+\item As shown in the figure, a beam of length 1 m is rigidly supported at one end and simply supported at the other. Under the action of a uniformly distributed load of 10 N/m, the magnitude of the normal reaction force at the simply supported end is $\_\_\_\_$N \brak{round\ off\ to\ two\ decimal\ places}.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q11.tex}
+}%
+\end{figure}\\
+\item An airplane of mass 4000 kg and wing reference area 25 $\text{m}^2$ flying at sea level has a maximum lift coefficient of 1.65. Assume density of air as 1.225 kg/$\text{m}^3$ and acceleration due to gravity as 9.8 m/$\text{s}^2$. Using a factor of safety of 1.25 to account for additional unsteady lift during a sudden pull-up, the speed at which the airplane reaches a load factor of 3.2 is $\_\_\_\_$ m/s \brak{round\ off\ to\ two\ decimal\ places}. \\
+\item A Pitot tube mounted on the wing tip of an airplane flying at an altitude of 3 km measures a pressure of 0.72 bar, and the outside air temperature is 268.66 K. Take the sea level conditions as, pressure = 1.01 bar, temperature = 288.16 K, and density = 1.225 kg/$\text{m}^3$. The acceleration due to gravity is 9.8 m/$\text{s}^2$ and the gas constant is 287 J/(kg K). Assuming standard atmosphere, the equivalent airspeed for this airplane is $\_\_\_\_$ m/s \brak{round\ off\ to\ two\ decimal\ places}. \\
+			 \end{enumerate}
+			 \end{document}
+ 

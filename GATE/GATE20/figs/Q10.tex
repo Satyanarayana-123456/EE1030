@@ -1,0 +1,22 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (4,10) -- (4,7.5);
+\draw [line width=1.4pt, short] (4,7.5) -- (12.5,7.5);
+\draw [short] (12.5,7.5) -- (12.5,10);
+\draw  (5.75,9) rectangle (7.25,7.5);
+\draw  (8.75,9) rectangle (10.25,7.5);
+\draw (4,8.5) to[R] (5.75,8.5);
+\draw (7.25,8.5) to[R] (8.75,8.5);
+\draw (10.25,8.5) to[R] (12.5,8.5);
+\draw [line width=1.6pt, short] (6.5,9) -- (6.5,10);
+\draw [line width=1.6pt, short] (9.5,9) -- (9.5,10);
+\draw [->, >=Stealth] (6.5,9.5) -- (7.25,9.5);
+\draw [->, >=Stealth] (9.5,9.5) -- (10.25,9.5);
+\draw [->, >=Stealth] (8,7) .. controls (9,7) and (9,7) .. (9.25,7.5) ;
+\node [font=\normalsize] at (5,9) {$k$};
+\node [font=\normalsize] at (8,9) {$k$};
+\node [font=\normalsize] at (11.25,9) {$2k$};
+\node [font=\normalsize] at (7,9.75) {$x_1\brak{t}$};
+\node [font=\normalsize] at (10,9.75) {$x_2\brak{t}$};
+\node [font=\normalsize] at (6.75,7) {Smooth surface};
+\end{circuitikz}
