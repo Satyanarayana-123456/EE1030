@@ -1,0 +1,199 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2019 - CE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{14 - 26}
+
+
+\begin{enumerate}
+\item For a small value of $h$, the Taylor series expansion for $f\brak{x+h}$ is
+\begin{enumerate}
+    \item $f\brak{x} + hf'\brak{x} + \frac{h^2}{2!}f''\brak{x} + \frac{h^3}{3!}f'''\brak{x} + \cdots + \infty$
+    \item $f\brak{x} - hf'\brak{x} + \frac{h^2}{2!}f''\brak{x} - \frac{h^3}{3!}f'''\brak{x} + \cdots + \infty$
+    \item $f\brak{x} + hf'\brak{x} + \frac{h^2}{2}f''\brak{x} + \frac{h^3}{3}f'''\brak{x} + \cdots + \infty$
+    \item $f\brak{x} - hf'\brak{x} + \frac{h^2}{2}f''\brak{x} - \frac{h^3}{3}f'''\brak{x} + \cdots + \infty$ \\
+\end{enumerate}
+\item A plane truss is shown in the figure \brak{not\ drawn\ to\ scale}.
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\input{figs/Q2.tex}
+}%
+\end{figure}\\
+Which one of the options contains ONLY zero force members in the truss ?
+\begin{enumerate}
+    \item FG, FI, HI, RS
+    \item FG, FH, HI, RS
+    \item FI, HI, PR, RS
+    \item FI, FG, RS, PR \\
+\end{enumerate}
+\item An element is subjected to biaxial normal tensile strains of 0.0030 and 0.0020. The normal strain in the plane of maximum shear strain is
+\begin{enumerate}
+    \item Zero
+    \item 0.0010
+    \item 0.0025
+    \item 0.0050 \\
+\end{enumerate}
+\item Consider the pin-jointed plane truss shown in the figure \brak{not\ drawn\ to\ scale}. Let $R_P$, $R_Q$, and $R_R$ denote the vertical reactions (upward positive) applied by the supports at P, Q, and R, respectively, on the truss. The correct combination of $\brak{R_P, R_Q, R_R}$ is represented by
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q4.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item \brak{30, -30, 30}kN
+    \item \brak{20, 0, 10}kN
+    \item \brak{10, 30, -10}kN
+    \item \brak{0, 60, -30}kN \\
+\end{enumerate}
+\item Assuming that there is no possibility of shear buckling in the web, the maximum reduction permitted by IS 800-2007 in the (low-shear) design bending strength of a semi-compact steel section due to high shear is
+ \begin{enumerate}
+    \item zero
+    \item 25\%
+    \item 50\%
+    \item governed by the area of the flange \\
+\end{enumerate}
+\item In the reinforced beam section shown in the figure \brak{not\ drawn\ to\ scale}, the nominal cover provided at the bottom of the beam as per IS 456-2000, is
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q6.tex}
+}%
+\end{figure}
+\pagebreak
+\begin{enumerate}
+    \item 30 mm
+    \item 36 mm
+    \item 42 mm
+    \item 50 mm \\
+\end{enumerate}
+\item The interior angles of four triangles are given below:
+\begin{table}[h!]
+  \centering
+  \input{tables/Q7.tex}
+\end{table}\\
+Which of the triangles are ill-conditioned and should be avoided in Triangulation surveys ?
+\begin{enumerate}
+   \item Both P and R 
+   \item Both Q and R 
+   \item Both P and S
+   \item Both Q and S \\
+\end{enumerate}
+\item The coefficient of average rolling friction of a road is $f_r$ and its grade is +$G$\%. If the grade of this road is doubled, what will be the percentage change in the braking distance (for the design vehicle to come to a stop) measured along the horizontal (assume all other parameters are kept unchanged) ?
+\begin{enumerate}
+    \item $\frac{0.01 G}{f_r + 0.02 G} \times 100$
+    \item $\frac{f_r}{f_r + 0.02 G} \times 100$
+    \item $\frac{0.02 G}{f_r + 0.01 G} \times 100$
+    \item $\frac{2 f_r}{f_r + 0.01 G} \times 100$ \\
+\end{enumerate}
+\item An isolated concrete pavement slab of length $L$ is resting on a frictionless base. The temperature of the top and bottom fibre of the slab are $T_t$ and $T_b$, respectively. Given: the coefficient of thermal expansion = $\alpha$ and the elastic modulus = $E$. Assuming $T_t > T_b$ and the unit weight of concrete as zero, the maximum thermal stress is calculated as
+\begin{enumerate}
+    \item $L \alpha \brak{T_t - T_b}$
+    \item $E \alpha \brak{T_t - T_b}$
+    \item $\frac{E \alpha \brak{T_t - T_b}}{2}$
+    \item zero \\
+\end{enumerate}
+\item In a rectangular channel, the ratio of the velocity head to the flow depth for critical flow condition, is
+\begin{enumerate}
+    \item $\frac{1}{2}$
+    \item $\frac{2}{3}$
+    \item $\frac{3}{2}$
+    \item 2 \\
+\end{enumerate}
+\item If the path of an irrigation canal is below the bed level of a natural stream, the type of cross-drainage structure provided is
+\begin{enumerate}
+    \item Aqueduct
+    \item Level crossing
+    \item Sluice gate
+    \item Super passage \\
+\end{enumerate}
+\item A catchment may be idealised as a rectangle. There are three rain gauges located inside the catchment at arbitrary locations. The average precipitation over the catchment is estimated by two methods: (i) Arithmetic mean $\brak{P_A}$, and (ii) Thiessen polygon $\brak{P_T}$. Which one of the
+following statements is correct ?
+\begin{enumerate}
+    \item $P_A$ is always smaller than $P_T$
+    \item $P_A$ is always greater than $P_T$
+    \item $P_A$ is always equal to $P_T$
+    \item There is no definite relationship between $P_A$ and $P_T$ \\
+\end{enumerate}
+\item A retaining wall of height $H$ with smooth vertical backface supports a backfill inclined at an angle $\beta$ with the horizontal. The backfill consists of cohesionless soil having angle of internal friction $\phi$. If the active lateral thrust acting on the wall is $P_a$, which one of the following statements is TRUE ?
+\begin{enumerate}
+    \item $P_a$ acts at a height $\frac{H}{2}$ from the base of the wall and at an angle $\beta$ with the horizontal
+    \item $P_a$ acts at a height $\frac{H}{2}$ from the base of the wall and at an angle $\phi$ with the horizontal
+    \item $P_a$ acts at a height $\frac{H}{3}$ from the base of the wall and at an angle $\beta$ with the horizontal
+    \item $P_a$ acts at a height $\frac{H}{3}$ from the base of the wall and at an angle $\phi$ with the horizontal \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
