@@ -1,0 +1,37 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [->, >=Stealth] (5.75,4) -- (5.75,12);
+\draw [->, >=Stealth] (4.5,7) -- (13.25,7);
+\draw [short] (3.75,10) -- (5.75,10);
+\draw [short] (5.75,10) -- (9,5);
+\draw [short] (9,5) -- (11.25,7);
+\draw (8.75,11.75) to[american voltage source] (8.75,7.5);
+\draw [short] (8.75,11.75) -- (10,11.75);
+\draw [short] (10,11.75) -- (10,11);
+\draw [short] (8.75,7.5) -- (10,7.5);
+\draw [short] (10,11) -- (9.75,10.75);
+\draw [short] (9.75,11) -- (9.75,10.5);
+\draw [short] (9.5,11) -- (9.5,10.5);
+\draw [short] (9.25,10.75) -- (9.5,10.75);
+\draw [->, >=Stealth] (9.75,10.75) -- (10,10.25);
+\draw [short] (10,10.25) -- (10,10);
+\draw [short] (10,10) -- (11.5,10);
+\draw (10,10) to[L ] (10,8.25);
+\draw (10,7.5) to[D] (10,8.5);
+\draw (11.5,10) to[R] (11.5,8.5);
+\draw (11.5,8.5) to[L ] (11.5,7.5);
+\draw [short] (10,7.5) -- (11.5,7.5);
+\node [font=\normalsize] at (12.75,6.75) {Time};
+\node [font=\normalsize] at (5.25,8.25) {Diode};
+\node [font=\normalsize] at (5.25,8) {current};
+\node [font=\normalsize] at (6,10) {1};
+\node [font=\normalsize] at (7.5,6.75) {2};
+\node [font=\normalsize] at (9,4.75) {3};
+\node [font=\normalsize] at (11.25,6.75) {4};
+\node [font=\normalsize] at (8,10) {$V_{source}$};
+\node [font=\normalsize] at (10.5,11.25) {IGBT};
+\node [font=\normalsize] at (10.75,9) {$L_{par}$};
+\node [font=\normalsize] at (12.25,9.25) {$R_{load}$};
+\node [font=\normalsize] at (12.25,8) {$L_{load}$};
+\node [font=\normalsize] at (10.5,8) {D};
+\end{circuitikz}

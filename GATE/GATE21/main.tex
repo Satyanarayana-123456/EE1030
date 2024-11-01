@@ -1,0 +1,178 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2020 - EE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{27 - 39}
+
+
+\begin{enumerate}
+\item A three-phase, 50 Hz, 4-pole induction motor runs at no-load with a slip of 1\%. With full load, the slip increases to 5\%. The \% speed regulation of the motor (rounded off to 2 decimal places) is $\_\_\_\_$. \\
+\item Currents through ammeters A2 and A3 in the figure are $1\angle{10\degree}$ and $1\angle{70\degree}$ respectively. The reading of
+the ammeter A1 (rounded off to 3 decimal places) is $\_\_\_\_$A.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q2.tex}
+}%
+\end{figure}\\
+\item The Thevenin equivalent voltage, $V_{TH}$, in V (rounded off two 2 decimal places) of the network shown below, is $\_\_\_\_$.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q3.tex}
+}%
+\end{figure}\\
+\item A double pulse measurement for an inductivity loaded circuit controlled by the IGBT switch is carried out to evaluate the reverse recovery characteristics of the diode, D, represented approximately as a piecewise linear plot of current vs time at diode turn-off. $L_{par}$ is a parasitic inductance due to the wiring of the circuit, and is in series with the diode. The point on the plot (indicate your choice by entering 1, 2, 3 or 4) at which the IGBT experiences the highest current stress is $\_\_\_\_$.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q4.tex}
+}%
+\end{figure}\\
+\item A single-phase, 4 kVA, 200 V/100 V, 50 Hz transformer with laminated CRGO steel core has rated no-load loss of 450 W. When the high-voltage winding is excited with 160 V, 40 Hz sinusoidal ac supply, the no-load losses are found to be 320 W. When the high-voltage winding of the same transformer is supplied from a 100 V, 25 Hz sinusoidal ac source, the no-load losses will be $\_\_\_\_$ W (rounded off two 2 decimal places). \\
+\item A single-phase inverter is fed from a 100 V dc source and is controlled using a quasi-square wave modulation scheme to produce an output waveform, $v\brak{t}$, as shown. The angle $\sigma$ is adjusted to entirely eliminate the $3^{\text{rd}}$ harmonic component from the output voltage. Under this condition, for $v\brak{t}$, the magnitude of the $5^{\text{th}}$ harmonic component as a percentage of the magnitude of the fundamental component is $\_\_\_\_$ (rounded off to 2 decimal places).
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q6.tex}
+}%
+\end{figure}\\
+\pagebreak
+\item A single 50 Hz synchronous generator on droop control was delivering 100 MW power to a system. Due to increase in load, generator power had to be increased by 10 MW, as a result of which, system frequency dropped to 49.75 Hz. Further increase in load in the system resulted in frequency of 49.25 Hz.
+At this condition, the power in MW supplied by the generator is $\_\_\_\_$( rounded off to 2 decimal places). \\
+\item Consider a negative unity feedback system with forward path transfer function 
+\begin{align*}
+    G\brak{s} = \frac{K}{\brak{s+a}\brak{s-b}\brak{s+c}},
+\end{align*}
+where $K, a, b, c$ are positive real numbers. For a Nyquist path enclosing the
+entire imaginary axis and right half of the $s$-plane in the clockwise direction, the Nyquist plot of $\brak{1 + G\brak{s}}$, encircles the origin of $\brak{1 + G\brak{s}}$-plane once in the clockwise direction and never passes
+through this origin for a certain value of $K$. Then, the number of poles of $\frac{G\brak{s}}{1 + G\brak{s}}$ lying in the open right half of the $s$-plane is $\_\_\_\_$. \\
+\item The cross-section of a metal-oxide-semiconductor structure is shown schematically. Starting from an uncharged condition, a bias +3 V is applied to the gate contact with respect to the body contact. The charge inside the silicon dioxide layer is then measured to be $+Q$. The total charge contained within the dashed box shown, upon application of bias, expressed as a multiple of $Q$ (absolute value in Coulombs, rounded off to the nearest integer) is $\_\_\_\_$.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q9.tex}
+}%
+\end{figure}\\
+\pagebreak
+\item For real numbers, $x$ and $y$, with $y = 3x^2 + 3x + 1$ the maximum and minimum value of $y$ for$x \in \sbrak{-2, 0}$ are respectively, $\_\_\_\_$.
+\begin{enumerate}
+    \item 7 and $\frac{1}{4}$.
+    \item 7 and 1.
+    \item -2 and $-\frac{1}{2}$.
+    \item 1 and $\frac{1}{4}$. \\ 
+\end{enumerate}
+\item The vector function expressed by
+\begin{align*}
+    \vec{F} = \vec{a}_x\brak{5y - k_1z} + \vec{a}_y\brak{3z + k_2x}  +\vec{a}_z\brak{k_3y - 4x}
+\end{align*}
+represents a conservative field, where $\vec{a}_x$, $\vec{a}_y$, $\vec{a}_z$ are unit vectors along $x$, $y$ and $z$ directions, respectively. The values of constants $k_1$, $k_2$, $k_3$ are given by:
+\begin{enumerate}
+    \item $k_1 = 3$, $k_2 = 3$, $k_3 = 7$
+    \item $k_1 = 3$, $k_2 = 8$, $k_3 = 5$
+    \item $k_1 = 4$, $k_2 = 5$, $k_3 = 3$
+    \item $k_1 = 0$, $k_2 = 0$, $k_3 = 0$ \\
+\end{enumerate}
+\item A 250 V dc shunt motor has an armature resistance of 0.2 $\Omega$ and a field resistance of 100 $\Omega$. When the motor is operated no-load at rated voltage, it draws an armature current of 5 A and runs at 1200 rpm. When a load is coupled to the motor, it draws total line current of 50 A at rated voltage, with a 5\% reduction in the air-gap flux due to armature reaction. Voltage drop across the brushes can be taken as 1 V per brush under all operating conditions. The speed of the motor, in rpm, under this loaded condition,
+is closet to :
+\begin{enumerate}
+    \item 1200
+    \item 1000
+    \item 1220
+    \item 900 \\
+\end{enumerate}
+\item Two buses, $i$ and $j$, are connected with a transmission line of admittance $Y$, at the two ends of which there are ideal transformers with turns ratio as shown. Bus admittance matrix for the system is :
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q13.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item $\sbrak{\begin{matrix}
+        -t_it_jY & t_j^2Y \\ t_i^2 & -t_it_jY
+    \end{matrix}}$
+     \item $\sbrak{\begin{matrix}
+        t_it_jY & -t_j^2Y \\ -t_i^2 & t_it_jY
+    \end{matrix}}$
+     \item $\sbrak{\begin{matrix}
+        t_i^2 & -t_it_jY \\ -t_it_jY & t_j^2
+    \end{matrix}}$
+     \item $\sbrak{\begin{matrix}
+        t_it_jY & -\brak{t_i - t_j}^2Y \\ -\brak{t_i - t_j}^2Y & t_it_jY
+    \end{matrix}}$
+     \end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
