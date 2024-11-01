@@ -1,0 +1,177 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2020 - XE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{40 - 52}
+
+
+\begin{enumerate}
+\item A venturimeter with 75 mm diameter throat is placed in a 150 mm diameter pipeline carrying water at 25\degree C. The pressure drop between the upstream tap and the venturi throat is 40 kPa. (Density of water = 1000 kg/$\text{m}^3$). \\\\
+The flow rate is $\_\_\_\_$ $\text{m}^3$/s (rounded off to three decimal places). \\
+\item A water jet with velocity $\overrightarrow{V}_{\text{jet}}$ impinges normal to a moving flat plate with velocity $\overrightarrow{V}_{\text{plate}}$ such that the jet splits equally into two halves as shown in Figure. The jet cross-sectional area is 2 $\text{cm}^2$, $\overrightarrow{V}_{\text{jet}}$ is 20 m/s and $\overrightarrow{V}_{\text{plate}}$ is 10 m/s and density of water is 1000 kg/$\text{m}^3$. Consider steady flow and neglect weight of the jet, weight of the plate and frictional losses. \\\\
+The absolute value of the force required to keep the plate moving at constant velocity $\overrightarrow{V}_{\text{plate}}$ is $\_\_\_\_$ N.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q2.tex}
+}%
+\end{figure}\\
+\item In an inverted manometer (as shown in the Figure), the pressure difference, $p_B - p_A$ is 100 kPa.\\\\
+Use specific gravity of oil as 0.8, density of water as 1000 kg/$\text{m}^3$, density of mercury as 13600 kg/$\text{m}^3$ and acceleration due to gravity as 10 m/$\text{s}^2$. \\\\
+The height of the water column, $H$ is $\_\_\_\_$ cm. (rounded off to one decimal place). \\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q3.tex}
+}%
+\end{figure}
+\item An incompressible, steady flow with a uniform velocity condition at the inlet between parallel plates is shown in Figure. The flow develops into a parabolic laminar profile with $u = ay\brak{y_0 - y}$ at the downstream end, where '$a$' is a constant. Assume unit depth of the plate. For $U_0$ = 7.5 cm/s, $y_0$ = 3 cm and the fluid with density, $\rho$ = 800 kg/$\text{m}^3$. \\\\
+The value of $a$ is $\_\_\_\_$. \\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q4.tex}
+}%
+\end{figure}
+\item A Pb-Sn sample of eutectic composition, containing $\alpha$- and $\beta$-phases, is examined in a scanning electron microscope. The $\alpha$-phase contains $\sim$ 97 wt\% Pb (atomic number 82) while $\beta$-phase contains $\sim$ 99 wt\% Sn (atomic number 50). The ratio of number of backscattered electrons escaping from $\alpha$-phase to that from $\beta$-phase would be:
+\begin{enumerate}
+    \item Less than 1
+    \item Equal to 1
+    \item Greater than 1
+    \item Equal to 0 \\
+\end{enumerate}
+\item Smallest or minimum feature size that can be theoretically resolved in an optical microscope does NOT depend on:
+\begin{enumerate}
+    \item Refractive index of the medium between the lens and the focal point
+    \item Intensity of radiation
+    \item Wavelength of radiation
+    \item Numerical aperture of the objective lens \\ 
+\end{enumerate}
+\item Following diagram shows a square 2-D lattice with a hexagonal motif (dark colored). The rotational symmetry element that must be present in the system is:
+\begin{figure}[!ht]
+\centering
+\resizebox{0.3\textwidth}{!}{%
+\input{figs/Q7.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item Six-fold rotation
+    \item Two-fold rotation
+    \item Three-fold rotation
+    \item Four-fold rotation \\
+\end{enumerate}
+\item Density of states, $D\brak{E}$, in a three dimensional solid varies with energy \brak{E} as
+\begin{enumerate}
+    \item $E^{\frac{1}{2}}$
+    \item $E^0$
+    \item $E^{-\frac{1}{2}}$
+    \item $E^{\frac{3}{2}}$ \\
+\end{enumerate}
+\item The variation of molar volume (Vm) of a liquid showing glass transition temperature (Tg) while cooling from its melting temperature (Tm) is depicted by:
+\pagebreak
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q9.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item I
+    \item II
+    \item III
+    \item IV \\
+\end{enumerate}
+\item Find the correct match between polymer name in Column I and the monomer type in Column II.
+\begin{table}[h!]
+  \centering
+  \input{tables/Q10.tex}
+\end{table}
+\begin{enumerate}
+    \item I-P, II-S, III-R, IV-Q
+    \item I-R, II-Q, III-S, IV-P
+    \item I-S, II-P, III-Q, IV-R
+    \item I-S, II-R, III-Q, IV-P \\
+\end{enumerate}
+\item A ceramic has a fracture toughness $\brak{K_{Ic}}$ of 1 MPa$\cdot\text{m}^\frac{1}{2}$. If this ceramic is to be exposed to a maximum stress $\brak{\sigma}$ of 200 MPa, the maximum value of half crack length '$a$' (in micrometer, $\mu$m, below which the material does not fail, is $\_\_\_\_$ $\mu$m \brak{round\ off\ to\ one\ decimal\ place}. Loading condition for the sample is shown in the schematic. Assume geometrical factor f = 1.2. \\
+\begin{figure}[!ht]
+\centering
+\resizebox{0.2\textwidth}{!}{%
+\input{figs/Q11.tex}
+}%
+\end{figure}
+\item A ceramic material is periodically heated and cooled between 25\degree C and a higher temperature, $T_f$. During thermal cycling, the material remains dimensionally constrained. The material can withstand a maximum compressive stress of 200 MPa without failure. Material's coefficient of thermal expansion is 7.5$\times 10^{-6} \degree \text{C}^{-1}$ and modulus of elasticity \brak{E} is 200 GPa. The lowest value of $T_f$ (in \degree C) at which material will fail is $\_\_\_\_$ \degree C \brak{round-off\ to\ the\ nearest\ integer}. Assume that there is no plastic deformation during thermal cycling. \\
+\item During homogeneous solidification of a liquid metal, the radius of critical nucleus (in nanometer, nm) at a temperature $T_s$ which is below the melting point $\brak{T_m}$, is $\_\_\_\_$ nm \brak{round-off\ to\ one\ decimal\ place}. Given that $\gamma_{sl}$ (solid-liquid interfacial energy) is 0.18 J$\cdot\text{m}^{-2}$ and $\Delta G_v$ (change in volume free energy upon transformation from liquid to solid) at $T_s$ is 0.18$\times 10^{8}$ J$\cdot\text{m}^{-3}$. \\
+			 \end{enumerate}
+			 \end{document}
+ 
