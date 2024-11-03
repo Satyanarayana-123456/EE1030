@@ -1,0 +1,206 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2021 - ST
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{40 - 52}
+
+
+\begin{enumerate}
+\item Let A be a $3 \times 3$ real matrix such that $I_3 + A$ is invertible and let $B = \brak{I_3 + A}^{-1}\brak{I_3 - A}$, where $I_3$ denotes the $3 \times 3$ identity matrix. Then which one of the following statements is true?
+\begin{enumerate}
+    \item If $B$ is orthogonal, then $A$ is invertible
+    \item If $B$ is orthogonal, then all the eigenvalues of $A$ are real
+    \item If $B$ is skew-symmetric, then $A$ is orthogonal
+    \item If $B$ is skew-symmetric, then the determinant of $A$ equals -1 \\
+\end{enumerate}
+\item Let $X$ be a random variable having Poisson distribution such that $E\brak{X^2}$ = 110. Then which one of the following statements is NOT true?
+\begin{enumerate}
+    \item $E\brak{X^n} = 10 E\sbrak{\brak{X + 1}^{n-1}}$, for all $n = 1, 2, 3, \cdots$
+    \item $P\brak{X\text{ is even}} = \frac{1}{4}\brak{1 + e^{-20}}$
+    \item $P\brak{X = k} < P\brak{X = k + 1}$, for $k = 0, 1, \cdots, 8$
+    \item $P\brak{X = k} > P\brak{X = k + 1}$, for $k = 10, 11, \cdots$ \\
+\end{enumerate}
+\item Let $X$ be a random variable having uniform distribution on $\sbrak{-\frac{\pi}{2}, \frac{\pi}{2}}$. Then which one of the following statements is NOT true?
+\begin{enumerate}
+    \item $Y = \cot\brak{X}$ follows standard Cauchy distribution
+    \item $Y = \tan\brak{X}$ follows standard Cauchy distribution
+    \item $Y = -\log_e\brak{\frac{1}{2} + \frac{X}{\pi}}$ has moment generating function $M\brak{t} = \frac{1}{1 - t},\ t < 1$
+    \item $Y = -2\log_e\brak{\frac{1}{2} + \frac{X}{\pi}}$ follows central chi-square distribution with one degree of freedom \\
+\end{enumerate}
+\item Let $\Omega = \{1, 2, 3, \cdots \}$ represent the collection of all possible outcomes of a random experiment with probabilities $P\brak{\{n\}} = \alpha n$ for $n \in \Omega$. Then which one of the following statements is NOT true?
+\begin{enumerate}
+    \item $\lim\limits_{n\rightarrow\infty}\alpha_n = 0$
+    \item $\sum_{n=1}^{\infty}\sqrt{\alpha_n}$ converges
+    \item For any positive integer $k$, there exist $k$ disjoint events $A_1, A_2, \cdots , A_k$ such that $P\brak{\bigcup_{i=1}^{k}A_i} < 0.001$
+    \item There exists a sequence $\{A_i\}_{i \geq 1}$ of strictly increasing events such that $P\brak{\bigcup_{i=1}^{k}A_i} < 0.001$ \\
+\end{enumerate}
+\item Let $\brak{X, Y}$ have the joint probability density function
+\begin{align*}
+    f_{X, Y}\brak{x, y} = \begin{cases}
+        \frac{4}{\brak{x+y}^3}, & x > 1, y > 1, \\
+        0, & \text{otherwise}.
+    \end{cases}
+\end{align*}
+Then which one of the following statements is NOT true?
+\begin{enumerate}
+    \item The probability density function of $X + Y$ is
+    \begin{align*}
+        f_{X + Y}\brak{z} = \frac{4}{z^3}\brak{z - 2}, & z > 2, \\
+        0, & \text{otherwise}.
+    \end{align*}
+    \item $P\brak{X + Y > 4} = \frac{3}{4}$
+    \item $E\brak{X + Y} = 4\log_{e}2$
+    \item $E\brak{Y | X = 2} = 4$ \\
+\end{enumerate}
+\item Let $X_1$, $X_2$ and $X_3$ be three uncorrelated random variables with common variance $\sigma^2 < \infty$. Let $Y_1 = 2X_1 + X_2 + X_3$, $Y_2 = X_1 + 2X_2 + X_3$ and $Y_3 = X_1 + X_2 + 2X_3$. Then which of the following statements is/are true? \\
+P : The sum of eigenvalues of the variance covariance matrix of $\brak{Y_1, Y_2, Y_3}$ is $18\sigma^2$. \\
+Q : The correlation coefficient between $Y_1$ and $Y_2$ equals that between
+$Y_2$ and $Y_3$.
+\begin{enumerate}
+    \item P only
+    \item Q only
+    \item Both P and Q
+    \item Neither P nor Q \\ 
+\end{enumerate}
+\item Let $\{X_n\}_{n \geq 0}$ be a time-homogeneous discrete time Markov chain with either finite or countable state space $S$. Then which one of the following statements is true?
+\begin{enumerate}
+    \item There is at least one recurrent state
+    \item If there is an absorbing state, then there exists at least one stationary distribution
+    \item If all the states are positive recurrent, then there exists a unique stationary distribution
+    \item If $\{X_n\}_{n \geq 0}$ is irreducible, $S = \{1, 2\}$ and $\sbrak{\pi_1}, \sbrak{\pi_2}$ is a stationary distribution, then $\lim\limits_{n\rightarrow\infty}P\brak{X_n = i|X_0 =i} = \pi_i$ for $i = 1, 2$ \\
+\end{enumerate}
+\item Let customers arrive at a departmental store according to a Poisson process with rate 10. Further, suppose that each arriving customer is either a male or a female with probability $\frac{1}{2}$ each, independent of all other arrivals. Let $N\brak{t}$ denote the total number of customers who have arrived by time $t$. Then which one of the following statements is NOT true?
+\begin{enumerate}
+    \item If $S_2$ denotes the time of arrival of the second female customer, then $P\brak{S_2 \leq 1} = 25\int_{0}^{1}se^{-5s} ds$
+    \item If $M\brak{t}$ denotes the number of male customers who have arrived by time $t$, then $P\brak{M\brak{\frac{1}{3}} = 0|M\brak{1} = 1} = \frac{1}{3}$
+    \item $E\sbrak{\brak{N\brak{t}}^2} = 100t^2 + 10t$
+    \item $E\sbrak{N\brak{t}N\brak{2t}} = 200t^2 + 10t$ \\
+\end{enumerate}
+\item Let $X_{\brak{1}} < X_{\brak{2}} < X_{\brak{3}} < X_{\brak{4}} < X_{\brak{5}}$ be the order statistics corresponding to a random sample of size 5 from a uniform distribution on $\sbrak{0, \theta}$, where $\theta \in \brak{0, \infty}$. Then which of the following statements is/are true?\\
+P : $3X_{\brak{2}}$ is an unbiased estimator of $\theta$.\\
+Q : The variance of $E\sbrak{2X_{\brak{3}}|X_{\brak{5}}}$ is less than or equal to the variance of $2X_{\brak{3}}$.
+\begin{enumerate}
+    \item P only
+    \item Q only
+    \item Both P and Q
+    \item Neither P nor Q \\ 
+\end{enumerate}
+\item Let $X_1$, $X_2$, $\cdots$ , $X_n$ be a random sample of size $n\brak{\geq 2}$ from a distribution having the probability density function
+\begin{align*}
+    f\brak{x;\theta} = \begin{cases}
+        \frac{1}{\theta}e^{-\frac{x}{\theta}}, & x > 0, \\
+        0, & \text{otherwise},
+    \end{cases}
+\end{align*}
+where $\theta\in\brak{0, \infty}$. Let $X_{\brak{1}} = \min\{X_1$, $X_2$, $\cdots$ , $X_n\}$ and $T = \sum_{i=1}^nX_i$. Then $E\brak{X_{\brak{1}}|T}$ equals
+\begin{enumerate}
+    \item $\frac{T}{n^2}$
+    \item $\frac{T}{n}$
+    \item $\frac{\brak{n+1}T}{2n}$
+    \item $\frac{\brak{n+1}^2T}{4n^2}$ \\
+\end{enumerate}
+\item Let $X_1, X_2, \cdots, X_n$ be a random sample of size $n\brak{\geq 2}$ from a uniform distribution on $\sbrak{-\theta, \theta}$, where $\theta \in \brak{0, \infty}$. Let $X_{\brak{1}} = \min\{X_1, X_2, \cdots, X_n\}$ and $X_{\brak{n}} = \max\{X_1, X_2, \cdots, X_n\} $. Then which of the following statements is/are true ?
+P : $\brak{X_{\brak{1}}, X_{\brak{n}}}$ is a complete statistic. \\
+Q : $X_{\brak{n}} - X_{\brak{1}}$ is an ancillary statistic.
+\begin{enumerate}
+    \item P only
+    \item Q only
+    \item Both P and Q
+    \item Neither P nor Q \\ 
+\end{enumerate}
+\item Let $\{X_n\}_{n \geq 1}$ be a sequence of independent and identically distributed random variables having common distribution function $ F\brak{\cdot}$. Let $a < b$ be two real numbers such that $F\brak{x} = 0$ for all $x \leq a$, $0 < F\brak{x} < 1$ for all $a < x < b$, and $F\brak{x} = 1$ for all $x \geq b$. Let $S_n\brak{x}$ be the empirical distribution function at $x$ based on $X_1, X_2, \cdots, X_n$, $n \geq 1$. Then which one of the following statements is NOT true ?
+\begin{enumerate}
+    \item $P\sbrak{\lim_{n \rightarrow \infty} \sup_{-\infty < x < \infty} \abs{S_n\brak{x} - F\brak{x}} = 0} = 1$
+    \item For fixed $x \in \brak{a, b}$ and $t \in (-\infty, \infty)$,
+    $\lim_{n \to \infty} P\sbrak{\frac{\sqrt{n}\abs{S_n\brak{x} - F\brak{x}}}{\sqrt{S_n\brak{x}(1 - S_n\brak{x})}} \leq t} = P\brak{Z \leq t)},$
+    where $Z$ is the standard normal random variable
+    \item The covariance between $S_n\brak{x}$ and $S_n\brak{y}$ equals $\frac{1}{n} F\brak{x}(1 - F\brak{y})$ for all $n \geq 2$ and for fixed $-\infty < x, y < \infty$
+    \item If $Y_n = \sup_{-\infty < x < \infty} \brak{S_n\brak{x} - F\brak{x}}^2$, then $\{4n\ Y_n\}_{n \geq 1}$ converges in distribution to a central chi-square random variable with 2 degrees of freedom \\
+\end{enumerate}
+\item Let the joint distribution of random variables $X_1, X_2, X_3$ and $X_4$ be $N_4\brak{\underline{\mu}, \Sigma}$, where
+\begin{align*}
+\underline{\mu} = \myvec{1 \\ 0 \\ 0 \\ 1}\ \text{and}\ \Sigma = \sbrak{\begin{matrix}
+    1 & 0.2 & 0 & 0 \\ 0.2 & 2 & 0 & 0 \\ 0 & 0 & 2 & 0.2 \\ 0 & 0 & 0.2 & 1
+\end{matrix}}.
+\end{align*}
+Then which one of the following statements is true ?
+\begin{enumerate}
+    \item $\frac{5}{17} \sbrak{\brak{X_1 + X_2}^2 + \brak{X_3 + X_4 - 1}^2}$ follows a central chi-square distribution with 2 degrees of freedom
+    \item $\frac{1}{3} \sbrak{\brak{X_1 + X_2}^2 + \brak{X_3 + X_4 - 1}^2}$ follows a central chi-square distribution with 2 degrees of freedom
+    \item $E \sbrak{\sqrt{\abs{\frac{X_1 + X_2 - 1}{X_3 + X_4 - 1}}}}$ is NOT finite
+    \item $E \sbrak{\abs{\frac{X_1 + X_2 + X_3 + X_4 - 2}{X_1 + X_2 - X_3 - X_4}}}$ is NOT finite \\
+\end{enumerate}
+			 \end{enumerate}
+			 \end{document}
+ 
