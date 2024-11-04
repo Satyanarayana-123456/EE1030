@@ -1,0 +1,8 @@
+\beamer@sectionintoc {2}{Problem}{3}{0}{1}
+\beamer@sectionintoc {3}{Solution}{4}{0}{2}
+\beamer@subsectionintoc {3}{1}{Description of Variables used}{4}{0}{2}
+\beamer@subsectionintoc {3}{2}{Row Reduction: Finding $\mathbf {c}$}{5}{0}{2}
+\beamer@subsectionintoc {3}{3}{Finding $\mathbf {u}$, $r$ and $f$}{6}{0}{2}
+\beamer@subsectionintoc {3}{4}{Equation of Circle}{7}{0}{2}
+\beamer@subsectionintoc {3}{5}{Plot}{8}{0}{2}
+\beamer@subsectionintoc {3}{6}{Codes}{9}{0}{2}
