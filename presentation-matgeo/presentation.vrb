@@ -1,0 +1,12 @@
+\frametitle{Codes}
+    The equation of circle \eqref{eq:circ_eq} can be found through
+    {\footnotesize
+\begin{lstlisting}
+https://github.com/Satyanarayana-123456/EE1030/blob/49c3368ff40b51aed83efa82383340d2fa51db7d/Presentation/matgeo/codes/main.c
+\end{lstlisting}
+}
+    The plot of the circle can be obtained by{\footnotesize
+\begin{lstlisting}
+https://github.com/Satyanarayana-123456/EE1030/blob/49c3368ff40b51aed83efa82383340d2fa51db7d/Presentation/matgeo/codes/circle.py
+\end{lstlisting}
+}
