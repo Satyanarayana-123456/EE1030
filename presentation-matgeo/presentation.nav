@@ -37,8 +37,16 @@
 \headcommand {\beamer@subsectionentry {0}{3}{6}{9}{Codes}}
 \headcommand {\slideentry {3}{6}{1}{9/9}{Codes}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@partpages {1}{9}}
-\headcommand {\beamer@subsectionpages {9}{9}}
-\headcommand {\beamer@sectionpages {4}{9}}
-\headcommand {\beamer@documentpages {9}}
-\headcommand {\gdef \inserttotalframenumber {9}}
+\headcommand {\slideentry {3}{6}{2}{10/10}{Codes}{0}}
+\headcommand {\beamer@framepages {10}{10}}
+\headcommand {\slideentry {3}{6}{3}{11/11}{Codes}{0}}
+\headcommand {\beamer@framepages {11}{11}}
+\headcommand {\slideentry {3}{6}{4}{12/12}{Codes}{0}}
+\headcommand {\beamer@framepages {12}{12}}
+\headcommand {\slideentry {3}{6}{5}{13/13}{Codes}{0}}
+\headcommand {\beamer@framepages {13}{13}}
+\headcommand {\beamer@partpages {1}{13}}
+\headcommand {\beamer@subsectionpages {9}{13}}
+\headcommand {\beamer@sectionpages {4}{13}}
+\headcommand {\beamer@documentpages {13}}
+\headcommand {\gdef \inserttotalframenumber {13}}

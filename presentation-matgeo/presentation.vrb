@@ -1,12 +1,17 @@
-\frametitle{Codes}
-    The equation of circle \eqref{eq:circ_eq} can be found through
-    {\footnotesize
+\frametitle{Code - Python}
 \begin{lstlisting}
-https://github.com/Satyanarayana-123456/EE1030/blob/8e602868638ce68d254508a0a3312206087937d4/presentation-matgeo/codes/main.c
-\end{lstlisting}
-}
-    The plot of the circle can be obtained by{\footnotesize
-\begin{lstlisting}
-https://github.com/Satyanarayana-123456/EE1030/blob/8e602868638ce68d254508a0a3312206087937d4/presentation-matgeo/codes/circle.py
-\end{lstlisting}
-}
+centerY = centerY.value
+radius = circle_lib.calculateRadius(area)
+points = np.loadtxt("coordinates.txt", delimiter=",", unpack=False)
+plt.figure()
+plt.plot(points[:, 0], points[:, 1], color='green', label=f"Circle")
+plt.scatter(centerX, centerY, color='blue', s=100, label="Center", edgecolor='black')
+plt.text(centerX, centerY, f"({centerX:.2f}, {centerY:.2f})", fontsize=10, ha='right', color='black')
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Circle")
+plt.legend(loc='upper right')
+plt.gca().set_aspect('equal', adjustable='box')
+plt.grid(True)
+plt.show()
+    \end{lstlisting}
