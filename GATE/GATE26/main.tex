@@ -1,0 +1,153 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2023 - PH
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{53 - 65}
+
+
+\begin{enumerate}
+\item A spin $\frac{1}{2}$ particle is in a spin up state along the $x$-axis (with unit vector $\hat{x}$) and is denoted as $\bigg|\frac{1}{2},\frac{1}{2}\rangle_x$. What is the probability of finding the particle to be in a
+spin up state along the direction $\hat{x}'$, which lies in the $xy$-plane and makes an angle $\theta$ with respect to the positive $x$-axis, if such a measurement is made ?
+\begin{enumerate}
+    \item $\frac{1}{2}\cos^2\frac{\theta}{4}$
+    \item $\cos^2\frac{\theta}{4}$
+    \item $\frac{1}{2}\cos^2\frac{\theta}{2}$
+    \item $\cos^2\frac{\theta}{2}$ \\
+\end{enumerate}
+\item Different spectral lines of the Balmer series (transitions $n \rightarrow 2$, with $n$ being the principal quantum number) fall one at a time on a Young's double slit apparatus. The separation between the slits is $d$ and the screen is placed at a constant distance from the slits. What factor should $d$ be multiplied by to maintain a constant fringe width for various lines, as $n$ takes different allowed values ? 
+\begin{enumerate}
+    \item $\frac{n^2 - 4}{4n^2}$
+    \item $\frac{n^2 + 4}{4n^2}$
+    \item $\frac{4n^2}{n^2 - 4}$
+    \item $\frac{4n^2}{n^2 + 4}$ \\
+\end{enumerate}
+\item Under parity and time reversal transformations, which of the following statements is(are) TRUE about the electric dipole moment \textbf{p} and the magnetic dipole moment \boldsymbol{$\mu$} ?  
+\begin{enumerate}
+    \item \textbf{p} is odd under parity and \boldsymbol{$\mu$} is odd under time reversal
+    \item \textbf{p} is odd under parity and \boldsymbol{$\mu$} is even under time reversal
+    \item \textbf{p} is even under parity and \boldsymbol{$\mu$} is odd under time reversal
+    \item \textbf{p} is even under parity and \boldsymbol{$\mu$} is even under time reversal \\
+\end{enumerate}
+\item Consider the complex function
+\begin{align*}
+    f\brak{z} = \frac{z^2\sin\brak{z}}{\brak{z - \pi}^4}
+\end{align*}
+At $z = \pi$ , which of the following options is(are) CORRECT ?
+\begin{enumerate}
+    \item The order of the pole is 4
+    \item The order of the pole is 3
+    \item The residue at the pole is $\frac{\pi}{6}$
+    \item The residue at the pole is $\frac{2\pi}{3}$ \\
+\end{enumerate}
+\item Consider the vector field $\overrightarrow{V}$ consisting of the velocities of points on a thin horizontal disc of radius $R = 2$ m, moving anticlockwise with uniform angular speed $\omega = 2$ rad/sec about an axis passing through its center. If $V = \abs{\overrightarrow{V}}$, then which of the following options is(are) CORRECT ? (In the options, $\hat{r}$ and $\hat{\theta}$ are unit vectors corresponding to the plane polar coordinates $r$ and $\theta$).\\\\
+You may use the fact that in cylindrical coordinates $\brak{s, \phi, z}$ ($s$ is the distance from the $z$-axis), the gradient, divergence, curl and Laplacian operators are:
+\begin{align*}
+    \overrightarrow{\nabla}f & = \frac{\partial f}{\partial s}\hat{s} + \frac{1}{s}\frac{\partial f}{\partial \phi}\hat{\phi} + \frac{\partial f}{\partial z}\hat{z}; \\
+\overrightarrow{\nabla}\cdot\overrightarrow{A} & = \frac{1}{s}\frac{\partial}{\partial s}\brak{sA_s} + \frac{1}{s}\frac{\partial A_{\phi}}{\partial \phi} + \frac{\partial A_z}{\partial z}; \\
+\overrightarrow{\nabla}\times\overrightarrow{A} & = \brak{\frac{1}{s} \frac{\partial A_z}{\partial \phi} - \frac{\partial A_{\phi}}{\partial z}}\hat{s} + \brak{\frac{\partial A_s}{\partial z} - \frac{\partial A_z}{\partial s}}\hat{\phi} \\
+& + \frac{1}{s}\brak{\frac{\partial}{\partial s}\brak{sA_{\phi}} - \frac{\partial A_s}{\partial \phi}}\hat{z}; \\
+\overrightarrow{\nabla}^2f & = \frac{1}{s}\frac{\partial}{\partial s}\brak{s \frac{\partial f}{\partial s}} + \frac{1}{s^2}\frac{\partial^2 f}{\partial \phi^2} + \frac{\partial^2 f}{\partial z^2}.
+\end{align*}
+\begin{enumerate}
+    \item $\overrightarrow{\nabla}V = 2\hat{r}$
+    \item $\overrightarrow{\nabla}\cdot\overrightarrow{V} = 2$
+    \item $\overrightarrow{\nabla}\times\overrightarrow{V} = 4\hat{z}$, where $\hat{z}$ is a unit vector perpendicular to the $\brak{r, \theta}$ plane
+    \item $\overrightarrow{\nabla}^2V = \frac{4}{3}$ at $r = 1.5$ m \\
+\end{enumerate}
+\item A slow moving $\pi^{-}$ particle is captured by a deuteron \brak{d} and this reaction produces two neutrons \brak{n} in the final state, i.e., $\pi^{-} + d \rightarrow n + n$. Neutron and deuteron have even intrinsic parities, whereas $\pi^{-}$ has odd intrinsic parity. $L$ and $S$ are the orbital and spin angular momenta, respectively of the system of two neutrons. Which of the following statements regarding the final two-neutron state is(are) CORRECT ? 
+\begin{enumerate}
+    \item It has odd parity
+    \item $L + S$ is odd
+    \item $L = 1, S = 1$
+    \item $L = 2, S = 0$ \\ 
+\end{enumerate}
+\item Two independent electrostatic configurations are shown in the figure.
+Configuration \brak{I} consists of an isolated point charge $q$ = 1 C, and configuration \brak{II} consists of another identical charge surrounded by a thick conducting shell of inner radius $R_1 = 1$ m and outer radius $R_2 = 2$ m, with the charge being at the center of the shell. $W_{I} = \frac{\epsilon_0}{2}\int E_{I}^2\ dV$ and $W_{II} = \frac{\epsilon_0}{2}\int E_{II}^2\ dV$, where $E_{I}$ and $E_{II}$ are the magnitudes of the electric fields for configurations \brak{I} and \brak{II} respectively, $\epsilon_0$ is the permittivity of vacuum, and the volume integrations are carried out over all space. If $\frac{8\pi}{\epsilon_0}\abs{W_{I} - W_{II}} = \frac{1}{n}$, what is
+the value of the integer $n$ ?
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q7.tex}
+}%
+\end{figure} \\
+\item In pion nucleon scattering, the pion and nucleon can combine to form a short lived bound state called the $\Delta$ particle $\brak{\pi + N \rightarrow \Delta}$. The masses of the pion, nucleon and the $\Delta$ particle are 140 MeV/$c^2$, 938 MeV/$c^2$ and 1230 MeV/$c^2$, respectively. In the lab frame, where the nucleon is at rest, what is the minimum energy (in MeV/$c^2$, rounded off to one decimal place) of the pion to produce the
+$\Delta$ particle ? \\
+\item Consider an electromagnetic wave propagating in the $z$-direction in vacuum, with the magnetic field given by $\overrightarrow{B} = \overrightarrow{B_0}e^{i\brak{kz - \omega t}}$. If $B_0 = 10^{-8}$ T, the average power passing through a circle of radius 1.0 m placed in the $xy$ plane is $P$ (in Watts). Using $\epsilon_0 = 10^{-11}\ \frac{C^2}{N m^2}$, what is the value of $\frac{10^3P}{\pi}$ (rounded off to one decimal place) ? \\
+\item An $\alpha$-particle is emitted from the decay of Americium (Am) at rest, i.e., $^{241}_{94}\text{Am} \rightarrow ^{237}_{92}\text{U} + \alpha$. The rest masses of $^{241}_{94}\text{Am}$, $^{237}_{92}\text{U}$ and $\alpha$ are 224.544 GeV/$c^2$, 220.811 GeV/$c^2$ and 3.728 GeV/$c^2$ respectively. What is the kinetic energy (in MeV/$c^2$, rounded off to two decimal places) of the $\alpha$-particle ? \\
+\item Consider 6 identical, non-interacting, spin $\frac{1}{2}$ atoms arranged on a crystal lattice at absolute temperature $T$. The $z$-component of the magnetic moment of each of these atoms can be $\pm\mu_B$. If $P$ and $Q$ are the probabilities of the net magnetic moment of the solid being $2\mu_B$ and $6\mu_B$ respectively, what is the value of $\frac{P}{Q}$ (in integer) ? \\
+\item Two identical, non-interacting $^4\text{He}_2$ atoms are distributed among 4 different non-degenerate energy levels. The probability that they occupy different energy levels is $p$. Similarly, two $^3\text{He}_2$ atoms are distributed among 4 different non-degenerate energy levels, and the probability that they occupy different levels is $q$. What is the value of $\frac{p}{q}$ (rounded off to one decimal place) ? \\
+\item Two identical bodies kept at temperatures 800 K and 200 K act as the hot and the cold reservoirs of an ideal heat engine, respectively. Assume that their heat capacity \brak{C} in Joules/K is independent of temperature and that they do not undergo any phase change. Then, the maximum work that can be obtained from the heat engine is $n \times C$ Joules. What is the value of $n$ (in integer) ? \\
+			 \end{enumerate}
+			 \end{document}
+ 
