@@ -1,0 +1,179 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2023 - XE
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{40 - 52}
+
+
+\begin{enumerate}
+\item Water (density = 1000 kg/$\text{m}^3$) flows steadily with a flow rate of 0.05 $\text{m}^3$/s through a venturimeter having throat diameter of 100 mm. If the pipe diameter is 200 mm and losses are negligible, the pressure drop (in kPa, $rounded\ off\ to\ one\ decimal\ place$) between an upstream location in the pipe and the throat (both at the same elevation) is $\_\_\_\_$. \\
+\item Water flows around a thin flat plate (0.25 m long, 2 m wide) with a free stream velocity $\brak{U_{\infty}}$ of 1 m/s, as shown in the figure. Consider linear velocity profile $\brak{\frac{u}{U_{\infty}} = \frac{y}{\delta}}$ for which the laminar boundary layer thickness is expressed as $\delta = \frac{3.5x}{\sqrt{Re_x}}$. For water, density = 1000 kg/$\text{m}^3$ and dynamic viscosity = 0.001 kg/m.s. Net drag force (in N, $rounded\ off\ to\ two\ decimal\ places$) acting on the plate, neglecting the end effects, is $\_\_\_\_$. 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q2.tex}
+}%
+\end{figure} \\
+\item Axial velocity profile $u\brak{r}$ for an axisymmetric flow through a circular tube of radius $R$ is given as,
+\begin{align*}
+    \frac{u\brak{r}}{U} = \brak{1 - \frac{r}{R}}^{\frac{1}{n}}
+\end{align*}
+where $U$ is the centerline velocity. If $V$ refers to the area-averaged velocity (volume flow rate per unit area), then the ratio $\frac{V}{U}$ for $n = 1$ \brak{rounded\ off\ to\ two\ decimal\ places} is $\_\_\_\_$. \\
+\item A stationary circular pipe of radius $R = 0.5$ m is half filled withwater (density = 1000 kg/$\text{m}^3$), whereas the upper half is filled with air at atmospheric pressure, as shown in the figure. Acceleration due to gravity is $g$ = 9.81 m/$\text{s}^2$. The magnitude of the force per unit length (in kN/m, $rounded\ off\ to\ one\ decimal\ place$) applied by water on the pipe section AB is $\_\_\_\_$.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q4.tex}
+}%
+\end{figure} \\
+\item In age-hardening of an aluminium alloy, the purpose of solution treatment
+followed by quenching is to
+\begin{enumerate}
+    \item form martensitic structure
+    \item increase the size of the precipitates
+    \item form supersaturated solid solution
+    \item form precipitates at the grain boundaries \\
+\end{enumerate}
+\item The magnetization (M) - magnetic field (H) curves for four different materials are given below. Which one of these materials is most suitable for use as a permanent magnet?
+\begin{enumerate}
+    \item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A6.1.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A6.2.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A6.3.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A6.4.tex}
+}%
+\\
+\end{enumerate}
+\item The band gap of a semiconducting material is $\sim$ 2 eV. Which one of the following absorption (A) vs. energy (in eV) curves is correct ?
+\begin{enumerate}
+    \item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A7.1.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A7.2.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A7.3.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A7.4.tex}
+}%
+\\
+\end{enumerate}
+\item Figures (i) and (ii) show a binary phase diagram and the corresponding Gibbs free energy \brak{G} vs. composition \brak{X_B} diagram, respectively. Figure (ii) corresponds to which one of the temperatures shown in Figure (i)?
+\pagebreak
+\begin{figure}[!ht]
+\centering
+\resizebox{0.9\textwidth}{!}{%
+\input{figs/Q8.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item T1
+    \item T2
+    \item T3
+    \item T4 \\
+\end{enumerate}
+\item Aliovalent doping of $MgCl_2$ in $NaCl$ leads to the formation of defects. Which one of the following is the correct defect reaction ?
+\begin{enumerate}
+    \item $Mg^{\bullet}_{Cl} + Na_{Na} + V'_{Cl} = \varnothing$
+    \item $Mg^{\bullet}_{Na} + Cl_{Cl} + V'_{Na} = \varnothing$
+    \item $Mg_{Na} + Cl_{Cl} = \varnothing$
+    \item $Mg'_{Na} + Cl_{Cl} + V^{\bullet}_{Na} = \varnothing$ \\
+\end{enumerate}
+\item A screw dislocation in a FCC crystal has Burgers vector of $\frac{a}{2}\sbrak{1 1 0}$, where $a$ is the lattice constant. The possible slip plane(s) is/are:
+\begin{enumerate}
+    \item $\brak{1 1 \bar{1}}$
+    \item $\brak{1 1 1}$
+    \item $\brak{\bar{1} 1 1}$
+    \item $\brak{1 \bar{1} 1}$ \\
+\end{enumerate}
+\item The tensile true stress $\brak{\sigma}$ - true strain $\brak{\epsilon}$ curve follows the Hollomon equation:
+\begin{align*}
+    \sigma = 500\epsilon^{0.15}\ \text{MPa}
+\end{align*}
+At the maximum load, the work-hardening rate $\brak{\frac{d\sigma}{d\epsilon}}$ is (in MPa): $\_\_\_\_$ (rounded off to nearest integer) \\
+\item A metal has a certain vacancy fraction at a temperature of 600 K. On increasing the temperature to 900 K, the vacancy fraction increases by a factor of $\_\_\_\_$ (rounded off to one decimal place) \\\\
+Given: Gas constant, R = 8.31 J $\text{mol}^{-1}\text{K}^{-1}$ and activation energy for vacancy formation, Q = 68 kJ $\text{mol}^{-1}$ \\
+\item In a semiconductor, the ratio of electronic mobility to hole mobility is 10. The density of electrons and holes are $10^{15} m^{-3}$ and $10^{16} m^{-3}$, respectively. If the conductivity of the material is 1.6 $\Omega^{-1} m^{-1}$, then the mobility of holes is (in $m^2V^{-1}s^{-1}$) : $\_\_\_\_$ (rounded off to nearest integer) \\\\
+Given: Charge of an electron: $1.6 \times 10^{-19}\ C$ \\
+			 \end{enumerate}
+			 \end{document}
+  
