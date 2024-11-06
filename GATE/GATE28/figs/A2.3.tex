@@ -1,0 +1,17 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw  (4,11) rectangle (12.25,10.5);
+\draw  (9,10.25) circle (0.25cm);
+\fill[color=blue]  (4,11) rectangle (12.25,10.5);
+\node at (4.25,10.75) [circ] {};
+\draw [short] (4.25,10.75) -- (3.75,10);
+\draw [short] (4.25,10.75) -- (4.75,10);
+\draw [short] (3.5,10) -- (5,10);
+\draw [short] (8.5,10) -- (9.5,10);
+\draw  (12,10.25) circle (0.25cm);
+\draw [short] (11.5,10) -- (12.5,10);
+\draw [->, >=Stealth] (6.75,12) -- (6.75,11);
+\draw [->, >=Stealth] (10.5,12) -- (10.5,11);
+\node [font=\normalsize] at (6.5,12) {$P_1$};
+\node [font=\normalsize] at (10.25,12) {$P_2$};
+\end{circuitikz}

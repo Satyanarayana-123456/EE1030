@@ -1,0 +1,13 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (5,11.25) -- (5,7.5);
+\draw [short] (8.75,11.25) -- (8.75,7.5);
+\draw [short] (5,11.25) .. controls (6.75,13) and (7,9.75) .. (8.75,11.25);
+\draw [short] (5,7.5) .. controls (7,9.25) and (7,6) .. (8.75,7.5);
+\draw [<->, >=Stealth] (5,8.5) -- (8.75,8.5)node[pos=0.5, fill=white]{20 mm};
+\node [font=\normalsize] at (4.25,10.25) {Left face};
+\node [font=\normalsize] at (9.75,10.25) {Right face};
+\node [font=\normalsize] at (4,9.25) {$T$ =150 \degree C };
+\node [font=\normalsize] at (10,9.5) {$T$ = 110 \degree C};
+\node [font=\normalsize] at (6.5,10) {$\dot{q}$ = 100 MW/$\text{m}^3$};
+\end{circuitikz}

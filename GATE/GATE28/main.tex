@@ -1,0 +1,176 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal]{IEEEtran}
+\usepackage[a5paper, margin=10mm, onecolumn]{geometry}
+%\usepackage{lmodern} % Ensure lmodern is loaded for pdflatex
+\usepackage{tfrupee} % Include tfrupee package
+
+\setlength{\headheight}{1cm} % Set the height of the header box
+\setlength{\headsep}{0mm}     % Set the distance between the header box and the top of the text
+
+\usepackage{gvv-book}
+\usepackage{gvv}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+% \usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\begin{document}
+
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+
+
+
+\title{
+%	\logo{
+GATE - 2024 - ME
+
+\large{EE1030 : Matrix Theory}
+
+Indian Institute of Technology Hyderabad
+%	}
+}
+\author{Satyanarayana Gajjarapu
+
+AI24BTECH11009
+}	
+
+
+
+
+
+\maketitle
+
+
+
+
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+
+\section{40 - 52}
+
+
+\begin{enumerate}
+\item Steady, compressible flow of air takes place through an adiabatic convergingdiverging nozzle, as shown in the figure. For a particular value of pressure difference across the nozzle, a stationary normal shock wave forms in the diverging section of the nozzle. If $E$ and $F$ denote the flow conditions just upstream and downstream of the normal shock, respectively, which of the following statement(s) is/are TRUE ?
+\begin{figure}[!ht]
+\centering
+\resizebox{0.7\textwidth}{!}{%
+\input{figs/Q1.tex}
+}%
+\end{figure}
+\begin{enumerate}
+    \item Static pressure at $E$ is lower than the static pressure at $F$
+    \item Density at $E$ is lower than the density at $F$
+    \item Mach number at $E$ is lower than the Mach number at $F$
+    \item Specific entropy at $E$ is lower than the specific entropy at $F$ \\
+\end{enumerate}
+\item Which of the following beam(s) is/are statically indeterminate ?
+\begin{enumerate}
+    \item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A2.1.tex}
+}%
+\item \resizebox{0.45\textwidth}{!}{%
+\input{figs/A2.2.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A2.3.tex}
+}%
+\item \resizebox{0.4\textwidth}{!}{%
+\input{figs/A2.4.tex}
+}% \\
+\end{enumerate}
+\item If the value of the double integral
+\begin{align*}
+    \int_{x=3}^{4}\int_{y=1}^{2} \frac{dxdy}{\brak{x + y}^2}
+\end{align*}
+is $\log_e\brak{\frac{a}{24}}$, then $a$ is $\_\_\_\_$ \brak{answer\ in\ integer}. \\
+\item If $x\brak{t}$ satisfies the differential equation
+\begin{align*}
+    t\frac{dx}{dt} + \brak{t - x} = 0
+\end{align*}
+subject to the condition $x\brak{1} = 0$, then the value of $x\brak{2}$ is $\_\_\_\_$ \brak{rounded\ off\ to\ 2\ decimal\ places}. \\
+\item Let $X$ be a continuous random variable defined on $\sbrak{0,1}$ such that its probability density function $f\brak{x} = 1$ for $0 \leq x \leq 1$ and 0 otherwise. Let $Y = \log_e\brak{X + 1}$. Then the expected value of $Y$ is $\_\_\_\_$. \brak{rounded\ off\ to\ 2\ decimal\ places} \\
+\item Consider an air-standard Brayton cycle with adiabatic compressor and turbine, and a regenerator, as shown in the figure. Air enters the compressor at 100 kPa and 300 K and exits the compressor at 600 kPa and 550 K. The air exits the combustion chamber at 1250 K and exits the adiabatic turbine at 100 kPa and 800 K. The exhaust air from the turbine is used to preheat the air in the regenerator. The exhaust air exits the regenerator (state 6) at 600 K. There is no pressure drop across the regenerator and the combustion chamber. Also, there is no heat loss from the regenerator to the surroundings. The ratio of specific heats at constant pressure and volume is $\frac{c_p}{c_v} =
+1.4$. The thermal efficiency of the cycle is $\_\_\_\_$ \% \brak{answer\ in\ integer}.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.9\textwidth}{!}{%
+\input{figs/Q6.tex}
+}%
+\end{figure}\\
+\item A piston-cylinder arrangement shown in the figure has a stop located 2 m above the base. The cylinder initially contains air at 140 kPa and 350 \degree C and the piston is resting in equilibrium at a position which is 1 m above the stops. The system is now cooled to the ambient temperature of 25 \degree C. Consider air to be an ideal gas with a value of gas constant $R$ = 0.287 kJ/(kg.K). \\\\
+The absolute value of specific work done during the process is $\_\_\_\_$ kJ/kg
+\brak{rounded\ off\ to\ 1\ decimal\ place} 
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q7.tex}
+}%
+\end{figure}\\
+\item A heat pump (H.P.) is driven by the work output of a heat engine (H.E.) as shown in the figure. The heat engine extracts 150 kJ of heat from the source at 1000 K. The heat pump absorbs heat from the ambient at 280 K and delivers heat to the room which is maintained at 300 K. Considering the combined system to be ideal, the total amount of heat delivered to the room together by the heat engine and heat pump is $\_\_\_\_$ kJ \brak{answer\ in\ integer}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q8.tex}
+}%
+\end{figure}\\
+\item Consider a slab of 20 mm thickness. There is a uniform heat generation of
+$\dot{q}$ = 100 MW/$\text{m}^3$ inside the slab. The left and right faces of the slab are maintained at 150 \degree C and 110 \degree C, respectively. The plate has a constant thermal conductivity of 200 W/(m.K). Considering a 1-D steady state heat conduction, the location of the maximum temperature from the left face will be at $\_\_\_\_$ mm \brak{answer\ in\ integer}.
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q9.tex}
+}%
+\end{figure}\\ 
+\item A condenser is used as a heat exchanger in a large steam power plant in which steam is condensed to liquid water. The condenser is a shell and tube heat exchanger which consists of 1 shell and 20,000 tubes. Water flows through each of the tubes at a rate of 1 kg/s with an inlet temperature of 30 \degree C. The steam in the condenser shell condenses at the rate of 430 kg/s at a temperature of 50 \degree C. If the heat of vaporization is 2.326 MJ/kg and specific heat of water is 4 kJ/(kg.K), the effectiveness of the heat exchanger is $\_\_\_\_$ \brak{rounded\ off\ to\ 3\ decimal\ places}. \\
+\item Consider a hemispherical furnace of diameter $D$ = 6 m with a flat base. The dome of the furnace has an emissivity of 0.7 and the flat base is a blackbody. The base and the dome are maintained at uniform temperature of 300 K and 1200 K, respectively. Under steady state conditions, the rate of radiation heat transfer from the dome to the base is $\_\_\_\_$ kW \brak{rounded\ off\ to\ the\ nearest\ integer}. \\\\
+Use Stefan-Boltzmann constant = $5.67 \times 10^{-8}$ W/$\brak{\text{m}^2\text{K}^4}$
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q11.tex}
+}%
+\end{figure}\\
+\item A liquid fills a horizontal capillary tube whose one end is dipped in a large pool of the liquid. Experiments show that the distance $L$ travelled by the liquid meniscus inside the capillary in time $t$ is given by 
+\begin{align*}
+    L = k\gamma^aR^b\mu^c\sqrt{t},
+\end{align*}
+where $\gamma$ is the surface tension, $R$ is the inner radius of the capillary, and $\mu$ is the dynamic viscosity of the liquid. If $k$ is a dimensionless constant, then the exponent $a$ is $\_\_\_\_$ \brak{rounded\ off\ to\ 1\ decimal\ place}. \\
+\item The Levai type-A train illustrated in the figure has gears with module
+$m$ = 8 mm/tooth. Gears 2 and 3 have 19 and 24 teeth respectively. Gear 2 is
+fixed and internal gear 4 rotates at 20 rev/min counter-clockwise. The magnitude of angular velocity of the arm is $\_\_\_\_$ rev/min. \brak{rounded\ off\ to\ 2\ decimal\ places}
+\begin{figure}[!ht]
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\input{figs/Q13.tex}
+}%
+\end{figure}\\
+			 \end{enumerate}
+			 \end{document}
+ 

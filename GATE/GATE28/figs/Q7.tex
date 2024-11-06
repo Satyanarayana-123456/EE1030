@@ -1,0 +1,23 @@
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\normalsize]
+\draw [short] (5.25,12) -- (5.25,6);
+\draw [short] (5.25,6) -- (10.25,6);
+\draw [short] (10.25,6) -- (10.25,12);
+\draw  (5.25,9.25) rectangle (6,8.75);
+\fill[color=lightgray] (5.25,9.25) rectangle (6,8.75);
+\draw  (10.25,9.25) rectangle (9.5,8.75);
+\fill[color=lightgray] (10.25,9.25) rectangle (9.5,8.75);
+\draw  (5.25,10.75) rectangle (10.25,10.25);
+\fill[color=blue] (5.25,10.75) rectangle (10.25,10.25);
+\draw  (6,11) rectangle (9.25,10.75);
+\fill[color=blue] (6,11) rectangle (9.25,10.75);
+\draw  (6.5,11.25) rectangle (8.5,11);
+\fill[color=blue] (6.5,11.25) rectangle (8.5,11);
+\draw [short] (10.5,10.25) -- (11,10.25);
+\draw [short] (10.5,9.25) -- (11,9.25);
+\draw [short] (10.5,6) -- (11,6);
+\draw [<->, >=Stealth] (10.75,10.25) -- (10.75,9.25);
+\draw [<->, >=Stealth] (10.75,9.25) -- (10.75,6);
+\node [font=\normalsize] at (11.25,9.75) {1 m};
+\node [font=\normalsize] at (11.25,7.75) {2 m};
+\end{circuitikz}
