@@ -1,0 +1,130 @@
+\documentclass[12pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}   % For UTF-8 encoding
+\usepackage{graphicx}         % For including images
+\usepackage{amsmath} 
+\usepackage{mathtools}% For math symbols and environments
+\usepackage{geometry}         % For page layout
+\geometry{a4paper, margin=1in}
+
+\title{\textbf{Eigenvalue Calculation} \\
+\large EE1030 : Matrix Theory}
+\author{Satyanarayana Gajjarapu \\
+AI24BTECH11009 \\
+\texttt{ai24btech11009@iith.ac.in} \\
+}
+\date{\today}
+
+\begin{document}
+\maketitle
+\section{Eigenvalues \& Eigenvectors}
+\subsection{Definition}
+Eigenvalues are set of scalars associated with system of linear equations. Consider a square matrix $A$ of dimension $n \times n$, a non-zero vector $\mathbf{v}$ of length $n$. If
+\begin{align*}
+    A\mathbf{v} = \lambda\mathbf{v}
+\end{align*}
+where $\lambda$ is a scalar, then $\mathbf{v}$ is called an eigenvector of $A$ and $\lambda$ is the corresponding eigenvalue.
+\subsection{Finding Eigenvalues}
+Since $\mathbf{v}$ is a non-zero vector ($\det{\mathbf{v}} \neq 0$)
+\begin{align*}
+    A\mathbf{v} & = \lambda\mathbf{v} \\
+    (A - \lambda I)\mathbf{v} & = 0 \\
+    \det((A - \lambda I)\mathbf{v}) & = 0 \\
+    \det(A - \lambda I) & = 0
+\end{align*}
+where $I$ is the identity matrix. The above equation is called the characteristic equation or eigen equation. The eigenvalues of a matrix are the roots of $\lambda$ in this equation.
+\section{QR Algorithm}
+The algorithm chosen to solve for eigenvalues of a matrix is \textbf{QR Algorithm}.
+\subsection{QR decomposition process}
+In the algorithm, a matrix $A$ is decomposed into product of two matrices $Q$ and $R$ using Gram-Schmidt process, where \\
+$\bullet$ $Q$ is an orthogonal matrix ($Q^{T}Q = I$) in real space or an unitary matrix ($Q^{*}Q =I$) in complex space. \\
+$\bullet$ $R$ is an upper triangular matrix. \\\\
+Let $A = [\begin{matrix}
+    \mathbf{a}_1 & \mathbf{a}_2 & \cdots & \mathbf{a}_n
+\end{matrix}]$, where $\mathbf{a}_1, \cdots, \mathbf{a}_n$ are column matrices of length $n$. When Gram-Schmidt process is applied to $A$
+\begin{align*}
+    Q = \begin{bmatrix}
+        \mathbf{q}_1 & \mathbf{q}_2 & \cdots & \mathbf{q}_n
+    \end{bmatrix},\quad & R = \begin{bmatrix}
+        \langle \mathbf{q}_1,\mathbf{a}_1 \rangle & \langle \mathbf{q}_1,\mathbf{a}_2 \rangle & \cdots & \langle \mathbf{q}_1,\mathbf{a}_n \rangle \\
+        0 & \langle \mathbf{q}_2, \mathbf{a}_2 \rangle & \cdots & \langle \mathbf{q}_2, \mathbf{a}_n \rangle \\
+0 & 0 & \cdots & \langle \mathbf{q}_3, \mathbf{a}_n \rangle \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \cdots & \langle \mathbf{q}_n, \mathbf{a}_n \rangle
+    \end{bmatrix} \\
+    \mathbf{u}_k = \mathbf{a}_k - \sum\limits_{j=1}^{k-1}\text{proj}_{\mathbf{u}_j}\mathbf{a}_k,\quad & \mathbf{q}_k = \frac{\mathbf{u}_k}{||\mathbf{u}_k||} \\
+    \text{proj}_\mathbf{u}\mathbf{a} = \frac{\langle \mathbf{u},\mathbf{a}\rangle}{\langle \mathbf{u},\mathbf{u}\rangle}\mathbf{u} \quad \text{and} & \quad \langle \mathbf{v},\mathbf{w}\rangle \text{ is the inner product, } \mathbf{v}^T\mathbf{w}
+\end{align*}
+\subsection{Algorithm Description}
+After decomposition of the matrix $A$ into $Q$ and $R$, $A$ is updated as the product $RQ$. This process repeated iteratively until the updated matrix $A$ becomes a diagonal matrix or a upper triangular matrix, where the elements below the diagonal become zero. The diagonal elements of the resulting matrix are the eigenvalues of matrix $A$. This iterative process can be expressed by
+\begin{align*}
+    A_k & = Q_kR_k \\
+    A_{k+1} & = R_kQ_k
+\end{align*}
+$A_k$ represents the matrix after $k$-th iteration.\\
+$\bullet$ The final matrix obtained will be diagonal matrix, if the matrix $A$ is diagonalizable.\\
+$\bullet$ The final matrix obtained will be upper triangular matrix of Schur form, if $A$ is non-diagonalizable. 
+\subsection{Analysis of the algorithm}
+\subsubsection{Time Complexity}
+In the matrix multiplication function, the resultant matrix $C$ contains $n^2$ terms and each of them requires $O(n)$ operations. Therefore the total number of operations are $O(n) \times O(n^2) = O(n^3)$, resulting the time complexity of this function to be $O(n^3)$.\\\\
+In QR decomposition function, calculating inner product has $O(n)$ operations, subtracting the projections also has $O(n)$ operations. Therefore each column construction has $O(n^2)$ operations and normalization for each column involve $O(n)$ operations. So, the process of orthogonalization has time complexity of $O(n^3)$. For computing $R$, each inner product calculation requires $O(n)$ operations and to compute it for $n^2$ elements the time complexity becomes $O(n^3)$.\\\\
+The total time complexity of QR decomposition function is
+\begin{align*}
+    O(n^3) + O(n^3) = O(n^3)
+\end{align*}
+In QR algorithm function, each iteration has matrix multiplication and QR decomposition. So, for one iteration time complexity is $O(n^3) + O(n^3) = O(n^3)$. Let the number of iterations before convergence of matrix $A$ is $P$, then the time complexity of this function is $O(P \cdot n^3)$.\\\\
+The time complexity of the main function is negligible compared to $O(P \cdot n^3)$. Therefore overall time complexity is approximated to $O(P \cdot n^3)$, where $P$ depends on convergence properties of the matrix.
+\subsubsection{Memory Usage}
+The memory used for 
+\begin{enumerate}
+    \item the matrix $A$ is $n\times n\times 16 = 16n^2$ 
+    \item the matrix $Q$ is $n\times n\times 16 = 16n^2$ 
+     \item the matrix $R$ is $n\times n\times 16 = 16n^2$ 
+     \item eigenvalues array is $n\times 16 = 16n$
+\end{enumerate}
+Therefore, the total memory used is $48n^2 + 16n$.
+\subsubsection{Convergence Rate}
+The algorithm has
+\begin{enumerate}
+    \item fast convergence if matrix type is diagonal or symmetric
+    \item moderate convergence for normal diagonalizable and non-symmetric matrices
+    \item slow convergence for defective and large matrices.
+\end{enumerate}
+\subsubsection{Suitability}
+This algorithm is suitable mostly to all types of matrices except defective matrices and certain sparse matrices.
+\subsection{Merits}
+\begin{enumerate}
+    \item This algorithm gives all eigenvalues of a matrix.
+    \item It can handle matrices with complex entries and output complex eigenvalues.
+    \item It is easy to implement and has a good numerical stability for most matrices.
+    \item It is flexible because it can handle matrices of different sizes.
+\end{enumerate}
+\subsection{Demerits}
+\begin{enumerate}
+    \item It is inefficient for large matrices.
+    \item Convergence condition is inaccurate for some matrices.
+    \item In case of defective matrices the algorithm may fail to converge.
+\end{enumerate}
+\section{Comparison with other Algorithms}
+Comparison of QR algorithm with other well known algorithms like Power Iteration algorithm, Jacobi eigenvalue algorithm and Arnoldi Iteration.
+\subsection{Time Complexity}
+\begin{table}[h!]
+\centering
+\input{tables/timecomp.tex}
+\end{table}
+
+\subsection{Output}
+\begin{table}[h!]
+\centering
+\input{tables/out.tex}
+\end{table}
+
+\subsection{Accuracy}
+$\bullet$ QR algorithm is highly accurate for almost all types of matrices except certain sparse matrices.\\
+$\bullet$ Power iteration algorithm is accurate for almost all types of matrices but gives only largest eigenvalue. \\
+$\bullet$ Jacobi's method is highly accurate for only symmetrical matrices.\\
+$\bullet$ Arnoldi iteration is accurate for hermition and sparse matrices. 
+
+\end{document}
+
